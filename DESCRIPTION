@@ -2,4 +2,4 @@ Package: placeholder
 Title: Does not matter.
 Version: 0.0.1
 Imports: bookdown
-Remotes: rstudio/bookdown
+Remotes: atyre2/NRES450_book
