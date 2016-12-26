@@ -17,11 +17,11 @@ N' = bN - dN + i - e
 
 where we’ve replaced the number of births and deaths with the products of the population abundance, N, and a per capita rate of birth and death. We’ve left immigration and emigration as fixed rates. The apostrophe notation for N means "instantaneous rate of change", that is, the rate when the time interval $\Delta \rightarrow 0$.
 
-Where things get interesting is when one or more of the rate constants in (\@ref(eq:fundamental2)) or amounts in (\@ref(eq:fundamental)) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
+Where things get interesting is when one or more of the rate constants in \@ref\(eq:fundamental2\) or amounts in \@ref\(eq:fundamental\) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
 
 ## The laws of nature
 
-The title of this chapter describes equation (\@ref(eq:fundamental)) as a "law" -- what do I mean by law? Is it something that was out there, waiting to be discovered by humans, independent of our existence and thought? Or was it created by our thinking of it, consistent with reality but not of reality? Joe Rosen, formerly professor of physics at Tel Aviv University and the University of Central Arkansas, spent an entire volume thinking hard about these issues [@rosen2010lawless]. His categorization of reality and what we can know about it is useful and easy to follow, so I will use it here. He begins with the notion that there is an objective reality that exists independent of our existence. The primary reason for this observation is the simple fact that nature pushes back. Imagine a world where you can fly; wouldn’t it be marvelous! If the world were not objective, but merely a construct of our imagination (a view of reality known as solipsism), then you could create this world, and fly. Unfortunately nature pushes back, and you will fall to the ground. So objective reality constrains what we can do.
+The title of this chapter describes equation \@ref\(eq:fundamental\) as a "law" -- what do I mean by law? Is it something that was out there, waiting to be discovered by humans, independent of our existence and thought? Or was it created by our thinking of it, consistent with reality but not of reality? Joe Rosen, formerly professor of physics at Tel Aviv University and the University of Central Arkansas, spent an entire volume thinking hard about these issues [@rosen2010lawless]. His categorization of reality and what we can know about it is useful and easy to follow, so I will use it here. He begins with the notion that there is an objective reality that exists independent of our existence. The primary reason for this observation is the simple fact that nature pushes back. Imagine a world where you can fly; wouldn’t it be marvelous! If the world were not objective, but merely a construct of our imagination (a view of reality known as solipsism), then you could create this world, and fly. Unfortunately nature pushes back, and you will fall to the ground. So objective reality constrains what we can do.
 
 The opposite of objective is subjective. Our inner thoughts and feelings are subjective, that is, they are known only to us as individuals. You might tell me what you are thinking or feeling, but I have no independent way of verifying that information. Beliefs about objective reality are similarly subjective, in
 that two people can have different beliefs about reality. However, it is possible for us to conduct *reality checks* on our beliefs about reality. If enough of us get together to check our beliefs, and over time, agree to a consensus belief that passes reality checks, then this is about as close to objective knowledge as we can get. Rosen calls this form of knowledge *intersubjective*; it is different from subjective belief by virtue of its broader consensus amongst many people, and yet not fully objective by virtue of the fact that it was formed from our subjective perceptions of reality. 
@@ -86,7 +86,7 @@ N_t = N_0 e^{bt}
 (\#eq:births)
 \end{equation}
 
-There are not very many species where births occur continuously (put in a box describing one of each type). Equation (\@ref(eq:births)) is an approximation of what usually occurs with wildlife species, especially wildlife in temperate and polar systems. There are many circumstances in which this approximation is acceptable, but we must never forget that it is an approximation, not the objective reality. In Chapter \@ref(chap:structured)  we will examine alternative approximations to the birth process that more closely match the biological reality.
+There are not very many species where births occur continuously (put in a box describing one of each type). Equation \@ref\(eq:births\) is an approximation of what usually occurs with wildlife species, especially wildlife in temperate and polar systems. There are many circumstances in which this approximation is acceptable, but we must never forget that it is an approximation, not the objective reality. In Chapter \@ref(chap:structured)  we will examine alternative approximations to the birth process that more closely match the biological reality.
 
 ## Turchin's law of population inertia
 
@@ -97,7 +97,7 @@ N' = bN - dN =(b-d)N = rN
 (\#eq:definer)
 \end{equation}
 
-where we've defined a new constant $r$, the difference between the per capita birth and death rates. This constant $r$ is so important in population dynamics that it has a special name -- the *intrinsic rate of population growth*. Notice that equation (\@ref(eq:definer)) looks a lot like equation (eq:deaths) and (eq:births). It is the equation for exponential growth or decay, and we know the solution for that:
+where we've defined a new constant $r$, the difference between the per capita birth and death rates. This constant $r$ is so important in population dynamics that it has a special name -- the *intrinsic rate of population growth*. Notice that equation \@ref\(eq:definer\) looks a lot like equation (eq:deaths) and (eq:births). It is the equation for exponential growth or decay, and we know the solution for that:
 
 \begin{equation}
 N_t = N_0 e^{rt}
@@ -107,7 +107,7 @@ N_t = N_0 e^{rt}
 This is the equation for exponential population growth, and it is the simplest possible population model. When $r > 0$, the population will increase, and when $r < 0$ the population will decrease (Figure 1). Looking back at eq. \@ref(eq:definer), we can see that $r > 0$ when the per capita birth rate is greater than the per capita
 death rate. That makes sense -- in order for the population to increase the number of births must exceed the number of deaths. Conversely, $r < 0$ when the per capita birth rate is less than the per capita death rate. The most important thing to recognize here is that the difference between a population growing or decaying is determined by the relative magnitudes of b and d. Measuring either one alone does not tell us whether the population will increase or decrease. What happens if $r$ is exactly equal to zero? The population will neither increase nor decrease, but remain at exactly the same level.
 
-Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially [@turchin2003complex]. Equation (\@ref(eq:expgrowth)) tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, "in the absence of other forces".
+Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially [@turchin2003complex]. Equation \@ref\(eq:expgrowth\) tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, "in the absence of other forces".
 
 That is, assuming that the per capita birth and death rates remain constant, unaffected by other processes, then the law of population inertia holds. Much of the remainder of this book focuses on determining when the law of population inertia does not hold.
 
@@ -129,7 +129,7 @@ N = N0*exp(r*t)
 lines(t,N,lwd=3,lty=2)
 ```
 
-There is one additional property of the exponential model of population dynamics that makes it useful as a touchstone for analyzing changes in numbers. If we take the logarithm of both sides of Equation (\@ref(eq:expgrowth)), we obtain
+There is one additional property of the exponential model of population dynamics that makes it useful as a touchstone for analyzing changes in numbers. If we take the logarithm of both sides of Equation \@ref\(eq:expgrowth\), we obtain
 
 \begin{equation*}
 ln(N_t) = ln(N_0) + rt
@@ -139,7 +139,7 @@ which has the same form as the equation of a straight line. The y-intercept of t
 
 ## Estimating $r$
 
-If this constant $r$ is so important, how do we figure out what value to use? Later we will build up an estimate of $r$ from detailed life history information. It can also be done in a "back of the envelope" way as long as we have two estimates of population size at different times. We start with equation (\@ref(eq:expgrowth)), and rearrange it to solve for $r$
+If this constant $r$ is so important, how do we figure out what value to use? Later we will build up an estimate of $r$ from detailed life history information. It can also be done in a "back of the envelope" way as long as we have two estimates of population size at different times. We start with equation \@ref\(eq:expgrowth\), and rearrange it to solve for $r$
 
 \begin{equation}
 \begin{split}
@@ -183,20 +183,20 @@ For the musk ox we get $t = ln(2)/0.13 = 5.3 \, years$ for the population to dou
 
 ## Glossary
 
-\begin{enumerate}
-  \item **Deterministic processes** have only a single outcome given complete knowledge of the state of the system.
-  \item **Expected value** of a random variable is the mean value, or the 1st moment of the distribution.
-  \item **Instantaneous mortality rate** the rate at which mortality events occur when the interval of time is allowed to shrink towards zero.
-  \item **Solipsism** A metaphysical viewpoint that asserts reality is only the result of our imaginations.
-\end{enumerate}
+1. **Deterministic processes** have only a single outcome given complete knowledge of the state of the system.
+2. **Expected value** of a random variable is the mean value, or the 1st moment of the distribution.
+3. **Instantaneous mortality rate** the rate at which mortality events occur when the interval of time is allowed to shrink towards zero.
+4. **Solipsism** A metaphysical viewpoint that asserts reality is only the result of our imaginations.
 
 ## Exercises
 
-\begin{enumerate}
-  \item An index of the Bald Eagle population in Illinois [@havera1988distribution] grew from 188 individuals in 1970 to 569 individuals in 1987. Assuming a closed population with constant birth and death rates through this period, what was the annual population growth rate?
-  \item For the same population of Bald Eagles in Illinois, how many eagles would you expect in 1984?
-  \item If the actual population count in 1984 was 930, what could you conclude about this population?
-  \item In how many years would you expect the Bald Eagle population to double in size after 1987?
-  \item Wildlife managers at an east coast wildlife refuge want their population of Piping Plovers to increase by 20\% in 5 years. Their estimated value of $r = 0.01$ without changing any management strategies. Can they achieve their objective? What value of $r$ would allow them to achieve their objective?
-\end{enumerate}
+1. An index of the Bald Eagle population in Illinois [@havera1988distribution] grew from 188 individuals in 1970 to 569 individuals in 1987. Assuming a closed population with constant birth and death rates through this period, what was the annual population growth rate?
+
+2. For the same population of Bald Eagles in Illinois, how many eagles would you expect in 1984?
+
+3. If the actual population count in 1984 was 930, what could you conclude about this population?
+
+4. In how many years would you expect the Bald Eagle population to double in size after 1987?
+
+5. Wildlife managers at an east coast wildlife refuge want their population of Piping Plovers to increase by 20\% in 5 years. Their estimated value of $r = 0.01$ without changing any management strategies. Can they achieve their objective? What value of $r$ would allow them to achieve their objective?
 
