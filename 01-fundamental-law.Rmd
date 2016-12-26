@@ -1,0 +1,202 @@
+# The fundamental law of population dynamics {#chap:fundamental}
+
+\begin{equation}
+  \Delta N = B - D + I - E
+  (\#eq:fundamental)
+\end{equation}
+
+This simple equation governs all changes in single species populations. The change in the abundance of a
+population in a given area across an interval of time $\Delta$, $\Delta N$, is the sum of the number of births $B$, the
+number of deaths $D$, the number of immigrants, or individuals arriving in the area from outside, $I$, and
+the number of emigrants, individuals leaving the area, $E$. As the interval of time gets smaller, we can write the fundamental law as a rate
+
+\begin{equation}
+N' = bN - dN + i - e
+(\#eq:fundamental2)
+\end{equation}
+
+where we’ve replaced the number of births and deaths with the products of the population abundance, N, and a per capita rate of birth and death. We’ve left immigration and emigration as fixed rates. The apostrophe notation for N means "instantaneous rate of change", that is, the rate when the time interval $\Delta \rightarrow 0$.
+
+Where things get interesting is when one or more of the rate constants in (\@ref(eq:fundamental2)) or amounts in (\@ref(eq:fundamental)) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
+
+## The laws of nature
+
+The title of this chapter describes equation (\@ref(eq:fundamental)) as a "law" -- what do I mean by law? Is it something that was out there, waiting to be discovered by humans, independent of our existence and thought? Or was it created by our thinking of it, consistent with reality but not of reality? Joe Rosen, formerly professor of physics at Tel Aviv University and the University of Central Arkansas, spent an entire volume thinking hard about these issues [@rosen2010lawless]. His categorization of reality and what we can know about it is useful and easy to follow, so I will use it here. He begins with the notion that there is an objective reality that exists independent of our existence. The primary reason for this observation is the simple fact that nature pushes back. Imagine a world where you can fly; wouldn’t it be marvelous! If the world were not objective, but merely a construct of our imagination (a view of reality known as solipsism), then you could create this world, and fly. Unfortunately nature pushes back, and you will fall to the ground. So objective reality constrains what we can do.
+
+The opposite of objective is subjective. Our inner thoughts and feelings are subjective, that is, they are known only to us as individuals. You might tell me what you are thinking or feeling, but I have no independent way of verifying that information. Beliefs about objective reality are similarly subjective, in
+that two people can have different beliefs about reality. However, it is possible for us to conduct *reality checks* on our beliefs about reality. If enough of us get together to check our beliefs, and over time, agree to a consensus belief that passes reality checks, then this is about as close to objective knowledge as we can get. Rosen calls this form of knowledge *intersubjective*; it is different from subjective belief by virtue of its broader consensus amongst many people, and yet not fully objective by virtue of the fact that it was formed from our subjective perceptions of reality. 
+
+Intersubjective knowledge is socially constructed knowledge, but is not consistent with the the post-modernist position that all reality is socially constructed. Our socially constructed, intersubjective beliefs are constrained by objective reality -- not everything is possible. Even if a diehard post-modernist could convince a group of a 1000 people that she could fly unaided, she would not be able to do so. 
+
+In the field of wildlife management science, the goal is the production of “reliable knowledge” [@romesburg1981wildlife] to use in making management decisions. It is not uncommon to see exhortations from leaders in the field to make science based decisions, presumably a call to use reliable, or intersubjective, knowledge to decide which course of action should be followed. Unfortunately, as we will see in many examples throughout this book, people do not make decisions like that. Our subjective beliefs about many things, from religion to justice, affect what we think should be done. Inevitably, the more people are affected by a decision or policy related to wildlife management, the more political (i.e. subjective) the decision or policy will become.
+
+So a *law* of population dynamics is well tested intersubjective knowledge, or reliable knowledge, that we can use to make predictions about the consequences of management actions. As you will see below, a law will also have assumptions that must be met in order for it to apply. 
+
+## The nature of models of nature
+
+Almost all of the equations in this book, other than the fundamental equation, are models of nature. That is, they are deliberate simplifications of what is really going on out in nature. If our models were exact replicas of nature, then we would have as much trouble understanding the model as we have understanding nature! It is easy to get caught up in the thrill (OK, easy for people who build models) of adding ever more biological realism to a model. But this does not necessarily help us make decisions in the face of complexity.
+
+A consequence of this deliberate simplification is that all models are in fact, fictitious. This might seem surprising. After all, works of fiction are by definition false. Not true. How can something that is known to be false help us understand nature? This is a problem that so vexed early philosophers of science that they deliberately ignored it for the better part of a century.  Fortunately for the science of population dynamics, this philosophical high-mindedness did not stop scientists from using models to understand nature. Statistician George Box put it this way: 
+
+> All models are wrong. Some models are useful. [@box1976science]. 
+
+The key is identifying which models are useful. In this book the utility of a model is measured by the extent to which the model allows us to forecast the future consequences of management decisions.
+
+## Deaths
+
+Of all the biological processes in the fundamental equation, the simplest one to get a handle on is $D$, the number of deaths in a period of time. A great deal of fisheries and wildlife management involves directly manipulating $D$ through harvest or culling, or indirectly manipulating $D$ through habitat management.
+
+Consider the problem of stocking a lake with walleye fingerlings. From past research at this lake, we know that the instantaneous mortality rate is $d = 0.01 week^{-1}$. If a hatchery manager wants to stock 10,000 fingerlings, how many will survive one year? We have three pieces of information – the rate of mortality, the initial number of fish, and the period of time. In continuous time, assuming that there are no births, emigration or immigration 
+
+\begin{equation*}
+N' = - dN 
+\end{equation*}
+
+This is an equation for the rate of change in a variable where the variable itself ($N$) is multiplied by a constant. This is the equation for exponential decay. The solution to that equation is
+
+\begin{equation*}
+N_t = N_0 e^{-dt}
+(\#eq:deaths)
+\end{equation*}
+
+We can substitute in the values for our problem, where N0 = 10000 and t = 52 weeks, which gives us
+
+\begin{equation*}
+N_{52} = 10000 e^{-(0.01)(52)} = 5945 fingerlings
+\end{equation*}
+
+In nature, the result will almost certainly not be exactly 5945 fingerlings. We do not know $d$ exactly, $d$ might not be constant over the course of the year, and indeed, the process of mortality itself is not *deterministic*. We cannot know exactly how many fingerlings will encounter a channel catfish during the year; only that some will with catastrophic results for the fingerlings! The number 5945 is an *expected value*, in the sense of Chapter \@ref(chap:abundance).
+
+Instead of an instantaneous mortality rate, we might have a discrete time rate estimated from a mark-recapture program. In that case we would have a per capita mortality rate $d_{\Delta t}=e^{-d \Delta t}$ Note that the discrete time rate depends on the interval over which it is estimated.
+ 
+## Births
+
+The second term in the fundamental equation that we must have is the number of births in a single unit of time, $B$. There is little that can be done to manage $B$ directly; most wildlife management efforts can at best manipulate $B$ indirectly by altering the habitat. There are instances where preventing births through contraception is a useful management strategy for over abundant species, but it is often more expensive than manipulating $D$.
+
+In the continuous time form, the rate of change in N from births is
+
+\begin{equation*}
+N' = bN 
+\end{equation*}
+
+where b is the per capita rate of births per unit time. The population size after some interval of time $t$, $N_t$ will be given by
+
+\begin{equation}
+N_t = N_0 e^{bt}
+(\#eq:births)
+\end{equation}
+
+There are not very many species where births occur continuously (put in a box describing one of each type). Equation (\@ref(eq:births)) is an approximation of what usually occurs with wildlife species, especially wildlife in temperate and polar systems. There are many circumstances in which this approximation is acceptable, but we must never forget that it is an approximation, not the objective reality. In Chapter \@ref(chap:structured)  we will examine alternative approximations to the birth process that more closely match the biological reality.
+
+## Turchin's law of population inertia
+
+With births and deaths, we can proceed to construct the simplest possible model of population dynamics. In order to do so we must make an assumption about the remaining two pieces of the fundamental equation, $I$ and $E$, the number of individuals moving into and out of the population. We have a couple of choices here, but let us start with the simplest assumption: $I = E = 0$. That is, we will assume that no individuals move into or out of the population. The population is *closed* to emigration and immigration. With this assumption, the fundamental equation in continuous time reduces to
+
+\begin{equation}
+N' = bN - dN =(b-d)N = rN
+(\#eq:definer)
+\end{equation}
+
+where we've defined a new constant $r$, the difference between the per capita birth and death rates. This constant $r$ is so important in population dynamics that it has a special name -- the *intrinsic rate of population growth*. Notice that equation (\@ref(eq:definer)) looks a lot like equation (eq:deaths) and (eq:births). It is the equation for exponential growth or decay, and we know the solution for that:
+
+\begin{equation}
+N_t = N_0 e^{rt}
+(\#eq:expgrowth)
+\end{equation}
+
+This is the equation for exponential population growth, and it is the simplest possible population model. When $r > 0$, the population will increase, and when $r < 0$ the population will decrease (Figure 1). Looking back at eq. \@ref(eq:definer), we can see that $r > 0$ when the per capita birth rate is greater than the per capita
+death rate. That makes sense -- in order for the population to increase the number of births must exceed the number of deaths. Conversely, $r < 0$ when the per capita birth rate is less than the per capita death rate. The most important thing to recognize here is that the difference between a population growing or decaying is determined by the relative magnitudes of b and d. Measuring either one alone does not tell us whether the population will increase or decrease. What happens if $r$ is exactly equal to zero? The population will neither increase nor decrease, but remain at exactly the same level.
+
+Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially [@turchin2003complex]. Equation (\@ref(eq:expgrowth)) tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, "in the absence of other forces".
+
+That is, assuming that the per capita birth and death rates remain constant, unaffected by other processes, then the law of population inertia holds. Much of the remainder of this book focuses on determining when the law of population inertia does not hold.
+
+```{r expgrowth,echo=FALSE,fig.cap="Population growth over time r is greater than or less than zero. The right hand panel shows the same curves on a log scale."}
+par(mfrow=c(1,2))
+t = 0:20
+N0 = 100
+r = 0.1
+N = N0*exp(r*t)
+plot(t,N,xlab="Time",ylab="Population Size",ylim=c(0,max(N)),type="l",lwd=3)
+r = -0.1
+N = N0*exp(r*t)
+lines(t,N,lwd=3,lty=2)
+r = 0.1
+N = N0*exp(r*t)
+plot(t,N,log="y",xlab="Time",ylab="log(Population Size)",ylim=c(1,max(N)),type="l",lwd=3)
+r = -0.1
+N = N0*exp(r*t)
+lines(t,N,lwd=3,lty=2)
+```
+
+There is one additional property of the exponential model of population dynamics that makes it useful as a touchstone for analyzing changes in numbers. If we take the logarithm of both sides of Equation (\@ref(eq:expgrowth)), we obtain
+
+\begin{equation*}
+ln(N_t) = ln(N_0) + rt
+\end{equation*}
+
+which has the same form as the equation of a straight line. The y-intercept of the graph is the logarithm of the population size when $t=0$. Plotting the logarithm of $N_t$ against time will then have a straight line with a slope of $r$. This is a very easy way to check if a particular time series is well approximated by the exponential population model.
+
+## Estimating $r$
+
+If this constant $r$ is so important, how do we figure out what value to use? Later we will build up an estimate of $r$ from detailed life history information. It can also be done in a "back of the envelope" way as long as we have two estimates of population size at different times. We start with equation (\@ref(eq:expgrowth)), and rearrange it to solve for $r$
+
+\begin{equation}
+\begin{split}
+\frac{N_t}{N_0} & = e^{rt} \\
+ln\left(\frac{N_t}{N_0}\right)  & = rt \\
+r & = ln\left(\frac{N_t}{N_0}\right) /  t 
+\end{split}
+\end{equation}
+
+So our first estimate of $r$ is the log of the ratio of population estimates, divided by the number of time periods between the two estimates. This estimate assumes that the law of population inertia held during the intervening $t$ time periods. As an example, let us carry out these calculations for the herd of Muskox (*Ovibus moschatus*) on Nunivak Island, Alaska. Muskox were extirpated from the Arctic slope of Alaska in the late 19^th^ century, and efforts to reintroduce them from populations in Greenland began in the 1930’s. In 1947 David Spencer of the Bureau of Sport Fisheries and Wildlife in Alaska began an annual survey of the Nunivak Island population [@spencer1970muskox]. He recorded a total of 49 animals in 1947, and in 1965 he counted 514 animals total. Assuming that the law of population inertia held during those 18 years, we find
+
+\begin{equation}
+r = ln\left(\frac{N_t}{N_0}\right) /  t = 
+    ln\left(\frac{514}{49}\right)  / 18 = 
+    \frac{ln(10.49)}{18} = 0.13 \, years^{-1}
+\end{equation}
+
+How should we interpret that estimate? The change in a population over 1 year is $Ne^r$, so the factor $e^r$ is the percentage change in population size. In this case, $e^r = 1.138$, or about a 14 \% change per year. A useful approximation to remember is that when $r$ is close to 1, then $e^{r} \approx 1+r$, so you can think of $r$ as a percentage change in population size per year as long as it isn't too large. In the musk-ox case the error in this approximation is 1 percentage point.
+
+With this estimate of $r$ in hand, there are several things we can do. For example, what if we want to predict the number of animals on the island after another 3 years, assuming population growth holds at the same rate?
+
+\begin{equation}
+N_3 = 514 e^{(0.13)(3)} = 514(1.48) = 759\,muskox
+\end{equation}
+
+This is quite useful as a benchmark for management. If we go back in 3 years and there are a lot fewer, or a lot more muskox than we expected, then we would have to conclude that "all other forces" were not in fact zero, and that would start us on a useful search for what might have changed. In fact, in 1968 there were 714 animals. Is that a lot fewer than expected? In order to answer that question, we need to address an important issue – indeterminism – which we will begin in the next chapter.
+
+Another easy calculation to do is finding the *doubling time* for a population. This is the number of years for the population to double in size. The key here is to recognize that a population has doubled when $N_t = 2N_0$. We substitute $2N_0$ into eq. \@ref(eq:expgrowth) and solve for $t$
+
+\begin{equation}
+\begin{split}
+\frac{2N_0}{N_0} & = e^{rt} \\
+ln\left(2\right)  & = rt \\
+t & = \frac{ln\left(2\right)}{r}\,.
+\end{split}
+(\#eq:double)
+\end{equation}
+
+For the musk ox we get $t = ln(2)/0.13 = 5.3 \, years$ for the population to double in size. This calculation is very handy for guiding management expectations. If we desire a population to be 10\% larger, we can calculate how many years that will take by replacing the constant 2 in eq. \@ref(eq:double) with 1.1. 
+
+
+## Glossary
+
+\begin{enumerate}
+  \item **Deterministic processes** have only a single outcome given complete knowledge of the state of the system.
+  \item **Expected value** of a random variable is the mean value, or the 1st moment of the distribution.
+  \item **Instantaneous mortality rate** the rate at which mortality events occur when the interval of time is allowed to shrink towards zero.
+  \item **Solipsism** A metaphysical viewpoint that asserts reality is only the result of our imaginations.
+\end{enumerate}
+
+## Exercises
+
+\begin{enumerate}
+  \item An index of the Bald Eagle population in Illinois [@havera1988distribution] grew from 188 individuals in 1970 to 569 individuals in 1987. Assuming a closed population with constant birth and death rates through this period, what was the annual population growth rate?
+  \item For the same population of Bald Eagles in Illinois, how many eagles would you expect in 1984?
+  \item If the actual population count in 1984 was 930, what could you conclude about this population?
+  \item In how many years would you expect the Bald Eagle population to double in size after 1987?
+  \item Wildlife managers at an east coast wildlife refuge want their population of Piping Plovers to increase by 20\% in 5 years. Their estimated value of $r = 0.01$ without changing any management strategies. Can they achieve their objective? What value of $r$ would allow them to achieve their objective?
+\end{enumerate}
+

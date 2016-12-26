@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Lecture Notes for Biology of Wildlife Populations"
+author: "Andrew Tyre"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -8,23 +8,13 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+github-repo: atyre2/NRES450_book
+description: "These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska."
 ---
 
 # Prerequisites
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
-
-For now, you have to install the development versions of **bookdown** from Github:
-
-```{r eval=FALSE}
-devtools::install_github("rstudio/bookdown")
-```
-
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
-
-To compile this example to PDF, you need to install XeLaTeX.
+I assume you have installed R and RStudio to run examples shown in each chapter.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
@@ -32,3 +22,21 @@ knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+
+I originally set out to write this book because no existing population dynamics texts had the right mix of topics, or didn't address management related questions, or were far too advanced for an undergraduate audience. 
+
+My educational objectives for the course, and for the curriculum in which it is embedded, are as follows.
+
+\begin{enumerate}
+  \item Estimate the abundance of a species witin a specific geographical area, and critically evaluate the utility of abundance estimates.
+  \item Evaluate the impacts of habitat change on future population abundance. 
+  \item Assess how changes in harvest regulations will affect population abundance.
+  \item Assess the effect of competitors, predators and other species on a focal species.
+  \item Predict the consequences of alternative management actions in a Structured Decision Making framework using simple population models.
+  \item Identify the management decision(s) and the decision maker(s) relevant to a wildlife issue. 
+  \item Articulate the objectives of stakeholders along a means/ends continuum.
+  \item Enumerate available management actions and assemble alternative strategies.
+  \item Make tradeoffs between competing objectives to select a preferred management strategy in an SDM framework.
+\end{enumerate}
+
+I think objectives 2, 3 and 4 could be subsumed into objective 5, but I've left them broken out for the moment. Objectives 6, 7, 8 and 9 relate directly to using the PrOACT model of Structured Decision Making. Objective 7 is the same as Larkin's proximate/ultimate distinction, I think. NRES 311 currently addresses completely or at least introduces 1-3 and 6-9; I'm not sure about 4. 
