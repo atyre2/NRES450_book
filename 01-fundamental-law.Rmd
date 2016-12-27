@@ -97,14 +97,14 @@ N' = bN - dN =(b-d)N = rN
 (\#eq:definer)
 \end{equation}
 
-where we've defined a new constant $r$, the difference between the per capita birth and death rates. This constant $r$ is so important in population dynamics that it has a special name -- the *intrinsic rate of population growth*. Notice that equation \@ref(eq:definer) looks a lot like equation (eq:deaths) and (eq:births). It is the equation for exponential growth or decay, and we know the solution for that:
+where we've defined a new constant $r$, the difference between the per capita birth and death rates. This constant $r$ is so important in population dynamics that it has a special name -- the *intrinsic rate of population growth*. Notice that equation \@ref(eq:definer) looks a lot like equation \@ref(eq:deaths) and \@ref(eq:births). It is the equation for exponential growth or decay, and we know the solution for that:
 
 \begin{equation}
 N_t = N_0 e^{rt}
 (\#eq:expgrowth)
 \end{equation}
 
-This is the equation for exponential population growth, and it is the simplest possible population model. When $r > 0$, the population will increase, and when $r < 0$ the population will decrease (Figure 1). Looking back at eq. \@ref(eq:definer), we can see that $r > 0$ when the per capita birth rate is greater than the per capita
+This is the equation for exponential population growth, and it is the simplest possible population model. When $r > 0$, the population will increase, and when $r < 0$ the population will decrease (Figure \@ref(fig:expgrowth)). Looking back at eq. \@ref(eq:definer), we can see that $r > 0$ when the per capita birth rate is greater than the per capita
 death rate. That makes sense -- in order for the population to increase the number of births must exceed the number of deaths. Conversely, $r < 0$ when the per capita birth rate is less than the per capita death rate. The most important thing to recognize here is that the difference between a population growing or decaying is determined by the relative magnitudes of b and d. Measuring either one alone does not tell us whether the population will increase or decrease. What happens if $r$ is exactly equal to zero? The population will neither increase nor decrease, but remain at exactly the same level.
 
 Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially [@turchin2003complex]. Equation \@ref(eq:expgrowth) tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, "in the absence of other forces".
