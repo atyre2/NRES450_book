@@ -12,15 +12,14 @@ github-repo: atyre2/NRES450_book
 description: "These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska."
 ---
 
-# Prerequisites
+# Preface {-}
 
 I assume you have installed R and RStudio to run examples shown in each chapter.
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
+knitr::write_bib(c(.packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib')
+knitr::opts_chunk$set(echo=FALSE)
 ```
 
 I originally set out to write this book because no existing population dynamics texts had the right mix of topics, or didn't address management related questions, or were far too advanced for an undergraduate audience. 
