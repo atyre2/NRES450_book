@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2016-12-27">
+<meta name="date" content="2016-12-28">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -87,6 +87,17 @@
 <li class="chapter" data-level="2.6" data-path="chap-structured.html"><a href="chap-structured.html#exercises-1"><i class="fa fa-check"></i><b>2.6</b> Exercises</a><ul>
 <li class="chapter" data-level="" data-path="chap-structured.html"><a href="chap-structured.html#wild-horses-in-the-american-southwest"><i class="fa fa-check"></i>Wild horses in the American Southwest</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chap-abundance.html"><a href="chap-abundance.html"><i class="fa fa-check"></i><b>3</b> Estimating Abundance</a><ul>
+<li class="chapter" data-level="3.1" data-path="chap-abundance.html"><a href="chap-abundance.html#sampling-error-accuracy-and-precision"><i class="fa fa-check"></i><b>3.1</b> Sampling error, accuracy and precision</a></li>
+<li class="chapter" data-level="3.2" data-path="chap-abundance.html"><a href="chap-abundance.html#simple-random-sampling"><i class="fa fa-check"></i><b>3.2</b> Simple random sampling</a></li>
+<li class="chapter" data-level="3.3" data-path="chap-abundance.html"><a href="chap-abundance.html#how-big-a-sample-to-take"><i class="fa fa-check"></i><b>3.3</b> How big a sample to take?</a></li>
+<li class="chapter" data-level="3.4" data-path="chap-abundance.html"><a href="chap-abundance.html#areas-of-different-sizes"><i class="fa fa-check"></i><b>3.4</b> Areas of different sizes</a></li>
+<li class="chapter" data-level="3.5" data-path="chap-abundance.html"><a href="chap-abundance.html#stratified-sampling"><i class="fa fa-check"></i><b>3.5</b> Stratified Sampling</a><ul>
+<li class="chapter" data-level="" data-path="chap-abundance.html"><a href="chap-abundance.html#taylors-law"><i class="fa fa-check"></i>Taylor’s Law</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="chap-abundance.html"><a href="chap-abundance.html#further-reading"><i class="fa fa-check"></i>Further Reading</a></li>
+<li class="chapter" data-level="" data-path="chap-abundance.html"><a href="chap-abundance.html#exercises-2"><i class="fa fa-check"></i>Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -155,7 +166,7 @@ N_t = N_0 e^{-dt}
 <span class="math display">\[\begin{equation*}
 N_{52} = 10000 e^{-(0.01)(52)} = 5945 fingerlings
 \end{equation*}\]</span>
-<p>In nature, the result will almost certainly not be exactly 5945 fingerlings. We do not know <span class="math inline">\(d\)</span> exactly, <span class="math inline">\(d\)</span> might not be constant over the course of the year, and indeed, the process of mortality itself is not <em>deterministic</em>. We cannot know exactly how many fingerlings will encounter a channel catfish during the year; only that some will with catastrophic results for the fingerlings! The number 5945 is an <em>expected value</em>, in the sense of Chapter <a href="#chap:abundance"><strong>??</strong></a>.</p>
+<p>In nature, the result will almost certainly not be exactly 5945 fingerlings. We do not know <span class="math inline">\(d\)</span> exactly, <span class="math inline">\(d\)</span> might not be constant over the course of the year, and indeed, the process of mortality itself is not <em>deterministic</em>. We cannot know exactly how many fingerlings will encounter a channel catfish during the year; only that some will with catastrophic results for the fingerlings! The number 5945 is an <em>expected value</em>, in the sense of Chapter <a href="chap-abundance.html#chap:abundance">3</a>.</p>
 <p>Instead of an instantaneous mortality rate, we might have a discrete time rate estimated from a mark-recapture program. In that case we would have a per capita mortality rate <span class="math inline">\(d_{\Delta t}=e^{-d \Delta t}\)</span> Note that the discrete time rate depends on the interval over which it is estimated.</p>
 </div>
 <div id="births" class="section level2">
@@ -311,7 +322,7 @@ gitbook.start({
 "link": "https://github.com/atyre2/NRES450_book/edit/master/01-fundamental-law.Rmd",
 "text": "Edit"
 },
-"download": ["NRES450-LectureNotes.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
