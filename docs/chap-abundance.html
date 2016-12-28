@@ -93,9 +93,7 @@
 <li class="chapter" data-level="3.2" data-path="chap-abundance.html"><a href="chap-abundance.html#simple-random-sampling"><i class="fa fa-check"></i><b>3.2</b> Simple random sampling</a></li>
 <li class="chapter" data-level="3.3" data-path="chap-abundance.html"><a href="chap-abundance.html#how-big-a-sample-to-take"><i class="fa fa-check"></i><b>3.3</b> How big a sample to take?</a></li>
 <li class="chapter" data-level="3.4" data-path="chap-abundance.html"><a href="chap-abundance.html#areas-of-different-sizes"><i class="fa fa-check"></i><b>3.4</b> Areas of different sizes</a></li>
-<li class="chapter" data-level="3.5" data-path="chap-abundance.html"><a href="chap-abundance.html#stratified-sampling"><i class="fa fa-check"></i><b>3.5</b> Stratified Sampling</a><ul>
-<li class="chapter" data-level="" data-path="chap-abundance.html"><a href="chap-abundance.html#taylors-law"><i class="fa fa-check"></i>Taylor’s Law</a></li>
-</ul></li>
+<li class="chapter" data-level="3.5" data-path="chap-abundance.html"><a href="chap-abundance.html#stratified-sampling"><i class="fa fa-check"></i><b>3.5</b> Stratified Sampling</a></li>
 <li class="chapter" data-level="" data-path="chap-abundance.html"><a href="chap-abundance.html#further-reading"><i class="fa fa-check"></i>Further Reading</a></li>
 <li class="chapter" data-level="" data-path="chap-abundance.html"><a href="chap-abundance.html#exercises-2"><i class="fa fa-check"></i>Exercises</a></li>
 </ul></li>
@@ -268,7 +266,7 @@ Figure 3.4: The variance of the counts does not systematically decrease as the s
 \end{equation}\]</span>
 <p>Imagine that you want to estimate the population of white tailed deer (<em>Odocoileus virginianus</em>) on a property along the Platte River in Nebraska. The property has two kind of habitats, riparian forest and upland pasture. You know that deer prefer forests, and so you expect deer to be four times as abundant in the forest as they are in the pasture. You’re planning drive counts on 10 ha blocks, and there are 100 ha of each type of habitat, so <span class="math inline">\(U_{forest} = U_{pasture} = 10\)</span>. If we can afford to carry out <span class="math inline">\(u_{total} = 6\)</span> drive counts, how many should we do in the forest vs. the pasture?</p>
 <span class="math display">\[\begin{equation}
-  u_forest = u_{total} \frac{U_{forest} SE_{forest}}
+  u_{forest} = u_{total} \frac{U_{forest} SE_{forest}}
                {U_{forest} SE_{forest} + U_{pasture} SE_{pasture}} \
            = 6 \frac{10\cdot \sqrt{4}}
                   {10 \cdot \sqrt{4} + 10 \cdot \sqrt{1}} \
@@ -277,14 +275,16 @@ Figure 3.4: The variance of the counts does not systematically decrease as the s
            = 4
 \end{equation}\]</span>
 <p>In that case we should do 4 counts in the forest and 2 in the pasture. Note that we use the square root of the relative abundances, because the variance is proportional to abundance, but the allocation equation uses the standard errors. Even though the relative areas of the two habitats are identical, we do more counts in the forest because we expect the variance of the counts to be higher there.</p>
-<div id="taylors-law" class="section level3 unnumbered">
-<h3>Taylor’s Law</h3>
+
+<div class="rmdnote">
+<h3 id="taylors-law" class="unnumbered">Taylor’s Law</h3>
 <p>One of the most repeatable patterns in ecology is the relationship between the mean abundance and the variance of sample counts Ecologist Richard Southwood named this relationship “Taylor’s law” after his colleague L.R. Taylor, although it was known from agricultural data long before Taylor presented it in a 1961 Nature paper. In it’s linear form Taylor’s law is</p>
 <p><span class="math display">\[
   log\left(s_y^2\right) = a + b \cdot log\left(D\right)\,.
 \]</span></p>
-<p>It is possible to use simple linear regression to estimate the constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if you have estimates of the density from areas with a range of densities. The constant <span class="math inline">\(b\)</span> can be shown to be equal to 1 when the organisms are distributed at random. Values of <span class="math inline">\(b\)</span> less than one are indications of underdispersion, or even spacing between individuals, while values of <span class="math inline">\(b &gt; 1\)</span> indicate aggregation between individuals. Thus, <strong>if the variance of the counts is greater than the mean of the counts, we say the population is “overdispersed”</strong>, or equivalently, that individuals are clumped together more than we expect from a random distribution.</p>
+It is possible to use simple linear regression to estimate the constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if you have estimates of the density from areas with a range of densities. The constant <span class="math inline">\(b\)</span> can be shown to be equal to 1 when the organisms are distributed at random. Values of <span class="math inline">\(b\)</span> less than one are indications of underdispersion, or even spacing between individuals, while values of <span class="math inline">\(b &gt; 1\)</span> indicate aggregation between individuals. Thus, <strong>if the variance of the counts is greater than the mean of the counts, we say the population is “overdispersed”</strong>, or equivalently, that individuals are clumped together more than we expect from a random distribution.
 </div>
+<p></p>
 </div>
 <div id="further-reading" class="section level2 unnumbered">
 <h2>Further Reading</h2>

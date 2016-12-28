@@ -216,7 +216,7 @@ The $\hat{N_h}$ for each stratum are calculated in exactly the same way as the a
 Imagine that you want to estimate the population of white tailed deer (*Odocoileus virginianus*) on a property along the Platte River in Nebraska. The property has two kind of habitats, riparian forest and upland pasture. You know that deer prefer forests, and so you expect deer to be four times as abundant in the forest as they are in the pasture. You're planning drive counts on 10 ha blocks, and there are 100 ha of each type of habitat, so $U_{forest} = U_{pasture} = 10$. If we can afford to carry out $u_{total} = 6$ drive counts, how many should we do in the forest vs. the pasture? 
 
 \begin{equation}
-  u_forest = u_{total} \frac{U_{forest} SE_{forest}}
+  u_{forest} = u_{total} \frac{U_{forest} SE_{forest}}
                {U_{forest} SE_{forest} + U_{pasture} SE_{pasture}} \
            = 6 \frac{10\cdot \sqrt{4}}
                   {10 \cdot \sqrt{4} + 10 \cdot \sqrt{1}} \
@@ -227,6 +227,7 @@ Imagine that you want to estimate the population of white tailed deer (*Odocoile
 
 In that case we should do 4 counts in the forest and 2 in the pasture. Note that we use the square root of the relative abundances, because the variance is proportional to abundance, but the allocation equation uses the standard errors. Even though the relative areas of the two habitats are identical, we do more counts in the forest because we expect the variance of the counts to be higher there. 
 
+```{block2, note-text, type='rmdnote', echo=TRUE}
 ### Taylor's Law {-}
 
 One of the most repeatable patterns in ecology is the relationship between the mean abundance and the variance of sample counts  Ecologist Richard Southwood named this relationship "Taylor's law" after his colleague L.R. Taylor, although it was known from agricultural data long before Taylor presented it in a 1961 Nature paper. In it's linear form Taylor's law is
@@ -236,6 +237,12 @@ $$
 $$
 
 It is possible to use simple linear regression to estimate the constants $a$ and $b$ if you have estimates of the density from areas with a range of densities. The constant $b$ can be shown to be equal to 1 when the organisms are distributed at random. Values of $b$ less than one are indications of underdispersion, or even spacing between individuals, while values of $b > 1$ indicate aggregation between individuals. Thus, **if the variance of the counts is greater than the mean of the counts, we say the population is "overdispersed"**, or equivalently, that individuals are clumped together more than we expect from a random distribution.
+```
+
+
+
+
+
 
 ## Further Reading {-}
 Thompson, William, *et al.*(1998) Monitoring Vertebrate Populations. Academic Press.
