@@ -227,7 +227,7 @@ Imagine that you want to estimate the population of white tailed deer (*Odocoile
 
 In that case we should do 4 counts in the forest and 2 in the pasture. Note that we use the square root of the relative abundances, because the variance is proportional to abundance, but the allocation equation uses the standard errors. Even though the relative areas of the two habitats are identical, we do more counts in the forest because we expect the variance of the counts to be higher there. 
 
-```{block2, note-text, type='rmdnote', echo=TRUE}
+```{block2, type='rmdnote', echo=TRUE}
 ### Taylor's Law {-}
 
 One of the most repeatable patterns in ecology is the relationship between the mean abundance and the variance of sample counts  Ecologist Richard Southwood named this relationship "Taylor's law" after his colleague L.R. Taylor, although it was known from agricultural data long before Taylor presented it in a 1961 Nature paper. In it's linear form Taylor's law is
