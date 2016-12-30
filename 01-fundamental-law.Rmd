@@ -38,7 +38,9 @@ Almost all of the equations in this book, other than the fundamental equation, a
 
 A consequence of this deliberate simplification is that all models are in fact, fictitious. This might seem surprising. After all, works of fiction are by definition false. Not true. How can something that is known to be false help us understand nature? This is a problem that so vexed early philosophers of science that they deliberately ignored it for the better part of a century.  Fortunately for the science of population dynamics, this philosophical high-mindedness did not stop scientists from using models to understand nature. Statistician George Box put it this way: 
 
-> All models are wrong. Some models are useful. [@box1976science]. 
+> All models are wrong. Some models are useful.
+>
+> --- @box1976science. 
 
 The key is identifying which models are useful. In this book the utility of a model is measured by the extent to which the model allows us to forecast the future consequences of management decisions.
 

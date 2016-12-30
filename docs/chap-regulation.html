@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2016-12-29">
+<meta name="date" content="2016-12-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,7 +34,7 @@
   
   
 <link rel="prev" href="chap-exponential.html">
-<link rel="next" href="references.html">
+<link rel="next" href="chap-harvesting.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -108,6 +108,23 @@
 <li class="chapter" data-level="5.4" data-path="chap-regulation.html"><a href="chap-regulation.html#trends-over-time"><i class="fa fa-check"></i><b>5.4</b> Trends over time</a></li>
 <li class="chapter" data-level="5.5" data-path="chap-regulation.html"><a href="chap-regulation.html#glossary-2"><i class="fa fa-check"></i><b>5.5</b> Glossary</a></li>
 </ul></li>
+<li class="chapter" data-level="6" data-path="chap-harvesting.html"><a href="chap-harvesting.html"><i class="fa fa-check"></i><b>6</b> Harvesting and Control</a><ul>
+<li class="chapter" data-level="" data-path="chap-harvesting.html"><a href="chap-harvesting.html#eurasian-lynx-in-norway"><i class="fa fa-check"></i>Eurasian Lynx in Norway</a></li>
+<li class="chapter" data-level="6.1" data-path="chap-harvesting.html"><a href="chap-harvesting.html#standard-model"><i class="fa fa-check"></i><b>6.1</b> Compensatory and Additive Mortality</a></li>
+<li class="chapter" data-level="6.2" data-path="chap-harvesting.html"><a href="chap-harvesting.html#better-model"><i class="fa fa-check"></i><b>6.2</b> A Better Model For Harvesting Wildlife</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="chap-harvesting.html"><a href="chap-harvesting.html#fixed-quota-harvesting"><i class="fa fa-check"></i><b>6.2.1</b> Fixed quota harvesting</a></li>
+<li class="chapter" data-level="6.2.2" data-path="chap-harvesting.html"><a href="chap-harvesting.html#fixed-effort-harvest-strategy"><i class="fa fa-check"></i><b>6.2.2</b> Fixed Effort harvest strategy</a></li>
+<li class="chapter" data-level="6.2.3" data-path="chap-harvesting.html"><a href="chap-harvesting.html#revisiting-eurasian-lynx"><i class="fa fa-check"></i><b>6.2.3</b> Revisiting Eurasian Lynx</a></li>
+<li class="chapter" data-level="6.2.4" data-path="chap-harvesting.html"><a href="chap-harvesting.html#revisiting-additivity"><i class="fa fa-check"></i><b>6.2.4</b> Revisiting Additivity</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="chap-harvesting.html"><a href="chap-harvesting.html#what-about-control"><i class="fa fa-check"></i><b>6.3</b> What about control?</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="chap-harvesting.html"><a href="chap-harvesting.html#predicting-the-response-to-management"><i class="fa fa-check"></i><b>6.3.1</b> Predicting the response to management</a></li>
+<li class="chapter" data-level="" data-path="chap-harvesting.html"><a href="chap-harvesting.html#mid-continental-light-geese"><i class="fa fa-check"></i>Mid continental light geese</a></li>
+<li class="chapter" data-level="" data-path="chap-harvesting.html"><a href="chap-harvesting.html#living-with-large-predators"><i class="fa fa-check"></i>Living with large predators</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="chap-harvesting.html"><a href="chap-harvesting.html#a-rule-of-thumb-for-harvest-and-control"><i class="fa fa-check"></i><b>6.4</b> A “rule of thumb” for harvest and control</a></li>
+<li class="chapter" data-level="6.5" data-path="chap-harvesting.html"><a href="chap-harvesting.html#exercises-3"><i class="fa fa-check"></i><b>6.5</b> Exercises</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -132,8 +149,8 @@
 <div id="chap:regulation" class="section level1">
 <h1><span class="header-section-number">Chapter 5</span> Population Regulation and Stochasticity</h1>
 <p>Although Turchin’s law is often observed for short periods of time, eventually it always breaks down. Why? Under what conditions does exponential growth (or decay) come to a halt, and can we predict those conditions in advance?</p>
-<div id="pheasants-on-the-island" class="section level2 unnumbered">
-<h2>Pheasants on the Island</h2>
+<div id="pheasants-on-the-island" class="section level3 unnumbered">
+<h3>Pheasants on the Island</h3>
 <p>8 pheasants were released on Protection Island in 1937 (Einarsen 1945). The pheasants were counted twice a year until the entire population was eaten in 1943 when troops were posted to the island (fact check this – not mentioned in Einarsen 1945)! There were 30 pheasants in 1938, so using equations from Chapter <a href="chap-exponential.html#chap:exponential">4</a> we can work out the annual rate of growth assuming the population grows exponentially:</p>
 <p><span class="math display">\[
   r=ln\left(\frac{N_t}{N_0}\right)/t = ln\left(\frac{30}{8}\right)/1 = 1.32
@@ -175,6 +192,11 @@ Figure 5.2: Per capita birth and death rates for a model with birth rates affect
 </p>
 </div>
 <p>So what do the dynamics of this model look like? Whether we start above or below <span class="math inline">\(N^*\)</span>, the population decays (grows) towards the equilibrium point (Figure <a href="chap-regulation.html#fig:regulatedB">5.3</a>). The important assumption here is that the parameters <span class="math inline">\(a\)</span> and <span class="math inline">\(d\)</span> are constant over time. The population growth rate changes as population size changes, but the relationship between growth rate and population size is constant. We say this population is <em>regulated</em>, because it neither grows towards infinity nor decays towards zero without limits.</p>
+<pre><code>## 
+## Attaching package: &#39;deSolve&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     matplot</code></pre>
 <div class="figure"><span id="fig:regulatedB"></span>
 <img src="NRES450-LectureNotes_files/figure-html/regulatedB-1.png" alt="Growth trajectories implied by \@ref(eq:regulated1) for $a=0.8$ and $d=0.2$." width="672" />
 <p class="caption">
@@ -308,7 +330,7 @@ Figure 5.11: Ricker dynamics with and without a trend in carrying capacity. <spa
         </div>
       </div>
 <a href="chap-exponential.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="chap-harvesting.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

@@ -2,7 +2,7 @@
 
 Although Turchin’s law is often observed for short periods of time, eventually it always breaks down. Why? Under what conditions does exponential growth (or decay) come to a halt, and can we predict those conditions in advance?
 
-## Pheasants on the Island {-}
+### Pheasants on the Island {-}
 
 8 pheasants were released on Protection Island in 1937 (Einarsen 1945). The pheasants were counted twice a year until the entire population was eaten in 1943 when troops were posted to the island (fact check this – not mentioned in Einarsen 1945)! There were 30 pheasants in 1938, so using equations from Chapter \@ref(chap:exponential) we can work out the annual rate of growth assuming the population grows exponentially:
 
