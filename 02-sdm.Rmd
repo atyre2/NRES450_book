@@ -1,4 +1,4 @@
-# Making decisions {#chap:structured}
+# Making decisions {#chap:sdm}
 
 In Chapter \@ref(chap:fundamental) I defined a useful model as one that helps a manager make a decision. This means that an understanding of the process of decision making is fundamental to the process of modeling population dynamics in an applied setting, at least. In this chapter I introduce the concept of structured decision making, a simple framework for making management decisions under risk and uncertainty. 
 
