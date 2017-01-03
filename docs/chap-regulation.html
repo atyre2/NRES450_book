@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-01-01">
+<meta name="date" content="2017-01-03">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -138,6 +138,14 @@
 <li class="chapter" data-level="7.4" data-path="chap-structured.html"><a href="chap-structured.html#sensitivity-and-elasticity"><i class="fa fa-check"></i><b>7.4</b> Sensitivity and elasticity</a></li>
 <li class="chapter" data-level="7.5" data-path="chap-structured.html"><a href="chap-structured.html#stage-or-size-structured-populations"><i class="fa fa-check"></i><b>7.5</b> Stage or size structured populations</a></li>
 <li class="chapter" data-level="7.6" data-path="chap-structured.html"><a href="chap-structured.html#exercises-4"><i class="fa fa-check"></i><b>7.6</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="chap-conservation.html"><a href="chap-conservation.html"><i class="fa fa-check"></i><b>8</b> Conservation of small populations</a><ul>
+<li class="chapter" data-level="8.1" data-path="chap-conservation.html"><a href="chap-conservation.html#minimum-viable-population-size"><i class="fa fa-check"></i><b>8.1</b> Minimum viable population size</a></li>
+<li class="chapter" data-level="8.2" data-path="chap-conservation.html"><a href="chap-conservation.html#extinction-risk-and-expected-minimum-population-size"><i class="fa fa-check"></i><b>8.2</b> Extinction risk and expected minimum population size</a></li>
+<li class="chapter" data-level="8.3" data-path="chap-conservation.html"><a href="chap-conservation.html#dealing-with-habitat-fragmentation"><i class="fa fa-check"></i><b>8.3</b> Dealing with habitat fragmentation</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="chap-conservation.html"><a href="chap-conservation.html#sumatran-tiger-management"><i class="fa fa-check"></i><b>8.3.1</b> Sumatran tiger management</a></li>
+<li class="chapter" data-level="8.3.2" data-path="chap-conservation.html"><a href="chap-conservation.html#references-and-further-reading"><i class="fa fa-check"></i><b>8.3.2</b> References and further reading</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -271,8 +279,9 @@ Figure 5.6: The mean number of independent young as a function of the number of 
   \tag{5.4}
 \end{equation}\]</span>
 <p>Calculating the variance depends on whether or not <span class="math inline">\(b\)</span> and <span class="math inline">\(d\)</span> are equal. Usually they will not be equal, and then the variance of <span class="math inline">\(N_t\)</span> is</p>
-<span class="math display">\[\begin{equation}
+<span class="math display" id="eq:demoStochVar">\[\begin{equation}
   \sigma_{N_t}^2=\frac{N_0 \left(b+d\right) e^{rt}\left(e^{rt}-1\right)}{r}
+  \tag{5.5}
 \end{equation}\]</span>
 <p>There are several important things to notice about this equation. First, the variance increases with population size, as we’ve observed before (See box <a href="chap-abundance.html#taylors-law">Taylor’s Law</a>). This is different from sampling variation however – this is fundamental unpredictability about future population sizes. The variance also increases with the absolute magnitude of the per capita birth and death rates, because of the term <span class="math inline">\(b+d\)</span>. That is, a population with <span class="math inline">\(b=0.1\)</span> and <span class="math inline">\(d=0.05\)</span> will be less variable than a population with <span class="math inline">\(b=1.1\)</span> and <span class="math inline">\(d=1.05\)</span>, even though both populations have a growth rate <span class="math inline">\(r=0.05\)</span>. The second population has much higher rates of turnover, and so a greater risk of a run of births or deaths causing the population to deviate from the average. Finally, the variance will increase with time, because of the terms containing <span class="math inline">\(e^{rt}\)</span> (Figure <a href="chap-regulation.html#fig:demoStochExp">5.7</a>). If the per capita birth and death rates are equal, <span class="math inline">\(r = 0\)</span>, and the variance is simply</p>
 <span class="math display">\[\begin{equation*}
@@ -305,7 +314,7 @@ Figure 5.9: Exponentially growing population with environmental stochasticity. T
   \bar{N_t} &amp; =N_0 e^{\bar{r}t} \\
   \sigma_{N_t}^2 &amp; =N_0^2 e^{\bar{r}t}\left(e^{\sigma_r^2 t}-1\right).
 \end{split}
-  \tag{5.5}
+  \tag{5.6}
 \end{equation}\]</span>
 <p>For the catastrophe model this is very approximate, because it assumes that growth rates follow a normal distribution, and thus the population can be larger than a population that never experiences a catastrophe. However, the idea that <span class="math inline">\(r\)</span> could have a normal distribution is not unreasonable. It is just a different kind of environmental variation. As with demographic stochasticity, the key things to recognize are 1) the variation in population size increases with time, and 2) the mean growth trajectory is not likely to be followed by any single real population. This last point bears repeating. When we evaluate an ecological forecast by comparing a predicted population and confidence limit with a real population time series, we should not expect the real population to exactly follow the mean. We should be happy if the trajectory is mostly within the confidence bounds for the forecast.</p>
 <p>Although we’ve modelled environmental and demographic stochasticity separately above, in reality they both occur in all real populations. Individuals are discrete, and hence demographic stochasticity matters. Birth and death rates are not constant, and hence environmental stochasticity matters. So which approximation should we use? It depends largely on the size of the population. When a population is very small (say <span class="math inline">\(N_0 &lt; 50\)</span>) the probability of reaching a small size, or even zero individuals, becomes larger and larger. In this circumstance it is very important to account for the discreteness of individuals, and include demographic stochasticity. As population size increases the probability of extinction due to chance alone becomes smaller. When populations are large, the effect of demographic variation in birth and death rates can be well approximated with a normal distribution. We can safely use the environmental stochasticity model to forecast the combined effects of demographic and environmental stochasticity.</p>

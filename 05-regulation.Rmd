@@ -194,6 +194,7 @@ Calculating the variance depends on whether or not $b$ and $d$ are equal. Usuall
 
 \begin{equation}
   \sigma_{N_t}^2=\frac{N_0 \left(b+d\right) e^{rt}\left(e^{rt}-1\right)}{r}
+  (\#eq:demoStochVar)
 \end{equation}
 
 There are several important things to notice about this equation. First, the variance increases with population size, as we've observed before (See box [Taylor's Law]). This is different from sampling variation however -- this is fundamental unpredictability about future population sizes. The variance also increases with the absolute magnitude of the per capita birth and death rates, because of the term $b+d$. That is, a population with $b=0.1$ and $d=0.05$ will be less variable than a population with $b=1.1$ and $d=1.05$, even though both populations have a growth rate $r=0.05$. The second population has much higher rates of turnover, and so a greater risk of a run of births or deaths causing the population to deviate from the average. Finally, the variance will increase with time, because of the terms containing $e^{rt}$ (Figure \@ref(fig:demoStochExp)). If the per capita birth and death rates are equal, $r = 0$, and the variance is simply
