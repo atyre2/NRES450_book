@@ -127,6 +127,8 @@ Another example of the effect of controlling effort comes from Oregon's sport ha
 knitr::include_graphics("images/cpm_hunterharvest_figure.png")
 ```
 
+
+
 ### Revisiting Eurasian Lynx
 
 So how is the Eurasian lynx harvest managed? It seems to be a bit of a hybrid. There is a quota, but it is adjusted continuously as the harvest size changes as if attempting to maintain a fixed proportion. It is not clear what the target proportion was, because there is no fixed proportion. There is an additional wrinkle too --- the quota is not filled each year. That is, there are some hunting opportunities that are not taken. This could arise either because of a lack of hunters, a lack of animals, or both. Variation in the degree to which harvest goals are achieved could be treated as another source of stochasticity in the population dynamics. One term used for this is *implementation uncertainty* [@bischof2012implementation]. 
@@ -211,6 +213,32 @@ text(0.01,0.5,"r",font=3)
 arrows(0.8,0,0.8,0.5,code=2)
 text(0.81,0,"K",font=3)
 ```
+
+```{r controlexample, echo=FALSE, fig.cap="Population growth as a function of population size. The thin line shows the effects of a fixed quota $Q=0.2K$. The thin dashed line is a fixed quota of $Q=0.9K$. The parameters of this curve are $r=3$ and $K=1$."}
+plot(0,0,type="n",xlab="Population Size",ylab="Population growth rate",axes=FALSE,xlim=c(0,1.3),ylim=c(0,1),xaxs="i",yaxs="i")
+axis(2,at=0)
+axis(1,at=c(0,1),labels=c("0","K"))
+box(bty="l")
+curve(3*x-3*x^2,add=TRUE,from=0,to=1,lwd=3)
+# below are the different harvesting strategies
+# strategy 1
+abline(h=0.2, lty=2)
+text(1.15,0.25,"Strategy 1")
+text(0.9,0.15,"K'")
+text(0.1,0.18,"K''")
+# strategy 2
+abline(h=0.8,lty=2)
+text(1.15,0.85,"Strategy 2")
+
+# strategy 3
+abline(h=0.7,lty=2)
+text(1.15,0.75,"Strategy 3")
+
+abline(v = 0.3, col="red")
+text(0.32,0.9,"Critical\nThreshold", adj=0, col="red")
+
+```
+
 
 ### Mid continental light geese {-}
 
