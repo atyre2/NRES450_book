@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-01-21">
+<meta name="date" content="2017-02-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -221,12 +221,18 @@ N_t = N_0 e^{rt}
 \tag{4.5}
 \end{equation}\]</span>
 <p>This is the equation for exponential population growth, and it is the simplest possible population model. When <span class="math inline">\(r &gt; 0\)</span>, the population will increase, and when <span class="math inline">\(r &lt; 0\)</span> the population will decrease (Figure <a href="chap-exponential.html#fig:expgrowth">4.1</a>). Looking back at eq. <a href="chap-exponential.html#eq:definer">(4.4)</a>, we can see that <span class="math inline">\(r &gt; 0\)</span> when the per capita birth rate is greater than the per capita death rate. That makes sense – in order for the population to increase the number of births must exceed the number of deaths. Conversely, <span class="math inline">\(r &lt; 0\)</span> when the per capita birth rate is less than the per capita death rate. The most important thing to recognize here is that the difference between a population growing or decaying is determined by the relative magnitudes of b and d. Measuring either one alone does not tell us whether the population will increase or decrease. What happens if <span class="math inline">\(r\)</span> is exactly equal to zero? The population will neither increase nor decrease, but remain at exactly the same level.</p>
-<p>Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially <span class="citation">(Turchin <a href="#ref-turchin2003complex">2003</a>)</span>. Equation <a href="chap-exponential.html#eq:expgrowth">(4.5)</a> tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, “in the absence of other forces”.</p>
-<p>That is, assuming that the per capita birth and death rates remain constant, unaffected by other processes, then the law of population inertia holds. Much of the remainder of this book focuses on determining when the law of population inertia does not hold.</p>
 <div class="figure"><span id="fig:expgrowth"></span>
 <img src="NRES450-LectureNotes_files/figure-html/expgrowth-1.png" alt="Population growth over time r is greater than or less than zero. The right hand panel shows the same curves on a log scale." width="672" />
 <p class="caption">
 Figure 4.1: Population growth over time r is greater than or less than zero. The right hand panel shows the same curves on a log scale.
+</p>
+</div>
+<p>Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially <span class="citation">(Turchin <a href="#ref-turchin2003complex">2003</a>)</span>. Equation <a href="chap-exponential.html#eq:expgrowth">(4.5)</a> tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, “in the absence of other forces”. In particular, the birth and death rates are independent of the population size (Figure <a href="chap-exponential.html#fig:expgrowth2">4.2</a>).</p>
+<p>That is, assuming that the per capita birth and death rates remain constant, unaffected by other processes, then the law of population inertia holds. Much of the remainder of this book focuses on determining when the law of population inertia does not hold.</p>
+<div class="figure"><span id="fig:expgrowth2"></span>
+<img src="NRES450-LectureNotes_files/figure-html/expgrowth2-1.png" alt="Per capita birth and death rates are *independent* of population size in exponential growth (A) or decay (B)." width="672" />
+<p class="caption">
+Figure 4.2: Per capita birth and death rates are <em>independent</em> of population size in exponential growth (A) or decay (B).
 </p>
 </div>
 <p>There is one additional property of the exponential model of population dynamics that makes it useful as a touchstone for analyzing changes in numbers. If we take the logarithm of both sides of Equation <a href="chap-exponential.html#eq:expgrowth">(4.5)</a>, we obtain</p>
@@ -251,7 +257,7 @@ r = ln\left(\frac{N_t}{N_0}\right) /  t =
     ln\left(\frac{514}{49}\right)  / 18 = 
     \frac{ln(10.49)}{18} = 0.13 \, years^{-1}
 \end{equation}\]</span>
-<p>How should we interpret that estimate? The change in a population over 1 year is <span class="math inline">\(Ne^r\)</span>, so the factor <span class="math inline">\(e^r\)</span> is the percentage change in population size. In this case, <span class="math inline">\(e^r = 1.138\)</span>, or about a 14 % change per year. A useful approximation to remember is that when <span class="math inline">\(r\)</span> is close to 1, then <span class="math inline">\(e^{r} \approx 1+r\)</span>, so you can think of <span class="math inline">\(r\)</span> as a percentage change in population size per year as long as it isn’t too large. In the musk-ox case the error in this approximation is 1 percentage point.</p>
+<p>How should we interpret that estimate? The change in a population over 1 year is <span class="math inline">\(Ne^r\)</span>, so the factor <span class="math inline">\(e^r\)</span> is the percentage change in population size. In this case, <span class="math inline">\(e^r = 1.138\)</span>, or about a 14 % change per year. A useful approximation to remember is that when <span class="math inline">\(r\)</span> is close to 1, then <span class="math inline">\(e^{r} \approx 1+r\)</span>, so <strong>you can think of <span class="math inline">\(r\)</span> as a percentage change in population size per year as long as it isn’t too large.</strong> In the musk-ox case the error in this approximation is 1 percentage point.</p>
 <p>With this estimate of <span class="math inline">\(r\)</span> in hand, there are several things we can do. For example, what if we want to predict the number of animals on the island after another 3 years, assuming population growth holds at the same rate?</p>
 <span class="math display">\[\begin{equation}
 N_3 = 514 e^{(0.13)(3)} = 514(1.48) = 759\,muskox

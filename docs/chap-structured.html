@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-01-21">
+<meta name="date" content="2017-02-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -181,20 +181,20 @@ N_t=\begin{bmatrix} n_{1,t} \\ n_{2,t} \\ \vdots \\ n_{m,t} \end{bmatrix}\,.
 <p>The number of age classes is <span class="math inline">\(m\)</span>. For the moment ignore differences between genders. What does the number <span class="math inline">\(n_{1,t}\)</span> represent? To answer this question, we have to specify a few more assumptions about the model. In particular, we have to describe the relationship between the census (the point in time where the individuals are counted), and when reproduction occurred.</p>
 <p>There are two general ways to describe reproduction in these models. The <em>birth flow</em> assumption means that reproduction occurs continuously between <span class="math inline">\(t\)</span> and <span class="math inline">\(t+1\)</span>. In contrast, the <em>birth pulse</em> assumption means that reproduction occurs in a single pulse at some point between <span class="math inline">\(t\)</span> and <span class="math inline">\(t+1\)</span>. In temperate environments the birth pulse assumption often works very well. Many species give birth in distinct seasons much shorter than the annual cycle. Regardless of which way we describe reproduction, individuals that are between age <span class="math inline">\(i-1\)</span> and <span class="math inline">\(i\)</span> are in age class <span class="math inline">\(i\)</span> (Figure <a href="chap-structured.html#fig:agestructure1">7.1</a>). In a birth pulse model, all individuals have the same birthday (Figure <a href="chap-structured.html#fig:agestructure2">7.2</a>). We won’t consider the birth flow assumption further in this textbook. If this assumption seems more relevant to your system, you should consult Caswell (2001) — the authoritative reference on the construction and analysis of structured population models.</p>
 <div class="figure"><span id="fig:agestructure1"></span>
-<img src="images/agestructure1.png" alt="The relationship between age classes and ages in an age structured model. The vertical bars represent birth days." width="411" />
+<img src="images/agestructure1.png" alt="The relationship between age classes and ages in an age structured model. The vertical bars represent birth days."  />
 <p class="caption">
 Figure 7.1: The relationship between age classes and ages in an age structured model. The vertical bars represent birth days.
 </p>
 </div>
 <div class="figure"><span id="fig:agestructure2"></span>
-<img src="images/agestructure2.png" alt="In a birth pulse model, everyone has the same birthday, and all reproduction occurs on the birthday." width="350" />
+<img src="images/agestructure2.png" alt="In a birth pulse model, everyone has the same birthday, and all reproduction occurs on the birthday."  />
 <p class="caption">
 Figure 7.2: In a birth pulse model, everyone has the same birthday, and all reproduction occurs on the birthday.
 </p>
 </div>
 <p>The next step is to decide when the census occurs relative to the birth pulse. This is often determined by how data on population size are being collected. For example, if the model is constructed from age at harvest data for white tail deer, the census (hunting season) occurs about 6 months after the birth pulse. If you are counting male and female prairie chickens on leks, then the census is taking place immediately prior to the pulse of reproduction (egg laying, incubation hatching and fledging). The most common assumptions are either immediately before or after the birth pulse. These are referred to as “pre-breeding” or “post-breeding” census models (Figure <a href="chap-structured.html#fig:agestructure3">7.3</a>).</p>
 <div class="figure"><span id="fig:agestructure3"></span>
-<img src="images/agestructure3.png" alt="In a post-breeding census model, the state of the population is captured right after breeding. In a pre-breeding census model, the state of the population is captured right before breeding occurs." width="372" />
+<img src="images/agestructure3.png" alt="In a post-breeding census model, the state of the population is captured right after breeding. In a pre-breeding census model, the state of the population is captured right before breeding occurs."  />
 <p class="caption">
 Figure 7.3: In a post-breeding census model, the state of the population is captured right after breeding. In a pre-breeding census model, the state of the population is captured right before breeding occurs.
 </p>
@@ -212,7 +212,7 @@ n_{2,t+1} &amp; = n_{1,t}S_1 + n_{2,t}S_2
 \end{align}\]</span>
 <p>In these equations <span class="math inline">\(S_i\)</span> is the survival probability from age <span class="math inline">\(i\)</span> to age <span class="math inline">\(i+1\)</span>, and <span class="math inline">\(F\)</span> is the number of individuals born to an individual of age class 2. So <span class="math inline">\(S_1\)</span> is the probability of surviving from age 1, in the census right before the first birthday, to age 2, in the census right before the second birthday. The first equation <a href="chap-structured.html#eq:firstclass">(7.1)</a> says that the number of age class one individuals in year <span class="math inline">\(t+1\)</span> is the sum of two terms. The first term is the product of the number of age class 1 individuals in year <span class="math inline">\(t\)</span>, the number of offspring produced by each individual, and the probability that new borns survive to their first birthday. The second term is the same, representing the reproductive contribution from age class two individuals. The second equation <a href="chap-structured.html#eq:secondclass">(7.2)</a> says that the number of age class two individuals in year <span class="math inline">\(t+1\)</span> is the sum of age class one and age class two individuals that survived from <span class="math inline">\(t\)</span> to <span class="math inline">\(t+1\)</span>. This life history can be represented graphically by putting the connections between the states as arrows (Figure <a href="chap-structured.html#fig:Chicken1">7.4</a>).</p>
 <div class="figure"><span id="fig:Chicken1"></span>
-<img src="images/chickens1.png" alt="Life history diagram of a Pseudo-chicken." width="238" />
+<img src="images/chickens1.png" alt="Life history diagram of a Pseudo-chicken."  />
 <p class="caption">
 Figure 7.4: Life history diagram of a Pseudo-chicken.
 </p>
@@ -284,73 +284,76 @@ Figure 7.6: Projecting the pseudo-chicken population forwards in time with a hig
 <div id="a-more-complex-example" class="section level2">
 <h2><span class="header-section-number">7.3</span> A more complex example</h2>
 <p>This next example shows how to build up a matrix from data on the number of individuals of each age in a population over a period of years. The data are from a study of great tits (<em>Parus major</em>) in the United Kingdom (Table <a href="chap-structured.html#tab:greattits">7.1</a>). If you sum up the # of birds columns, that is the total population size in each year. Average reproductive performance also varies from year to year. This variation is the result of both environmental variation between years as well as demographic stochasticity. In addition, the reproductive output of the age 1 birds is a bit lower than that of older birds. There might also be a tiny hint of “senesence”, or aging, as the oldest age classes also have lower reproductive output. Survival from one age class to the next can be worked out by working diagonally across the table. For example, birds that are 2 years old in 1962 were 1 year olds in 1961. Therefore the survival probability is <span class="math inline">\(43/128 = 0.34\)</span>. The corresponding probability from 1962 to 1963 is <span class="math inline">\(33/54 = 0.61\)</span>, much higher than the survival rate from the previous year.</p>
+<pre><code>## Warning: Duplicated column names deduplicated: &#39; # of birds &#39; =&gt; &#39; # of
+## birds _1&#39; [4], &#39; Mean Clutch &#39; =&gt; &#39; Mean Clutch _1&#39; [5], &#39; # of birds &#39; =&gt;
+## &#39; # of birds _2&#39; [6]</code></pre>
 <table>
 <caption><span id="tab:greattits">Table 7.1: </span>Age structure and reproductive performance of great tits (<em>Parus major</em>) in Wytham Wood.</caption>
 <thead>
 <tr class="header">
-<th align="right">Age</th>
-<th align="right"># of birds</th>
-<th align="right">Mean Clutch</th>
-<th align="right"># of birds</th>
-<th align="right">Mean Clutch</th>
-<th align="right"># of birds</th>
-<th align="right">Mean Clutch</th>
+<th align="left">Age</th>
+<th align="center"># of birds</th>
+<th align="center">Mean Clutch</th>
+<th align="center"># of birds _1</th>
+<th align="center">Mean Clutch _1</th>
+<th align="center"># of birds _2</th>
+<th align="center">Mean Clutch</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">1</td>
-<td align="right">128</td>
-<td align="right">7.7</td>
-<td align="right">54</td>
-<td align="right">8.5</td>
-<td align="right">54</td>
-<td align="right">9.4</td>
+<td align="left">1</td>
+<td align="center">128</td>
+<td align="center">7.7</td>
+<td align="center">54</td>
+<td align="center">8.5</td>
+<td align="center">54</td>
+<td align="center">9.4</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="right">18</td>
-<td align="right">8.5</td>
-<td align="right">43</td>
-<td align="right">9.0</td>
-<td align="right">33</td>
-<td align="right">10.0</td>
+<td align="left">2</td>
+<td align="center">18</td>
+<td align="center">8.5</td>
+<td align="center">43</td>
+<td align="center">9</td>
+<td align="center">33</td>
+<td align="center">10</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
-<td align="right">14</td>
-<td align="right">8.3</td>
-<td align="right">12</td>
-<td align="right">8.8</td>
-<td align="right">29</td>
-<td align="right">9.7</td>
+<td align="left">3</td>
+<td align="center">14</td>
+<td align="center">8.3</td>
+<td align="center">12</td>
+<td align="center">8.8</td>
+<td align="center">29</td>
+<td align="center">9.7</td>
 </tr>
 <tr class="even">
-<td align="right">4</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">5</td>
-<td align="right">8.2</td>
-<td align="right">9</td>
-<td align="right">9.7</td>
+<td align="left">4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td align="center">8.2</td>
+<td align="center">9</td>
+<td align="center">9.7</td>
 </tr>
 <tr class="odd">
-<td align="right">5</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right">8.0</td>
-<td align="right">2</td>
-<td align="right">9.5</td>
+<td align="left">5</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">8</td>
+<td align="center">2</td>
+<td align="center">9.5</td>
 </tr>
 <tr class="even">
-<td align="right">6</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right">9.0</td>
+<td align="left">6</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">9</td>
 </tr>
 </tbody>
 </table>
@@ -360,69 +363,69 @@ Figure 7.6: Projecting the pseudo-chicken population forwards in time with a hig
 <caption><span id="tab:staticlife">Table 7.2: </span>Static life tables for great tits (<em>Parus major</em>) in Wytham Wood. Survivorship schedule is not standardized.</caption>
 <thead>
 <tr class="header">
-<th align="right">Age</th>
-<th align="right">l(x)</th>
-<th align="right">m(x)</th>
-<th align="right">l(x)</th>
-<th align="right">m(x)</th>
+<th align="left">Age</th>
+<th align="left">l(x)</th>
+<th align="left">m(x)</th>
+<th align="left">l(x)</th>
+<th align="left">m(x)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right"></td>
-<td align="right">1962</td>
-<td align="right"></td>
-<td align="right">1963</td>
-<td align="right"></td>
+<td align="left"></td>
+<td align="left">1962</td>
+<td align="left"></td>
+<td align="left">1963</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td align="right">0</td>
-<td align="right">627</td>
-<td align="right">0.0</td>
-<td align="right">500</td>
-<td align="right">0.0</td>
+<td align="left">0</td>
+<td align="left">627</td>
+<td align="left">0.0</td>
+<td align="left">500</td>
+<td align="left">0.0</td>
 </tr>
 <tr class="odd">
-<td align="right">1</td>
-<td align="right">54</td>
-<td align="right">8.5</td>
-<td align="right">54</td>
-<td align="right">9.4</td>
+<td align="left">1</td>
+<td align="left">54</td>
+<td align="left">8.5</td>
+<td align="left">54</td>
+<td align="left">9.4</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="right">43</td>
-<td align="right">9.0</td>
-<td align="right">33</td>
-<td align="right">10.0</td>
+<td align="left">2</td>
+<td align="left">43</td>
+<td align="left">9</td>
+<td align="left">33</td>
+<td align="left">10</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
-<td align="right">12</td>
-<td align="right">8.8</td>
-<td align="right">29</td>
-<td align="right">9.7</td>
+<td align="left">3</td>
+<td align="left">12</td>
+<td align="left">8.8</td>
+<td align="left">29</td>
+<td align="left">9.7</td>
 </tr>
 <tr class="even">
-<td align="right">4</td>
-<td align="right">5</td>
-<td align="right">8.2</td>
-<td align="right">9</td>
-<td align="right">9.7</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">8.2</td>
+<td align="left">9</td>
+<td align="left">9.7</td>
 </tr>
 <tr class="odd">
-<td align="right">5</td>
-<td align="right">1</td>
-<td align="right">8.0</td>
-<td align="right">2</td>
-<td align="right">9.5</td>
+<td align="left">5</td>
+<td align="left">1</td>
+<td align="left">8</td>
+<td align="left">2</td>
+<td align="left">9.5</td>
 </tr>
 <tr class="even">
-<td align="right">6</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right">9.0</td>
+<td align="left">6</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">9</td>
 </tr>
 </tbody>
 </table>
@@ -757,54 +760,54 @@ e_{i,j} =  s_{i,j}\frac{a_{i,j}}{\lambda}\,.
 <caption><span id="tab:turtlestages">Table 7.6: </span>Stages used in the Crouse et al. model of loggerhead sea turtles</caption>
 <thead>
 <tr class="header">
-<th align="right">Stage number</th>
-<th align="left">Class</th>
-<th align="left">Size (cm)</th>
-<th align="left">Approximate ages (yr)</th>
+<th align="left">Stage number</th>
+<th align="center">Class</th>
+<th align="center">Size (cm)</th>
+<th align="center">Approximate ages (yr)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">1</td>
-<td align="left">eggs, hatchlings</td>
-<td align="left">&lt; 10</td>
-<td align="left">&lt; 1</td>
+<td align="left">1</td>
+<td align="center">eggs, hatchlings</td>
+<td align="center">&lt; 10</td>
+<td align="center">&lt; 1</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="left">small juveniles</td>
-<td align="left">10.1-58.0</td>
-<td align="left">1-7</td>
+<td align="left">2</td>
+<td align="center">small juveniles</td>
+<td align="center">10.1-58.0</td>
+<td align="center">1-7</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
-<td align="left">large juveniles</td>
-<td align="left">58.1-80.0</td>
-<td align="left">8-15</td>
+<td align="left">3</td>
+<td align="center">large juveniles</td>
+<td align="center">58.1-80.0</td>
+<td align="center">8-15</td>
 </tr>
 <tr class="even">
-<td align="right">4</td>
-<td align="left">subadults</td>
-<td align="left">80.1-87.0</td>
-<td align="left">16-21</td>
+<td align="left">4</td>
+<td align="center">subadults</td>
+<td align="center">80.1-87.0</td>
+<td align="center">16-21</td>
 </tr>
 <tr class="odd">
-<td align="right">5</td>
-<td align="left">novice breeders</td>
-<td align="left">&gt; 87.0</td>
-<td align="left">22</td>
+<td align="left">5</td>
+<td align="center">novice breeders</td>
+<td align="center">&gt; 87.0</td>
+<td align="center">22</td>
 </tr>
 <tr class="even">
-<td align="right">6</td>
-<td align="left">1st-yr remigrants</td>
-<td align="left">&gt; 87.0</td>
-<td align="left">23</td>
+<td align="left">6</td>
+<td align="center">1st-yr remigrants</td>
+<td align="center">&gt; 87.0</td>
+<td align="center">23</td>
 </tr>
 <tr class="odd">
-<td align="right">7</td>
-<td align="left">mature breeders</td>
-<td align="left">&gt; 87.0</td>
-<td align="left">24-54</td>
+<td align="left">7</td>
+<td align="center">mature breeders</td>
+<td align="center">&gt; 87.0</td>
+<td align="center">24-54</td>
 </tr>
 </tbody>
 </table>

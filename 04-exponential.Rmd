@@ -73,10 +73,6 @@ N_t = N_0 e^{rt}
 This is the equation for exponential population growth, and it is the simplest possible population model. When $r > 0$, the population will increase, and when $r < 0$ the population will decrease (Figure \@ref(fig:expgrowth)). Looking back at eq. \@ref(eq:definer), we can see that $r > 0$ when the per capita birth rate is greater than the per capita
 death rate. That makes sense -- in order for the population to increase the number of births must exceed the number of deaths. Conversely, $r < 0$ when the per capita birth rate is less than the per capita death rate. The most important thing to recognize here is that the difference between a population growing or decaying is determined by the relative magnitudes of b and d. Measuring either one alone does not tell us whether the population will increase or decrease. What happens if $r$ is exactly equal to zero? The population will neither increase nor decrease, but remain at exactly the same level.
 
-Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially [@turchin2003complex]. Equation \@ref(eq:expgrowth) tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, "in the absence of other forces".
-
-That is, assuming that the per capita birth and death rates remain constant, unaffected by other processes, then the law of population inertia holds. Much of the remainder of this book focuses on determining when the law of population inertia does not hold.
-
 ```{r expgrowth,echo=FALSE,fig.cap="Population growth over time r is greater than or less than zero. The right hand panel shows the same curves on a log scale."}
 par(mfrow=c(1,2))
 t = 0:20
@@ -94,6 +90,35 @@ r = -0.1
 N = N0*exp(r*t)
 lines(t,N,lwd=3,lty=2)
 ```
+
+
+Turchin’s law of population inertia states: in the absence of other forces, a population will continue to grow (or decline) exponentially [@turchin2003complex]. Equation \@ref(eq:expgrowth) tells us the rate at which the population will grow or decline. The important part of the law is the first phrase, "in the absence of other forces". In particular, the birth and death rates are independent of the population size (Figure \@ref(fig:expgrowth2)).
+
+That is, assuming that the per capita birth and death rates remain constant, unaffected by other processes, then the law of population inertia holds. Much of the remainder of this book focuses on determining when the law of population inertia does not hold.
+
+```{r expgrowth2,echo=FALSE,fig.cap="Per capita birth and death rates are *independent* of population size in exponential growth (A) or decay (B)."}
+par(mfrow=c(1,2))
+N = c(0,100)
+y = c(0,.2)
+b = 0.1
+d = 0.01
+
+plot(N,y,xlab="Population Size",ylab="Per capita birth and death rates", type="n", ylim=y)
+abline(h=b, lwd=3)
+abline(h=d, lwd=3, lty=2)
+text(x=c(80,80), y=c(b,d), labels=c("births", "deaths"), pos=1)
+mtext("A", line = -2, adj = 0.05, cex=1.5)
+
+b = 0.05
+d = 0.081
+plot(N,y,xlab="Population Size",ylab="", ylim=y, type="n")
+abline(h=b, lwd=3)
+abline(h=d, lwd=3, lty=2)
+text(x=c(80,80), y=c(b,d), labels=c("births", "deaths"), pos=1)
+mtext("B", line = -2, adj = 0.05, cex=1.5)
+
+```
+
 
 There is one additional property of the exponential model of population dynamics that makes it useful as a touchstone for analyzing changes in numbers. If we take the logarithm of both sides of Equation \@ref(eq:expgrowth), we obtain
 
@@ -123,7 +148,7 @@ r = ln\left(\frac{N_t}{N_0}\right) /  t =
     \frac{ln(10.49)}{18} = 0.13 \, years^{-1}
 \end{equation}
 
-How should we interpret that estimate? The change in a population over 1 year is $Ne^r$, so the factor $e^r$ is the percentage change in population size. In this case, $e^r = 1.138$, or about a 14 \% change per year. A useful approximation to remember is that when $r$ is close to 1, then $e^{r} \approx 1+r$, so you can think of $r$ as a percentage change in population size per year as long as it isn't too large. In the musk-ox case the error in this approximation is 1 percentage point.
+How should we interpret that estimate? The change in a population over 1 year is $Ne^r$, so the factor $e^r$ is the percentage change in population size. In this case, $e^r = 1.138$, or about a 14 \% change per year. A useful approximation to remember is that when $r$ is close to 1, then $e^{r} \approx 1+r$, so **you can think of $r$ as a percentage change in population size per year as long as it isn't too large.** In the musk-ox case the error in this approximation is 1 percentage point.
 
 With this estimate of $r$ in hand, there are several things we can do. For example, what if we want to predict the number of animals on the island after another 3 years, assuming population growth holds at the same rate?
 
