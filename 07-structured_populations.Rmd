@@ -131,7 +131,7 @@ plot(1:20,N[2,]/N[3,],type="l",lwd=3,xlab="Time",ylab="Proportion in age class 2
 par(old.par)
 ```
 
-It turns out that for any particular population projection matrix, there is a specific distribution of individuals among age classes that make the matrix behave as if it were a scalar multiplier. This is actually true of any square matrix with non-negative entries. In addition, no matter what age distribution of individuals I start with, the age distribution converges towards this special distribution. Depending on the particular structure of the matrix and the starting distribution of individuals, this convergence can be rapid or it can be slow, but it always happens. This special age distribution is called the "stable age distribution". It is important to recognize that the *proportion* of individuals in each age class is stable. The number of individuals is still changing. This makes the stable age distribution different from the stable points found in the Logistic population growth models. **When the population is at the stable age distribution, it will grow (or decay) geometrically at a constant rate.** The symbol for that growth rate is typically $\lambda$.  
+It turns out that for any particular population projection matrix, there is a specific distribution of individuals among age classes that make the matrix behave as if it were a scalar multiplier. This is actually true of any square matrix with non-negative entries. In addition, no matter what age distribution of individuals I start with, the age distribution converges towards this special distribution. Depending on the particular structure of the matrix and the starting distribution of individuals, this convergence can be rapid or it can be slow, but it always happens. This special age distribution is called the "stable age distribution". It is important to recognize that the *proportion* of individuals in each age class is stable. The number of individuals is still changing. This makes the stable age distribution different from the stable points found in the Logistic population growth models. **When the population is at the stable age distribution, it will grow (or decay) geometrically at a constant rate.** The symbol for that growth rate is typically $\lambda$. **When $\lambda = 1$ the population is neither growing nor declining**.
 
 It is possible to find the value of $\lambda$ and the stable age distribution without multiplying the population out until it has stabilized. When the population is at the stable age distribution, then 
 
@@ -251,7 +251,7 @@ $$
 \end{bmatrix}
 $$
 
-This matrix assumes that survivorship from age class 6 to older age classes is zero. This form of the matrix is the classic age structured model called a "Leslie matrix" after the biologist Patrick Leslie who first realized that life tables could be represented using matrices in the 1940's. The leading eigenvalue of this matrix is $\lambda = `r format(lambda(A), digits=3)`$, which means the population will increase at about 3% per year. 
+This matrix assumes that survivorship from age class 6 to older age classes is zero. This form of the matrix is the classic age structured model called a "Leslie matrix" after the biologist Patrick Leslie who first realized that life tables could be represented using matrices in the 1940's. **The leading eigenvalue of this matrix is $\lambda = `r format(lambda(A), digits=3)`$, which means the population will increase at about 3% per year. **
 
 ```{r fixup,echo=FALSE}
 S[6] = S[5]
