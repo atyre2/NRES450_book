@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-02-12">
+<meta name="date" content="2017-03-08">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -292,21 +292,21 @@ A_i = \frac{\alpha_i b - c_f}{c_v}
 <thead>
 <tr class="header">
 <th align="left">Alternative</th>
-<th align="left">Values</th>
+<th align="center">Values</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Split budget equally</td>
-<td align="left"><span class="math inline">\(\alpha_i = 0.33\)</span></td>
+<td align="center"><span class="math inline">\(\alpha_i = 0.33\)</span></td>
 </tr>
 <tr class="even">
 <td align="left">Split budget in proportion to extinction risk</td>
-<td align="left"><span class="math inline">\(\alpha_1 = \alpha_3 = 0.23\)</span>, <span class="math inline">\(\alpha_4 = 0.54\)</span></td>
+<td align="center"><span class="math inline">\(\alpha_1 = \alpha_3 = 0.23\)</span>, <span class="math inline">\(\alpha_4 = 0.54\)</span></td>
 </tr>
 <tr class="odd">
 <td align="left">Put the whole budget in 4</td>
-<td align="left"><span class="math inline">\(\alpha_1 = \alpha_3 = 0\)</span>, <span class="math inline">\(\alpha_4 = 1.0\)</span></td>
+<td align="center"><span class="math inline">\(\alpha_1 = \alpha_3 = 0\)</span>, <span class="math inline">\(\alpha_4 = 1.0\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -327,78 +327,79 @@ Figure 8.5: Extinction probability as a function of budget for areas 4 (solid li
 <thead>
 <tr class="header">
 <th align="left">Parameter</th>
-<th align="left">Symbol</th>
-<th align="right">Value</th>
+<th align="center">Symbol</th>
+<th align="center">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left">Unmanaged probability of extinction</td>
-<td align="left"><span class="math inline">\(P_{0i}\)</span></td>
-<td align="right"></td>
+<td align="center"><span class="math inline">\(P_{0i}\)</span></td>
+<td align="center"></td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td align="left"></td>
-<td align="right">0.088</td>
+<td align="center"></td>
+<td align="center">0.088</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
-<td align="left"></td>
-<td align="right">0.000</td>
+<td align="center"></td>
+<td align="center">0.00</td>
 </tr>
 <tr class="even">
 <td align="left">3</td>
-<td align="left"></td>
-<td align="right">0.088</td>
+<td align="center"></td>
+<td align="center">0.088</td>
 </tr>
 <tr class="odd">
 <td align="left">4</td>
-<td align="left"></td>
-<td align="right">0.205</td>
+<td align="center"></td>
+<td align="center">0.205</td>
 </tr>
 <tr class="even">
 <td align="left">Management efficiency</td>
-<td align="left"><span class="math inline">\(\phi_i\)</span></td>
-<td align="right"></td>
+<td align="center"><span class="math inline">\(\phi_i\)</span></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
 <td align="left">1</td>
-<td align="left"></td>
-<td align="right">0.046</td>
+<td align="center"></td>
+<td align="center">0.046</td>
 </tr>
 <tr class="even">
 <td align="left">2</td>
-<td align="left"></td>
-<td align="right">0.000</td>
+<td align="center"></td>
+<td align="center">0.00</td>
 </tr>
 <tr class="odd">
 <td align="left">3</td>
-<td align="left"></td>
-<td align="right">0.016</td>
+<td align="center"></td>
+<td align="center">0.016</td>
 </tr>
 <tr class="even">
 <td align="left">4</td>
-<td align="left"></td>
-<td align="right">0.060</td>
+<td align="center"></td>
+<td align="center">0.06</td>
 </tr>
 <tr class="odd">
 <td align="left">Total budget</td>
-<td align="left"><span class="math inline">\(b\)</span></td>
-<td align="right">52704.000</td>
+<td align="center"><span class="math inline">\(b\)</span></td>
+<td align="center">52704</td>
 </tr>
 <tr class="even">
 <td align="left">Fixed costs of managing subpopulation</td>
-<td align="left"><span class="math inline">\(c_f\)</span></td>
-<td align="right">1728.000</td>
+<td align="center"><span class="math inline">\(c_f\)</span></td>
+<td align="center">1728</td>
 </tr>
 <tr class="odd">
 <td align="left">Variable cost of management action (per unit effort)</td>
-<td align="left"><span class="math inline">\(c_v\)</span></td>
-<td align="right">220.000</td>
+<td align="center"><span class="math inline">\(c_v\)</span></td>
+<td align="center">220</td>
 </tr>
 </tbody>
 </table>
+<pre><code>## Warning: Unknown column &#39;Alternative&#39;</code></pre>
 <table>
 <caption><span id="tab:tigerconsequences">Table 8.3: </span>Consequences of alternative budget allocation rules.</caption>
 <thead>
@@ -413,15 +414,15 @@ Figure 8.5: Extinction probability as a function of budget for areas 4 (solid li
 <td align="left">0.34</td>
 </tr>
 <tr class="even">
-<td align="left">Split budget equally</td>
+<td align="left">Do Nothing</td>
 <td align="left">0.097</td>
 </tr>
 <tr class="odd">
-<td align="left">Split budget in proportion to extinction risk</td>
+<td align="left">Do Nothing</td>
 <td align="left">0.099</td>
 </tr>
 <tr class="even">
-<td align="left">Put the whole budget in 4</td>
+<td align="left">Do Nothing</td>
 <td align="left">0.18</td>
 </tr>
 </tbody>

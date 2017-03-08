@@ -436,7 +436,7 @@ $$
 
 where $s_{i,j}$ is the *sensitivity* of the population growth rate $\lambda$ to a change in the matrix element $a_{i,j}$. If you have software that can calculate eigenvalues and eigenvectors the sensitivity can be calculated directly. However, it can be done in a spreadsheet. First calculate $\lambda$ using the multiplication method. Then change one matrix entry by a small amount (say 1%) to a different value $a_{i,j}^\prime$, and calculate $\lambda^\prime$. Then use the approximate formula. It will quickly become tedious for a large matrix. For this text, it is enough to know how to interpret the values I provide for you. The matrix of sensitivity values for the great tit matrix is in Table \@ref(tab:gtsensitivity).
 
-```{r gtprematrix, echo=FALSE, include=FALSE}
+```{r gtprematrix2, echo=FALSE, include=FALSE}
 S = l[3:7]/l[2:6]
 A = matrix(0,nrow=6,ncol=6)
 A[cbind(2:6,1:5)]=S[1:5]
