@@ -326,7 +326,8 @@ p2 = 1-prod(1-p2)
 alpha = c(0,0,0,1)
 p3 = Pfunc(alpha,P0,phi,b,cf,cv)
 p3 = 1-prod(1-p3)
-tc <- data.frame(Alternative=c("Do Nothing",ta$Alternative),
+# note that now I need column name in backticks with a space!
+tc <- data.frame(Alternative=c("Do Nothing",ta$`Alternative `),
                  Values=c(
                    format(1-prod(1-P0), digits=2),
                    format(p1,digits=2),
