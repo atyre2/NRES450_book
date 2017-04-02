@@ -267,7 +267,7 @@ Figure 7.5: Projecting the pseudo-chicken population forwards in time.
 Figure 7.6: Projecting the pseudo-chicken population forwards in time with a higher Fertility for age class 2.
 </p>
 </div>
-<p>It turns out that for any particular population projection matrix, there is a specific distribution of individuals among age classes that make the matrix behave as if it were a scalar multiplier. This is actually true of any square matrix with non-negative entries. In addition, no matter what age distribution of individuals I start with, the age distribution converges towards this special distribution. Depending on the particular structure of the matrix and the starting distribution of individuals, this convergence can be rapid or it can be slow, but it always happens. This special age distribution is called the “stable age distribution”. It is important to recognize that the <em>proportion</em> of individuals in each age class is stable. The number of individuals is still changing. This makes the stable age distribution different from the stable points found in the Logistic population growth models. <strong>When the population is at the stable age distribution, it will grow (or decay) geometrically at a constant rate.</strong> The symbol for that growth rate is typically <span class="math inline">\(\lambda\)</span>.</p>
+<p>It turns out that for any particular population projection matrix, there is a specific distribution of individuals among age classes that make the matrix behave as if it were a scalar multiplier. This is actually true of any square matrix with non-negative entries. In addition, no matter what age distribution of individuals I start with, the age distribution converges towards this special distribution. Depending on the particular structure of the matrix and the starting distribution of individuals, this convergence can be rapid or it can be slow, but it always happens. This special age distribution is called the “stable age distribution”. It is important to recognize that the <em>proportion</em> of individuals in each age class is stable. The number of individuals is still changing. This makes the stable age distribution different from the stable points found in the Logistic population growth models. <strong>When the population is at the stable age distribution, it will grow (or decay) geometrically at a constant rate.</strong> The symbol for that growth rate is typically <span class="math inline">\(\lambda\)</span>. <strong>When <span class="math inline">\(\lambda = 1\)</span> the population is neither growing nor declining</strong>.</p>
 <p>It is possible to find the value of <span class="math inline">\(\lambda\)</span> and the stable age distribution without multiplying the population out until it has stabilized. When the population is at the stable age distribution, then</p>
 <span class="math display">\[\begin{equation*}
 \mathbf{Av} = \lambda\mathbf{v}.
@@ -499,7 +499,7 @@ F_i = S_i \cdot m(i)
 0.00 &amp; 0.00 &amp; 0.00 &amp; 0.00 &amp; 0.21 &amp; 0.00 \\ 
 \end{bmatrix}
 \]</span></p>
-<p>This matrix assumes that survivorship from age class 6 to older age classes is zero. This form of the matrix is the classic age structured model called a “Leslie matrix” after the biologist Patrick Leslie who first realized that life tables could be represented using matrices in the 1940’s. The leading eigenvalue of this matrix is <span class="math inline">\(\lambda = 1.03\)</span>, which means the population will increase at about 3% per year.</p>
+<p>This matrix assumes that survivorship from age class 6 to older age classes is zero. This form of the matrix is the classic age structured model called a “Leslie matrix” after the biologist Patrick Leslie who first realized that life tables could be represented using matrices in the 1940’s. <strong>The leading eigenvalue of this matrix is <span class="math inline">\(\lambda = 1.03\)</span>, which means the population will increase at about 3% per year. </strong></p>
 <p>One issue with this matrix is the Fertility of age class 6 is higher than any of the others. This really seems at odds with the otherwise clear pattern of senesence. The maternity schedule entry <span class="math inline">\(m(6) = 4.5\)</span>, which is only slightly greater than <span class="math inline">\(m(5)\)</span>. However, the survivorship from age class 6 to 7 is 0.67, which is much greater than the previous survivorship of 0.21. Note that <span class="math inline">\(S_6\)</span> is not shown in the matrix. It would be in the 7th row, 6th column, but there are only 6 rows. This estimate is based on a single individual making it to age 6 in one year. There is alot of estimation error in that rate. If I replace <span class="math inline">\(S_6\)</span> with the same value as <span class="math inline">\(S_5\)</span>, the fertility for age class 6 drops to 0.964, which is more consistent with the value for age class 5 and seems more reasonable. With this change the leading eigenvalue is <span class="math inline">\(\lambda = 1.03\)</span>. To two decimal places this is unchanged from before.</p>
 <p>What gives? I reduced the fertility of age class 6 by 2/3, and the growth rate of the population barely budged. One reason for this can be seen from the survival schedule in Table <a href="chap-structured.html#tab:gtcohort">7.3</a>. Less than 1% of individuals in the population will survive to age class 6. Therefore changes at that end of the matrix will have relatively little effect on the population as a whole. In the next section I’ll introduce some calculations that can tell us directly from the matrix how much the growth rate will respond to changes in a particular entry. Before that, I need to give you the equations for a pre-breeding census matrix.</p>
 <p>In a pre breeding census matrix age class 1 individuals are counted right before their first birthdays. Similarly, an age class 2 individual is about to have their 2nd birthday, an age class 3 individual is about tohave their 3rd birthday, and so on. The first thing I’ll do is write down the formula for the survival probabilities from age class <span class="math inline">\(i\)</span> to <span class="math inline">\(i+1\)</span>, <span class="math inline">\(S_i\)</span>:</p>
@@ -629,56 +629,56 @@ Figure 7.7: Total population of great tits projected over 10 years. The thin das
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">0.5804374</td>
-<td align="right">0.2292810</td>
-<td align="right">0.1299865</td>
-<td align="right">0.0480895</td>
-<td align="right">0.0099848</td>
-<td align="right">0.0064498</td>
+<td align="right">0.58</td>
+<td align="right">0.23</td>
+<td align="right">0.13</td>
+<td align="right">0.05</td>
+<td align="right">0.01</td>
+<td align="right">0.01</td>
 </tr>
 <tr class="even">
-<td align="right">0.6415867</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<td align="right">0.64</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
 </tr>
 <tr class="odd">
-<td align="right">0.0000000</td>
-<td align="right">0.2022798</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<td align="right">0.00</td>
+<td align="right">0.20</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
 </tr>
 <tr class="even">
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.1027560</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.10</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
 </tr>
 <tr class="odd">
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0462376</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.05</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
 </tr>
 <tr class="even">
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0000000</td>
-<td align="right">0.0059328</td>
-<td align="right">0.0000000</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.00</td>
+<td align="right">0.01</td>
+<td align="right">0.00</td>
 </tr>
 </tbody>
 </table>
-<p>So how do you read this thing? Consider the value in the 1st row, 6th column. This number is the sensitivity for the fertility of age class 6 that I messed around with above. This number means that if I change the fertility by 1, the growth rate will change by 0.01. The number is positive, so an increase in fertility yields an increase in population growth rate. Conversely, a decrease in the fertility will decrease the population growth rate. Compare that with the sensitivity in the 2nd row, 1st column. This is the response of the population growth rate to changes in the survival probability from age class 1 to age class 2. The value of 0.64 is many times larger, and in fact is the biggest value in the whole table. Notice that the values decrease quite rapidly as individuals age. This is due to the same effect pointed out before. Fewer and fewer individuals are making it to those older age classes, and therefore the survival and fertility values have progressively less effect on population growth. Matrix entries that are not biologically reasonable, like <span class="math inline">\(a_{6,1}\)</span> the 6th row and 1st column, also have sensitivity values, but typically these are fixed at zero.</p>
+<p>So how do you read this thing? Consider the value in the 1st row, 6th column. This number is the sensitivity for the fertility of age class 6 that I messed around with above. <strong>This number means that if I change the fertility by 1, the growth rate will change by 0.01.</strong> The number is positive, so an increase in fertility yields an increase in population growth rate. Conversely, a decrease in the fertility will decrease the population growth rate. Compare that with the sensitivity in the 2nd row, 1st column. This is the response of the population growth rate to changes in the survival probability from age class 1 to age class 2. The value of 0.64 is many times larger, and in fact is the biggest value in the whole table. Notice that the values decrease quite rapidly as individuals age. This is due to the same effect pointed out before. Fewer and fewer individuals are making it to those older age classes, and therefore the survival and fertility values have progressively less effect on population growth. Matrix entries that are not biologically reasonable, like <span class="math inline">\(a_{6,1}\)</span> the 6th row and 1st column, also have sensitivity values, but typically these are fixed at zero.</p>
 <p>One issue with sensitivity values arises when trying to compare values between matrix entries that have very different magnitudes. For example, the survivorship of age class 4 is only 0.21, which is 1/3 the magnitude of the fertility values. A change of 0.05 is a 25% change to the survivorship, but only a 10% change to the fertility. One way to fix this issue is to convert the sensitivity values to a relative scale; these are called <em>elasticities</em>. The formula is pretty easy:</p>
 <p><span class="math display">\[
 e_{i,j} =  s_{i,j}\frac{a_{i,j}}{\lambda}\,.
