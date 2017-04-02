@@ -131,7 +131,7 @@ plot(1:20,N[2,]/N[3,],type="l",lwd=3,xlab="Time",ylab="Proportion in age class 2
 par(old.par)
 ```
 
-It turns out that for any particular population projection matrix, there is a specific distribution of individuals among age classes that make the matrix behave as if it were a scalar multiplier. This is actually true of any square matrix with non-negative entries. In addition, no matter what age distribution of individuals I start with, the age distribution converges towards this special distribution. Depending on the particular structure of the matrix and the starting distribution of individuals, this convergence can be rapid or it can be slow, but it always happens. This special age distribution is called the "stable age distribution". It is important to recognize that the *proportion* of individuals in each age class is stable. The number of individuals is still changing. This makes the stable age distribution different from the stable points found in the Logistic population growth models. **When the population is at the stable age distribution, it will grow (or decay) geometrically at a constant rate.** The symbol for that growth rate is typically $\lambda$.  
+It turns out that for any particular population projection matrix, there is a specific distribution of individuals among age classes that make the matrix behave as if it were a scalar multiplier. This is actually true of any square matrix with non-negative entries. In addition, no matter what age distribution of individuals I start with, the age distribution converges towards this special distribution. Depending on the particular structure of the matrix and the starting distribution of individuals, this convergence can be rapid or it can be slow, but it always happens. This special age distribution is called the "stable age distribution". It is important to recognize that the *proportion* of individuals in each age class is stable. The number of individuals is still changing. This makes the stable age distribution different from the stable points found in the Logistic population growth models. **When the population is at the stable age distribution, it will grow (or decay) geometrically at a constant rate.** The symbol for that growth rate is typically $\lambda$. **When $\lambda = 1$ the population is neither growing nor declining**.
 
 It is possible to find the value of $\lambda$ and the stable age distribution without multiplying the population out until it has stabilized. When the population is at the stable age distribution, then 
 
@@ -251,7 +251,7 @@ $$
 \end{bmatrix}
 $$
 
-This matrix assumes that survivorship from age class 6 to older age classes is zero. This form of the matrix is the classic age structured model called a "Leslie matrix" after the biologist Patrick Leslie who first realized that life tables could be represented using matrices in the 1940's. The leading eigenvalue of this matrix is $\lambda = `r format(lambda(A), digits=3)`$, which means the population will increase at about 3% per year. 
+This matrix assumes that survivorship from age class 6 to older age classes is zero. This form of the matrix is the classic age structured model called a "Leslie matrix" after the biologist Patrick Leslie who first realized that life tables could be represented using matrices in the 1940's. **The leading eigenvalue of this matrix is $\lambda = `r format(lambda(A), digits=3)`$, which means the population will increase at about 3% per year. **
 
 ```{r fixup,echo=FALSE}
 S[6] = S[5]
@@ -436,15 +436,21 @@ $$
 
 where $s_{i,j}$ is the *sensitivity* of the population growth rate $\lambda$ to a change in the matrix element $a_{i,j}$. If you have software that can calculate eigenvalues and eigenvectors the sensitivity can be calculated directly. However, it can be done in a spreadsheet. First calculate $\lambda$ using the multiplication method. Then change one matrix entry by a small amount (say 1%) to a different value $a_{i,j}^\prime$, and calculate $\lambda^\prime$. Then use the approximate formula. It will quickly become tedious for a large matrix. For this text, it is enough to know how to interpret the values I provide for you. The matrix of sensitivity values for the great tit matrix is in Table \@ref(tab:gtsensitivity).
 
-```{r gtprematrix}
+```{r gtprematrix2, echo=FALSE, include=FALSE}
+S = l[3:7]/l[2:6]
+A = matrix(0,nrow=6,ncol=6)
+A[cbind(2:6,1:5)]=S[1:5]
+F = l[2]*m[2:7]
+A[1,] = F
+
 ```
 
 ```{r gtsensitivity, echo=FALSE, message=FALSE}
 # go back to the original pre-breeding census matrix
-knitr::kable(sensitivity(A, zero=TRUE), caption="Sensitivity matrix for the pre-breeding census model of great tits. Sensitivities for zero entries in matrix are fixed at zero.", col.names = 1:6)
+knitr::kable(sensitivity(A, zero=TRUE), caption="Sensitivity matrix for the pre-breeding census model of great tits. Sensitivities for zero entries in matrix are fixed at zero.", col.names = 1:6, digits=2)
 ```
 
-So how do you read this thing? Consider the value in the 1st row, 6th column. This number is the sensitivity for the fertility of age class 6 that I messed around with above. This number means that if I change the fertility by 1, the growth rate will change by 0.01. The number is positive, so an increase in fertility yields an increase in population growth rate. Conversely, a decrease in the fertility will decrease the population growth rate. Compare that with the sensitivity in the 2nd row, 1st column. This is the response of the population growth rate to changes in the survival probability from age class 1 to age class 2. The value of 0.64 is many times larger, and in fact is the biggest value in the whole table. Notice that the values decrease quite rapidly as individuals age. This is due to the same effect pointed out before. Fewer and fewer individuals are making it to those older age classes, and therefore the survival and fertility values have progressively less effect on population growth. Matrix entries that are not biologically reasonable, like $a_{6,1}$ the 6th row and 1st column, also have sensitivity values, but typically these are fixed at zero.
+So how do you read this thing? Consider the value in the 1st row, 6th column. This number is the sensitivity for the fertility of age class 6 that I messed around with above. **This number means that if I change the fertility by 1, the growth rate will change by 0.01.** The number is positive, so an increase in fertility yields an increase in population growth rate. Conversely, a decrease in the fertility will decrease the population growth rate. Compare that with the sensitivity in the 2nd row, 1st column. This is the response of the population growth rate to changes in the survival probability from age class 1 to age class 2. The value of 0.64 is many times larger, and in fact is the biggest value in the whole table. Notice that the values decrease quite rapidly as individuals age. This is due to the same effect pointed out before. Fewer and fewer individuals are making it to those older age classes, and therefore the survival and fertility values have progressively less effect on population growth. Matrix entries that are not biologically reasonable, like $a_{6,1}$ the 6th row and 1st column, also have sensitivity values, but typically these are fixed at zero.
 
 One issue with sensitivity values arises when trying to compare values between matrix entries that have very different magnitudes. For example, the survivorship of age class 4 is only 0.21, which is 1/3 the magnitude of the fertility values. A change of 0.05 is a 25% change to the survivorship, but only a 10% change to the fertility. One way to fix this issue is to convert the sensitivity values to a relative scale; these are called *elasticities*. The formula is pretty easy:
 
