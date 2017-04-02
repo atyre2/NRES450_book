@@ -26,7 +26,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-02-12">
+<meta name="date" content="2017-04-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -284,73 +284,76 @@ Figure 7.6: Projecting the pseudo-chicken population forwards in time with a hig
 <div id="a-more-complex-example" class="section level2">
 <h2><span class="header-section-number">7.3</span> A more complex example</h2>
 <p>This next example shows how to build up a matrix from data on the number of individuals of each age in a population over a period of years. The data are from a study of great tits (<em>Parus major</em>) in the United Kingdom (Table <a href="chap-structured.html#tab:greattits">7.1</a>). If you sum up the # of birds columns, that is the total population size in each year. Average reproductive performance also varies from year to year. This variation is the result of both environmental variation between years as well as demographic stochasticity. In addition, the reproductive output of the age 1 birds is a bit lower than that of older birds. There might also be a tiny hint of “senesence”, or aging, as the oldest age classes also have lower reproductive output. Survival from one age class to the next can be worked out by working diagonally across the table. For example, birds that are 2 years old in 1962 were 1 year olds in 1961. Therefore the survival probability is <span class="math inline">\(43/128 = 0.34\)</span>. The corresponding probability from 1962 to 1963 is <span class="math inline">\(33/54 = 0.61\)</span>, much higher than the survival rate from the previous year.</p>
+<pre><code>## Warning: Duplicated column names deduplicated: &#39; # of birds &#39; =&gt; &#39; # of
+## birds _1&#39; [4], &#39; Mean Clutch &#39; =&gt; &#39; Mean Clutch _1&#39; [5], &#39; # of birds &#39; =&gt;
+## &#39; # of birds _2&#39; [6]</code></pre>
 <table>
 <caption><span id="tab:greattits">Table 7.1: </span>Age structure and reproductive performance of great tits (<em>Parus major</em>) in Wytham Wood.</caption>
 <thead>
 <tr class="header">
-<th align="right">Age</th>
-<th align="right"># of birds</th>
-<th align="right">Mean Clutch</th>
-<th align="right"># of birds</th>
-<th align="right">Mean Clutch</th>
-<th align="right"># of birds</th>
-<th align="right">Mean Clutch</th>
+<th align="left">Age</th>
+<th align="center"># of birds</th>
+<th align="center">Mean Clutch</th>
+<th align="center"># of birds _1</th>
+<th align="center">Mean Clutch _1</th>
+<th align="center"># of birds _2</th>
+<th align="center">Mean Clutch</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">1</td>
-<td align="right">128</td>
-<td align="right">7.7</td>
-<td align="right">54</td>
-<td align="right">8.5</td>
-<td align="right">54</td>
-<td align="right">9.4</td>
+<td align="left">1</td>
+<td align="center">128</td>
+<td align="center">7.7</td>
+<td align="center">54</td>
+<td align="center">8.5</td>
+<td align="center">54</td>
+<td align="center">9.4</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="right">18</td>
-<td align="right">8.5</td>
-<td align="right">43</td>
-<td align="right">9.0</td>
-<td align="right">33</td>
-<td align="right">10.0</td>
+<td align="left">2</td>
+<td align="center">18</td>
+<td align="center">8.5</td>
+<td align="center">43</td>
+<td align="center">9</td>
+<td align="center">33</td>
+<td align="center">10</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
-<td align="right">14</td>
-<td align="right">8.3</td>
-<td align="right">12</td>
-<td align="right">8.8</td>
-<td align="right">29</td>
-<td align="right">9.7</td>
+<td align="left">3</td>
+<td align="center">14</td>
+<td align="center">8.3</td>
+<td align="center">12</td>
+<td align="center">8.8</td>
+<td align="center">29</td>
+<td align="center">9.7</td>
 </tr>
 <tr class="even">
-<td align="right">4</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">5</td>
-<td align="right">8.2</td>
-<td align="right">9</td>
-<td align="right">9.7</td>
+<td align="left">4</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td align="center">8.2</td>
+<td align="center">9</td>
+<td align="center">9.7</td>
 </tr>
 <tr class="odd">
-<td align="right">5</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right">8.0</td>
-<td align="right">2</td>
-<td align="right">9.5</td>
+<td align="left">5</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">8</td>
+<td align="center">2</td>
+<td align="center">9.5</td>
 </tr>
 <tr class="even">
-<td align="right">6</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right">9.0</td>
+<td align="left">6</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">1</td>
+<td align="center">9</td>
 </tr>
 </tbody>
 </table>
@@ -360,69 +363,69 @@ Figure 7.6: Projecting the pseudo-chicken population forwards in time with a hig
 <caption><span id="tab:staticlife">Table 7.2: </span>Static life tables for great tits (<em>Parus major</em>) in Wytham Wood. Survivorship schedule is not standardized.</caption>
 <thead>
 <tr class="header">
-<th align="right">Age</th>
-<th align="right">l(x)</th>
-<th align="right">m(x)</th>
-<th align="right">l(x)</th>
-<th align="right">m(x)</th>
+<th align="left">Age</th>
+<th align="left">l(x)</th>
+<th align="left">m(x)</th>
+<th align="left">l(x)</th>
+<th align="left">m(x)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right"></td>
-<td align="right">1962</td>
-<td align="right"></td>
-<td align="right">1963</td>
-<td align="right"></td>
+<td align="left"></td>
+<td align="left">1962</td>
+<td align="left"></td>
+<td align="left">1963</td>
+<td align="left"></td>
 </tr>
 <tr class="even">
-<td align="right">0</td>
-<td align="right">627</td>
-<td align="right">0.0</td>
-<td align="right">500</td>
-<td align="right">0.0</td>
+<td align="left">0</td>
+<td align="left">627</td>
+<td align="left">0.0</td>
+<td align="left">500</td>
+<td align="left">0.0</td>
 </tr>
 <tr class="odd">
-<td align="right">1</td>
-<td align="right">54</td>
-<td align="right">8.5</td>
-<td align="right">54</td>
-<td align="right">9.4</td>
+<td align="left">1</td>
+<td align="left">54</td>
+<td align="left">8.5</td>
+<td align="left">54</td>
+<td align="left">9.4</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="right">43</td>
-<td align="right">9.0</td>
-<td align="right">33</td>
-<td align="right">10.0</td>
+<td align="left">2</td>
+<td align="left">43</td>
+<td align="left">9</td>
+<td align="left">33</td>
+<td align="left">10</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
-<td align="right">12</td>
-<td align="right">8.8</td>
-<td align="right">29</td>
-<td align="right">9.7</td>
+<td align="left">3</td>
+<td align="left">12</td>
+<td align="left">8.8</td>
+<td align="left">29</td>
+<td align="left">9.7</td>
 </tr>
 <tr class="even">
-<td align="right">4</td>
-<td align="right">5</td>
-<td align="right">8.2</td>
-<td align="right">9</td>
-<td align="right">9.7</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">8.2</td>
+<td align="left">9</td>
+<td align="left">9.7</td>
 </tr>
 <tr class="odd">
-<td align="right">5</td>
-<td align="right">1</td>
-<td align="right">8.0</td>
-<td align="right">2</td>
-<td align="right">9.5</td>
+<td align="left">5</td>
+<td align="left">1</td>
+<td align="left">8</td>
+<td align="left">2</td>
+<td align="left">9.5</td>
 </tr>
 <tr class="even">
-<td align="right">6</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">1</td>
-<td align="right">9.0</td>
+<td align="left">6</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">1</td>
+<td align="left">9</td>
 </tr>
 </tbody>
 </table>
@@ -757,54 +760,54 @@ e_{i,j} =  s_{i,j}\frac{a_{i,j}}{\lambda}\,.
 <caption><span id="tab:turtlestages">Table 7.6: </span>Stages used in the Crouse et al. model of loggerhead sea turtles</caption>
 <thead>
 <tr class="header">
-<th align="right">Stage number</th>
-<th align="left">Class</th>
-<th align="left">Size (cm)</th>
-<th align="left">Approximate ages (yr)</th>
+<th align="left">Stage number</th>
+<th align="center">Class</th>
+<th align="center">Size (cm)</th>
+<th align="center">Approximate ages (yr)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">1</td>
-<td align="left">eggs, hatchlings</td>
-<td align="left">&lt; 10</td>
-<td align="left">&lt; 1</td>
+<td align="left">1</td>
+<td align="center">eggs, hatchlings</td>
+<td align="center">&lt; 10</td>
+<td align="center">&lt; 1</td>
 </tr>
 <tr class="even">
-<td align="right">2</td>
-<td align="left">small juveniles</td>
-<td align="left">10.1-58.0</td>
-<td align="left">1-7</td>
+<td align="left">2</td>
+<td align="center">small juveniles</td>
+<td align="center">10.1-58.0</td>
+<td align="center">1-7</td>
 </tr>
 <tr class="odd">
-<td align="right">3</td>
-<td align="left">large juveniles</td>
-<td align="left">58.1-80.0</td>
-<td align="left">8-15</td>
+<td align="left">3</td>
+<td align="center">large juveniles</td>
+<td align="center">58.1-80.0</td>
+<td align="center">8-15</td>
 </tr>
 <tr class="even">
-<td align="right">4</td>
-<td align="left">subadults</td>
-<td align="left">80.1-87.0</td>
-<td align="left">16-21</td>
+<td align="left">4</td>
+<td align="center">subadults</td>
+<td align="center">80.1-87.0</td>
+<td align="center">16-21</td>
 </tr>
 <tr class="odd">
-<td align="right">5</td>
-<td align="left">novice breeders</td>
-<td align="left">&gt; 87.0</td>
-<td align="left">22</td>
+<td align="left">5</td>
+<td align="center">novice breeders</td>
+<td align="center">&gt; 87.0</td>
+<td align="center">22</td>
 </tr>
 <tr class="even">
-<td align="right">6</td>
-<td align="left">1st-yr remigrants</td>
-<td align="left">&gt; 87.0</td>
-<td align="left">23</td>
+<td align="left">6</td>
+<td align="center">1st-yr remigrants</td>
+<td align="center">&gt; 87.0</td>
+<td align="center">23</td>
 </tr>
 <tr class="odd">
-<td align="right">7</td>
-<td align="left">mature breeders</td>
-<td align="left">&gt; 87.0</td>
-<td align="left">24-54</td>
+<td align="left">7</td>
+<td align="center">mature breeders</td>
+<td align="center">&gt; 87.0</td>
+<td align="center">24-54</td>
 </tr>
 </tbody>
 </table>
