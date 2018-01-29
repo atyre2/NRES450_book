@@ -45,11 +45,11 @@ which has units of individuals per unit area. If you look back into your introdu
 
 The next step is to quantify the precision of our estimate. This is the step that differs between sampling with and without replacement. The simplest formula is for the case where sampling is done with replacement. This is the same formula for the standard error of a mean when sampling from an infinite population. The first step is to calculate the sample variance of the counts
 
-\begin{equation}
-  s_y^2 = \frac{\sum_{i=1}^{u}{(y_i-\hat{D}a_i)^2}}
+$$
+s_y^2 = \frac{\sum_{i=1}^{u}{y_i^2}-\frac{\left(\sum_{i=1}^u{y_i}\right)^2}{u}}
                {u-1}
   (\#eq:samplevariance)
-\end{equation}
+$$
 
 This is the variance of the distribution of the counts, not yet the precision of our sample mean. The sample variance is a property of the observed counts. In contrast, the precision of our sample mean is a property of a statistic, the average density. This statistic itself has a distribution, that is, it is a random variable whose value is not known precisely. Imagine taking a second, and then a third, sample of units and recalculating the average density. Each time you take a sample, the average density will be different. Imagine doing that infinitely many times, and you have the distribution of the average density.
 
