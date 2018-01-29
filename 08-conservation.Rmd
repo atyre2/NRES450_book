@@ -236,7 +236,7 @@ The Levins model and Island Biogeography laid the foundations of modern metapopu
 
 The Sumatran subspecies of tiger (*Pantheris tigris sumatrae*) is classified as critically endangered by the IUCN. There are only 4 extant subpopulations in the region of the Kerinci Seblat National Park, Sumatra (Figure \@ref(fig:tigermap)). Linkie et al [-@linkie2006assessing] studied these populations and used a PVA model to calculate the probability of extinction of each in the absence of management over 50 years (a do nothing option), as well as the change in extinction probability for different levels of investment. For the most part the investments represent anti-poaching patrols to prevent illegal harvest of tigers in and around the park. The problem that must be solved is how to allocate poaching patrols among the 4 subpopulations. Should they all be patrolled equally? Put all the eggs in one basket? Allocate effort in proportion to population size? 
 
-```{r tigermap, fig.cap="Core tiger habitat in the Kerinci Seblat region of Sumatra, with the four different habitat types. Adapted from Linkie et al 2006."}
+```{r tigermap, fig.cap="Core tiger habitat in the Kerinci Seblat region of Sumatra, with the four different habitat types. Adapted from Linkie et al 2006.", out.width="100%"}
 knitr::include_graphics("images/sumatrantigers.png")
 ```
 
@@ -250,6 +250,16 @@ Pr\left\{\text{one or more subpopulations extinct}\right\} =
 
 where $P_{0i}$ is the probability of the $i^{th}$ population going extinct without management over a 50 year period. \@ref(eq:objtiger) starts with the probability that a subpopulation does not go extinct, $1-P_{0i}$. The probabilty that none of the subpopulations go extinct is simply the product of the four individual subpopulations not going extinct. This assumes that whether or not one of the subpopulations goes extinct is an event that is independent of whether or not the others do. Finally, by the law of total probability (the probability of all events has to add up to one), the probability of one or more subpopulations going extinct is just one minus the probability of none of the populations going extinct. They only had a single objective because they use the total budget available as a constraint on the range of options they could look at. 
 
+```{r tigeralts}
+ta <- readr::read_delim(
+"Alternative & Values
+ Split budget equally & $\\alpha_i = 0.33$ 
+Split budget in proportion to extinction risk & $\\alpha_1 = \\alpha_3 = 0.23$, $\\alpha_4 = 0.54$ 
+  Put the whole budget in 4 & $\\alpha_1 = \\alpha_3 = 0$, $\\alpha_4 = 1.0$", delim="&")
+knitr::kable(ta, caption="Alternative budget allocation rules. Recall that $\\alpha_2 = 0$ always.", escape = FALSE)
+```
+
+
 Having set the objective, the next step is to consider the *alternatives*. As it happens, Core area 2, the largest of the four (see Figure \@ref(fig:tigermap)), has a zero probability of extinction regardless of the degree of poaching. However Linkie et al. only evaluated poaching up to 5 tigers per year, so if poaching was in fact higher then this conclusion wouldn't hold. However, removing 5 tigers per year from each of the smaller subpopulations leads to a 50 year extinction probability approaching 1. So Chauvenet et al. considered options that divide the anti-poaching budget up between subpopulations 1, 3 and 4. Implementing anti-poaching patrols in an area requires some constant fixed cost regardless of the effort involved, and then some variable cost per unit of effort. So for a total budget $b$ the amount of anti-poaching patrol effort for an area $i$ is
 
 \begin{equation*}
@@ -257,24 +267,6 @@ A_i = \frac{\alpha_i b - c_f}{c_v}
 \end{equation*}
 
 where $\alpha_i$ is the proportion of the total budget devoted to area $i$, $c_f$ is the fixed cost, and $c_v$ is the variable cost. Note that $\sum_{i=1}^{4}\alpha_i = 1$, and $\alpha_2 = 0$. Chauvenet et al. built a sophisticated dynamic optimization model to get the exact answer, but I'll just evaluate some obvious alternatives here (Table \@ref(tab:tigeralts)).
-
-```{r tigeralts}
-ta <- readr::read_delim(
-"Alternative & Values
- Split budget equally & $\\alpha_i = 0.33$ 
-Split budget in proportion to extinction risk & $\\alpha_1 = \\alpha_3 = 0.23$, $\\alpha_4 = 0.54$ 
-  Put the whole budget in 4 & $\\alpha_1 = \\alpha_3 = 0$, $\\alpha_4 = 1.0$", delim="&")
-knitr::kable(ta, caption="Alternative budget allocation rules. Recall that $\\alpha_2 = 0$ always.")
-```
-
-The next step in the process is to calculate the *consequences* of different alternatives. This requires us to connect the effort in an area to a reduction in the extinction probability. Chauvenet et al. choose a simple model
-
-\begin{equation}
-Pr\left\{\text{area i extinct}|\alpha_i b\right\} = \frac{P_{0i}}
-                                                         {\phi_i \frac{\alpha_i b - c_f}{c_v}+1}
-\end{equation}
-
-where $\phi_i$ is a coefficient that describes how effective anti-poaching effort is at reducing the extinction risk in area $i$. Chauvenet et al. estimated these coefficients for each area from the results presented in Linkie et al. When $\alpha_i = 0$ then the extinction probability for area $i$ is just $P_{0i}$. As poaching effort increases, the extinction probability decreases hyperbolically towards zero. This means that initially small levels of effort make a big difference, but the gain per unit effort decreases as effort increases. This function gives me the actual probability of extinction for each area, which I then use in \@ref(eq:objtiger) to calculate the probability that one or more areas go extinct over 50 years (Table \@ref(tab:tigerconsequences)). Splitting the budget equally or according to the extinction risk in each area give nearly identical results, about 3 times better than doing nothing. These rules are very close to the performance obtained with the full dynamic optimization model. Putting all the effort into the most at risk population gives a substantially worse performance. Even so, with the particular budget available the expected time to the first extinction is still only about 10 years for the best options (1/Pr(1 or more extinct)). There is only one objective so there is no need to consider tradeoffs among competing objectives. 
 
 ```{r tigereffort,echo=FALSE,fig.cap="Extinction probability as a function of budget for areas 4 (solid line) and 1 (dashed line). Parameters given in Table \\@ref(tab:tigerparameters)."}
 P0 = c(0.088,0,0.088,0.205)
@@ -296,27 +288,42 @@ plot(alpha*b-cf,Pfunc(alpha,P0[4],phi[4],b,cf,cv),type="l",ylim=c(0,max(P0)),
 lines(alpha*b-cf,Pfunc(alpha,P0[1],phi[1],b,cf,cv),lty=2,lwd=3)
 ```
 
+
+The next step in the process is to calculate the *consequences* of different alternatives. This requires us to connect the effort in an area to a reduction in the extinction probability. Chauvenet et al. choose a simple model
+
+\begin{equation}
+Pr\left\{\text{area i extinct}|\alpha_i b\right\} = \frac{P_{0i}}
+                                                         {\phi_i \frac{\alpha_i b - c_f}{c_v}+1}
+\end{equation}
+
+where $\phi_i$ is a coefficient that describes how effective anti-poaching effort is at reducing the extinction risk in area $i$. Chauvenet et al. estimated these coefficients for each area from the results presented in Linkie et al. When $\alpha_i = 0$ then the extinction probability for area $i$ is just $P_{0i}$. As poaching effort increases, the extinction probability decreases hyperbolically towards zero. This means that initially small levels of effort make a big difference, but the gain per unit effort decreases as effort increases. This function gives me the actual probability of extinction for each area, which I then use in \@ref(eq:objtiger) to calculate the probability that one or more areas go extinct over 50 years (Table \@ref(tab:tigerconsequences)). 
+
+
 ```{r tigerparameters}
-tp <- readr::read_delim(
-"Parameter & Symbol   & Value
-Unmanaged probability of extinction & $P_{0i}$ &  
-  1 &  & 0.088 
-  2 &  & 0.00  
-  3 &  & 0.088 
-  4 &  & 0.205 
-Management efficiency & $\\phi_i$ & 
- 1 &  & 0.046 
- 2 &  & 0.00  
- 3 &  & 0.016 
- 4 &  & 0.06 
-Total budget & $b$ & 52704 
-Fixed costs of managing subpopulation & $c_f$ & 1728 
-Variable cost of management action (per unit effort) & $c_v$ & 220 ", delim="&")
-knitr::kable(tp, caption="Parameters of the model from Chauvenet et al 2010. All costs in US$.")
+tp <- readr::read_csv(
+"Parameter, Symbol,    Value
+Unmanaged probability of extinction , $P_{0i}$ ,  
+ 1 , , 0.088 
+ 2 ,  , 0.00  
+ 3 ,  , 0.088 
+ 4 ,  , 0.205 
+Management efficiency , $\\phi_i$ , 
+ 1 ,  , 0.046 
+ 2 ,  , 0.00  
+ 3 ,  , 0.016 
+ 4 ,  , 0.06 
+Total budget , $b$ , 52704 
+Fixed costs of managing subpopulation , $c_f$ , 1728 
+Variable cost of management action (per unit effort) , $c_v$ , 220 ")
+options(knitr.kable.NA = '') 
+knitr::kable(tp, caption="Parameters of the model from Chauvenet et al 2010. All costs in US\\$.", escape = FALSE)
 ```
 
 
-```{r tigerconsequences,echo=FALSE}
+Splitting the budget equally or according to the extinction risk in each area give nearly identical results, about 3 times better than doing nothing. These rules are very close to the performance obtained with the full dynamic optimization model. Putting all the effort into the most at risk population gives a substantially worse performance. Even so, with the particular budget available the expected time to the first extinction is still only about 10 years for the best options (1/Pr(1 or more extinct)). There is only one objective so there is no need to consider tradeoffs among competing objectives. 
+
+
+```{r tigerconsequences, echo=FALSE}
 alpha = c(1/3,0,1/3,1/3)
 p1 = Pfunc(alpha,P0,phi,b,cf,cv)
 p1 = 1-prod(1-p1)
@@ -334,6 +341,6 @@ tc <- data.frame(Alternative=c("Do Nothing",ta$`Alternative `),
                    format(p2,digits=2),
                    format(p3,digits=2)
                  ))
-knitr::kable(tc, caption="Consequences of alternative budget allocation rules.")
+knitr::kable(tc, caption="Consequences of alternative budget allocation rules.", escape = FALSE)
 ```
 

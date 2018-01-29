@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Lecture Notes for Biology of Wildlife Populations</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska.">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="Lecture Notes for Biology of Wildlife Populations" />
   <meta property="og:type" content="book" />
@@ -26,7 +25,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-04-02">
+<meta name="date" content="2018-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="chap-regulation.html">
 <link rel="next" href="chap-structured.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -56,6 +54,7 @@
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -230,7 +229,7 @@ We don’t know yet what will take it’s place,<br />
 but we hope it’s as good for the human race.</p>
 </blockquote>
 </div>
-<p></p>
+
 <div id="fixed-quota-harvesting" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> Fixed quota harvesting</h3>
 <p>What are some other ways we could harvest a wildlife population? It is quite typical for recreational harvests to be regulated by controlling the total number of animals harvested. I call this a <em>fixed quota</em> harvest strategy. If the quota is always filled (a big assumption), then the per capita harvest rate is <span class="math inline">\(\frac{Q}{N}\)</span>, and the population harvest rate is a flat line (Figure <a href="chap-harvesting.html#fig:harvest2">6.5</a>). As before, there is an equilibrium point <span class="math inline">\(K&#39;\)</span> with a positive amount of harvest that is just a bit less than <span class="math inline">\(K\)</span>. This equilibrium point is stable. When the population size is greater than <span class="math inline">\(K&#39;\)</span> harvest rate exceeds the population growth rate, and the population will decrease back toward <span class="math inline">\(K&#39;\)</span>. If the population size is lower than <span class="math inline">\(K&#39;\)</span>, then the population growth rate is greater than the harvest rate, and the population will grow.</p>
@@ -379,8 +378,9 @@ PTL_t = F_0 \frac{\tilde{r}_{max}}{2} \tilde{N}_t.
         </div>
       </div>
 <a href="chap-regulation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chap-structured.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="chap-structured.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -389,7 +389,7 @@ PTL_t = F_0 \frac{\tilde{r}_{max}}{2} \tilde{N}_t.
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
@@ -423,7 +423,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Lecture Notes for Biology of Wildlife Populations</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska.">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="Lecture Notes for Biology of Wildlife Populations" />
   <meta property="og:type" content="book" />
@@ -26,7 +25,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-04-02">
+<meta name="date" content="2018-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="chap-sdm.html">
 <link rel="next" href="chap-exponential.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -56,6 +54,7 @@
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -333,7 +332,7 @@ Figure 3.4: The variance of the counts does not systematically decrease as the s
 \]</span></p>
 It is possible to use simple linear regression to estimate the constants <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if you have estimates of the density from areas with a range of densities. The constant <span class="math inline">\(b\)</span> can be shown to be equal to 1 when the organisms are distributed at random. Values of <span class="math inline">\(b\)</span> less than one are indications of underdispersion, or even spacing between individuals, while values of <span class="math inline">\(b &gt; 1\)</span> indicate aggregation between individuals. Thus, <strong>if the variance of the counts is greater than the mean of the counts, we say the population is “overdispersed”</strong>, or equivalently, that individuals are clumped together more than we expect from a random distribution.
 </div>
-<p></p>
+
 </div>
 <div id="further-reading" class="section level2 unnumbered">
 <h2>Further Reading</h2>
@@ -434,8 +433,9 @@ It is possible to use simple linear regression to estimate the constants <span c
         </div>
       </div>
 <a href="chap-sdm.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chap-exponential.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="chap-exponential.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -444,7 +444,7 @@ It is possible to use simple linear regression to estimate the constants <span c
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
@@ -478,7 +478,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

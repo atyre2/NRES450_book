@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Lecture Notes for Biology of Wildlife Populations</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska.">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="Lecture Notes for Biology of Wildlife Populations" />
   <meta property="og:type" content="book" />
@@ -26,7 +25,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-04-02">
+<meta name="date" content="2018-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="chap-harvesting.html">
 <link rel="next" href="chap-conservation.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -56,6 +54,7 @@
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -899,86 +898,13 @@ Figure 7.8: Stable stage distribution for the loggerhead turtle population proje
 </p>
 </div>
 <p>There are two management interventions that are used for sea turtle conservation. The first is “headstarting”, the practice of monitoring clutches on nesting beaches, and then helping hatchlings to get to the sea without being eaten. This will increase the Fertility entries in the first row, because mortality on the beaches is included in the estimates of Fertility. The other action is to equip trawlers with “Turtle Excluder Devices”. These additions to the throat of a trawl net catch turtles before they are caught in the cod end of the net, and give them a hatch to escape out of. A TED will improve survival, particularly of larger turtles that are more likely to be caught on the TED’s grid. Headstarting is easy, in part because it is highly visible and gives everyone warm fuzzy feelings. The effects of TEDs are largely invisible, and require the consent of fishing communities to implement. Which one should we use?</p>
-<p>Consider the elasticity matrix first (Table <a href="chap-structured.html#tab:turtleelastic">7.8</a>). Headstarting will increase the entries in the top row, and adding those all together gets a total of a 5% change in <span class="math inline">\(\lambda\)</span> for a 1% increase in fertility. Compare that with the sum of the elasticities for increasing survival of large juveniles and up: 0.666, or more than 12 times larger increase for the same relative improvement. This suggests that improvements in survival of larger stages will be more effective at improving population growth rates than increases in fertility.</p>
-<table>
-<caption><span id="tab:turtleelastic">Table 7.8: </span>Elasticity matrix for loggerhead turtle populations. Each entry represents the relative change in population growth rate for a 1% change in that entry.</caption>
-<thead>
-<tr class="header">
-<th align="right">1</th>
-<th align="right">2</th>
-<th align="right">3</th>
-<th align="right">4</th>
-<th align="right">5</th>
-<th align="right">6</th>
-<th align="right">7</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.012</td>
-<td align="right">0.000</td>
-<td align="right">0.039</td>
-</tr>
-<tr class="even">
-<td align="right">0.051</td>
-<td align="right">0.181</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="odd">
-<td align="right">0.000</td>
-<td align="right">0.051</td>
-<td align="right">0.119</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="even">
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.051</td>
-<td align="right">0.139</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="odd">
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.051</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="even">
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.039</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-</tr>
-<tr class="odd">
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.000</td>
-<td align="right">0.039</td>
-<td align="right">0.230</td>
-</tr>
-</tbody>
-</table>
+<p>Consider the elasticity matrix first (Figure <a href="chap-structured.html#fig:turtleelastic">7.9</a>). Headstarting will increase the entries in the top row, and adding those all together gets a total of a 5% change in <span class="math inline">\(\lambda\)</span> for a 1% increase in fertility. Compare that with the sum of the elasticities for increasing survival of large juveniles and up: 0.666, or more than 12 times larger increase for the same relative improvement. This suggests that improvements in survival of larger stages will be more effective at improving population growth rates than increases in fertility.</p>
+<div class="figure"><span id="fig:turtleelastic"></span>
+<img src="NRES450-LectureNotes_files/figure-html/turtleelastic-1.png" alt="Elasticity matrix for loggerhead turtle populations. Each entry represents the relative change in population growth rate for a 1% change in that entry." width="672" />
+<p class="caption">
+Figure 7.9: Elasticity matrix for loggerhead turtle populations. Each entry represents the relative change in population growth rate for a 1% change in that entry.
+</p>
+</div>
 <p>Elasticities are useful, but really only evaluate small changes in matrix entries. Given the uncertainty in reproduction it is plausible that we could double the Fertilities, but not much more than that. Doubling the fertility entries gives us <span class="math inline">\(\lambda = 0.9814796\)</span>, which is still less than 1. Headstarting may slow the rate of decline in the population, but it cannot plausibly lead to a growing population by itself. In contrast, a modest 10% increase in the survival of large juveniles and up yields <span class="math inline">\(\lambda = 1.0099952\)</span>. TEDs seem like a very good option because they can reverse the declining population trend with even if they produce only modest improvements in survival. These analyses were used to support regulations requiring TEDs in many fisheries around the globe.</p>
 </div>
 <div id="exercises-4" class="section level2">
@@ -986,21 +912,21 @@ Figure 7.8: Stable stage distribution for the loggerhead turtle population proje
 <div class="figure"><span id="fig:tortoise"></span>
 <img src="NRES450-LectureNotes_files/figure-html/tortoise-1.png" alt="Stage structured pre-breeding projection matrix for Desert Tortoise *Gopherus agassizii* [@doak1994modeling]. The color codes highlight different magnitudes of the entries, with red having the largest value." width="672" />
 <p class="caption">
-Figure 7.9: Stage structured pre-breeding projection matrix for Desert Tortoise <em>Gopherus agassizii</em> <span class="citation">(Doak, Kareiva, and Klepetka <a href="#ref-doak1994modeling">1994</a>)</span>. The color codes highlight different magnitudes of the entries, with red having the largest value.
+Figure 7.10: Stage structured pre-breeding projection matrix for Desert Tortoise <em>Gopherus agassizii</em> <span class="citation">(Doak, Kareiva, and Klepetka <a href="#ref-doak1994modeling">1994</a>)</span>. The color codes highlight different magnitudes of the entries, with red having the largest value.
 </p>
 </div>
 <ol style="list-style-type: decimal">
-<li><p>Using the stage structured matrix in Figure <a href="chap-structured.html#fig:tortoise">7.9</a>, what does the value in the first row, 6th column mean?</p></li>
+<li><p>Using the stage structured matrix in Figure <a href="chap-structured.html#fig:tortoise">7.10</a>, what does the value in the first row, 6th column mean?</p></li>
 <li><p>The sum of the values in the second column is 0.716. What does this sum represent?</p></li>
 <li><p>What does the value in the 4th row and 4th column represent?</p></li>
 <li><p>A gopher tortoise nest is recovered from a construction site, and 100 hatchlings are reared to their first birthday and then released back into the wild with radio collars. How many are expected to survive the next year as they grow into the Juv1 stage?</p></li>
-<li><p>You have two management options: headstart eggs, increasing fertility of all adult age classes, or predator control which increases survival of yearlings and juveniles. Using the elasticity matrix in Figure <a href="chap-structured.html#fig:tortoiseE">7.10</a>, which management action will have the largest relative effect on population growth rate.</p></li>
+<li><p>You have two management options: headstart eggs, increasing fertility of all adult age classes, or predator control which increases survival of yearlings and juveniles. Using the elasticity matrix in Figure <a href="chap-structured.html#fig:tortoiseE">7.11</a>, which management action will have the largest relative effect on population growth rate.</p></li>
 <li><p>The leading eigenvalue of this projection matrix is 0.9580592. Is this population increasing or decreasing, and how fast?</p></li>
 </ol>
 <div class="figure"><span id="fig:tortoiseE"></span>
 <img src="NRES450-LectureNotes_files/figure-html/tortoiseE-1.png" alt="Elasticity matrix for gopher tortoise" width="672" />
 <p class="caption">
-Figure 7.10: Elasticity matrix for gopher tortoise
+Figure 7.11: Elasticity matrix for gopher tortoise
 </p>
 </div>
 
@@ -1021,8 +947,9 @@ Figure 7.10: Elasticity matrix for gopher tortoise
         </div>
       </div>
 <a href="chap-harvesting.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chap-conservation.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="chap-conservation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -1031,7 +958,7 @@ Figure 7.10: Elasticity matrix for gopher tortoise
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
@@ -1065,7 +992,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

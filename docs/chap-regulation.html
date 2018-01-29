@@ -6,9 +6,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Lecture Notes for Biology of Wildlife Populations</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska.">
-  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="Lecture Notes for Biology of Wildlife Populations" />
   <meta property="og:type" content="book" />
@@ -26,7 +25,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2017-04-02">
+<meta name="date" content="2018-01-22">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,7 +34,6 @@
   
 <link rel="prev" href="chap-exponential.html">
 <link rel="next" href="chap-harvesting.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -56,6 +54,7 @@
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -211,7 +210,7 @@ Figure 5.1: Total population size of pheasants on Einarsen Island. Filled circle
 <h3 id="the-many-flavors-of-carrying-capacity"><span class="header-section-number">5.1</span> The many flavors of carrying capacity</h3>
 <p>The term <em>carrying capacity</em> gets used loosely in many population management contexts. In addition to the very specific sense of the population size at which the rate of change is zero, there is at least one other meaning that is important. <strong>The <em>social carrying capacity</em> is the maximum population size that is tolerable to human populations living in the same area.</strong> This term usually gets used in the context of over-abundant populations. A population is over-abundant when (at least some) humans feel there are too many of a species. This is an area that is fraught with potential for conflict. Inevitably, there will be groups of people that disagree on what the suitable population size is for a certain species. The most prominent example of this in the national news is the Northern Rocky Mountain population of grey wolves. Conservationists want more wolves, while ranchers and others that live in the vicinity want fewer – ideally no – wolves. The only place where wolves are likely to reach their ecological carrying capacity is in Yellowstone National Park. Outside the park, social pressure has lead to harvesting, which in turn will lead to lower population size.</p>
 </div>
-<p></p>
+
 <div class="figure"><span id="fig:regulatedA"></span>
 <img src="NRES450-LectureNotes_files/figure-html/regulatedA-1.png" alt="Per capita birth and death rates for a model with birth rates affected by scramble competition" width="672" />
 <p class="caption">
@@ -301,6 +300,14 @@ Figure 5.7: Exponential growth with demographic stochasticity. Thin lines are 20
 Figure 5.8: The mean number of whistles per stop over time for Northern Bobwhite (<em>Colinus virginianus</em>) in Nebraska. 1983 was a very late, hard winter with deep snow. Image courtesy of noflickster, creative commons attribution, noncommercial, sharealike.
 </p>
 </div>
+<pre><code>## Warning in rbar * t: Recycling array of length 1 in array-vector arithmetic is deprecated.
+##   Use c() or as.vector() instead.</code></pre>
+<pre><code>## Warning in (b - d) - rbar: Recycling array of length 1 in vector-array arithmetic is deprecated.
+##   Use c() or as.vector() instead.</code></pre>
+<pre><code>## Warning in 2 * rbar * t: Recycling array of length 1 in array-vector arithmetic is deprecated.
+##   Use c() or as.vector() instead.</code></pre>
+<pre><code>## Warning in rsigma2 * t: Recycling array of length 1 in array-vector arithmetic is deprecated.
+##   Use c() or as.vector() instead.</code></pre>
 <div class="figure"><span id="fig:envStochExp"></span>
 <img src="NRES450-LectureNotes_files/figure-html/envStochExp-1.png" alt="Exponentially growing population with environmental stochasticity. The dashed lines are 20 replicate simulations with $b=0.3$ and $d=0.2$ in 19 out of 20 years, and $d=0.8$ in 1 out of 20 years. The solid line is the expected population size for $\bar{r} = 0.07$, and the grey polygon is the confidence limits for the population given $\sigma_{N_t}^2=0.017$. $N_0 = 200$ for all simulations." width="672" />
 <p class="caption">
@@ -353,8 +360,9 @@ Figure 5.11: Ricker dynamics with and without a trend in carrying capacity. <spa
         </div>
       </div>
 <a href="chap-exponential.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="chap-harvesting.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="chap-harvesting.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -363,7 +371,7 @@ Figure 5.11: Ricker dynamics with and without a trend in carrying capacity. <spa
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
 "github": false,
@@ -397,7 +405,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

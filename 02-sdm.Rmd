@@ -4,11 +4,11 @@ In Chapter \@ref(chap:fundamental) I defined a useful model as one that helps a 
 
 I start with a simple example of a decision: whether or not to provide supplemental food to a population of Hihi, an endangered bird in New Zealand (Figure \@ref(fig:hihi)). Managers at Kapiti Island want to provide nectar feeders to support recently translocated Hihi because they believe that the vegetation in the new location is not as rich in nectar sources as the island from which they came. They believe that additional food will support population growth in the translocated population by either improving adult survival or the number of offspring produced per pair. What they do not know is how much food to provide, or whether some other aspect of the environment in Kapiti Island will limit population growth despite increases in food availability. Concerns have also been expressed that Hihi will become dependent on feeders, and unable to utilize natural food sources. 
 
-```{r hihi,fig.cap='The hihi, or stichbird. Image by digitaltrails. http://www.flickr.com/photos/digitaltrails/87192080/ (CC BY-NC-SA 2.0)'}
+```{r hihi, fig.cap='The hihi, or stichbird. Image by digitaltrails. http://www.flickr.com/photos/digitaltrails/87192080/ (CC BY-NC-SA 2.0)', out.width="70%"}
 knitr::include_graphics("images/hihi_digitaltrails_cc_nc.jpg")
 ```
 
-Although this is a relatively simple decision, it has all the features that make decisions complicated and difficult. There are multiple competing outcomes, multiple ways of reaching those outcomes, and uncertainty about which actions will lead to which outcomes. In the face of all this complexity, it is very human to avoid making a decision --- which is itself a decision with outcomes --- and focus on acquiring more information or attempting to pass responsibility for the decision onwards. Research throughout the 20th century has documented the many ways in which human cognition fails when faced with complex decisions. Psychologists have also studied ways in which to help humans make decisions in such circumstances. In this book I will introduce a simple 5 step approach to decision making (Smart Choices reference) that can help overcome the psychological traps of decision making; it has a simple easy to remember acronym PrOACT, reminding you to be proactive in decision making. The five steps are: Problem, Objectives, Actions, Consequences, Tradeoffs.
+Although this is a relatively simple decision, it has all the features that make decisions complicated and difficult. There are multiple competing outcomes, multiple ways of reaching those outcomes, and uncertainty about which actions will lead to which outcomes. In the face of all this complexity, it is very human to avoid making a decision --- which is itself a decision with outcomes --- and focus on acquiring more information or attempting to pass responsibility for the decision onwards. Research throughout the 20th century has documented the many ways in which human cognition fails when faced with complex decisions. Psychologists have also studied ways in which to help humans make decisions in such circumstances. In this book I will introduce a simple 5 step approach to decision making (Smart Choices reference) that can help overcome the psychological traps of decision making; **it has a simple easy to remember acronym PrOACT, reminding you to be proactive in decision making. The five steps are: Problem, Objectives, Actions, Consequences, Tradeoffs.**
 
 ## Problem
 
@@ -120,7 +120,8 @@ col_names=c("Alternative",
             "Cost [$]",
             "Range Condition",
             "Total Population, April",
-            "Herd sex ratio [males:females]") )
+            "Herd sex ratio [males:females]") ,
+col_types = "cddic")
 knitr::kable(muskoxcon1, caption="Consequences table for Muskox removal problem.", booktabs=TRUE)
 ```
 

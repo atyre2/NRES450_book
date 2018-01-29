@@ -517,16 +517,16 @@ par(old.par)
 
 There are two management interventions that are used for sea turtle conservation. The first is "headstarting", the practice of monitoring clutches on nesting beaches, and then helping hatchlings to get to the sea without being eaten. This will increase the Fertility entries in the first row, because mortality on the beaches is included in the estimates of Fertility. The other action is to equip trawlers with "Turtle Excluder Devices". These additions to the throat of a trawl net catch turtles before they are caught in the cod end of the net, and give them a hatch to escape out of. A TED will improve survival, particularly of larger turtles that are more likely to be caught on the TED's grid. Headstarting is easy, in part because it is highly visible and gives everyone warm fuzzy feelings. The effects of TEDs are largely invisible, and require the consent of fishing communities to implement. Which one should we use?
 
-Consider the elasticity matrix first (Table \@ref(tab:turtleelastic)). Headstarting will increase the entries in the top row, and adding those all together gets a total of a 5% change in $\lambda$ for a 1% increase in fertility. Compare that with the sum of the elasticities for increasing survival of large juveniles and up: `r format(sum(eA$elasticities[3:7,3:7]), digits=3)`, or more than 12 times larger increase for the same relative improvement. This suggests that improvements in survival of larger stages will be more effective at improving population growth rates than increases in fertility.    
+Consider the elasticity matrix first (Figure \@ref(fig:turtleelastic)). Headstarting will increase the entries in the top row, and adding those all together gets a total of a 5% change in $\lambda$ for a 1% increase in fertility. Compare that with the sum of the elasticities for increasing survival of large juveniles and up: `r format(sum(eA$elasticities[3:7,3:7]), digits=3)`, or more than 12 times larger increase for the same relative improvement. This suggests that improvements in survival of larger stages will be more effective at improving population growth rates than increases in fertility.    
 
-```{r turtleelastic}
+```{r turtleelastic, echo=FALSE, fig.cap = "Elasticity matrix for loggerhead turtle populations. Each entry represents the relative change in population growth rate for a 1% change in that entry."}
 elasA <- eA$elasticities
 Aheadstart = A
 Aheadstart[1,] = A[1,]*2
 ATED = A
 ATED[3:7,3:7] = A[3:7,3:7]*1.1
-
-knitr::kable(elasA, col.names=1:7, caption="Elasticity matrix for loggerhead turtle populations. Each entry represents the relative change in population growth rate for a 1% change in that entry.", digits=3)
+image2(elasA, mar=c(1,3.5, 5,1), log=FALSE, box.off=.1)
+#knitr::kable(elasA, col.names=1:7, caption="Elasticity matrix for loggerhead turtle populations. Each entry represents the relative change in population growth rate for a 1% change in that entry.", digits=3)
 ```
 
 Elasticities are useful, but really only evaluate small changes in matrix entries. Given the uncertainty in reproduction it is plausible that we could double the Fertilities, but not much more than that. Doubling the fertility entries gives us $\lambda = `r lambda(Aheadstart)`$, which is still less than 1. Headstarting may slow the rate of decline in the population, but it cannot plausibly lead to a growing population by itself. In contrast, a modest 10\% increase in the survival of large juveniles and up yields $\lambda = `r lambda(ATED)`$. TEDs seem like a very good option because they can reverse the declining population trend with even if they produce only modest improvements in survival. These analyses were used to support regulations requiring TEDs in many fisheries around the globe. 
