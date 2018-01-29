@@ -159,7 +159,7 @@ This is identical to the estimator used when the sample units have identical are
 With the sample variance for the counts calculated, we follow the same procedure to get the the variance of $\hat{D}$
 
 \begin{equation}
-  s_{\hat{D}^2} = \left(\frac{u}{\sum_{i=1}^u{a_i}}\right)^2\frac{s_y^2}{u}
+  s_{\hat{D}}^2 = \left(\frac{u}{\sum_{i=1}^u{a_i}}\right)^2\frac{s_y^2}{u}
   (\#eq:densityvarwrRatio)
 \end{equation}
 
@@ -173,7 +173,7 @@ The finite sample size correction for sampling without replacement is similar - 
 Finally, the conversion to the $s_{\hat{N}}^2$ is always the same, simply multiplying the variance by the square of total area, $A$.
 
 $$
-  s_{\hat{N}} = s_{\hat{D}}^2 A^2 
+  s_{\hat{N}}^2 = s_{\hat{D}}^2 A^2 
 $$
 
 The second alternative is to select sample units with a probability proportional to their size; this leads to a *probability-proportional-to-size* or PPS estimate. For example, if our sample units are defined in a GIS layer with different size polygons, and we select the units to be sampled by throwing random points onto the map, then each unit will be selected with a probability proportional to it's size. In addition, it will also be sampling with replacement, and this is the only type of sampling that works for this estimator. 
