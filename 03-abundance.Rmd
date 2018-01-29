@@ -25,7 +25,7 @@ We'll begin with the easiest possible estimate of abundance. We have some area, 
 
 There are two ways to sample randomly from the set of all sample units. Give each sample unit a unique number, and place strips of paper with each number into a bag. In the first method, sampling with replacement, we draw a strip of paper, note the number, and then put the strip of paper back into the bag. **This means that it is possible for a given sample unit to be counted more than once.** In the second method, sampling without replacement, we draw a strip of paper, note the number, and then set that strip of paper aside. This means that each sample unit will only be sampled once. Both methods give the same result for the estimated abundance, but the precision of the samples will be different, especially if the total number of sample units U is small. Either way, we have now obtained a list of sample units in which to count our individuals. 
 
-Having established which units to sample, we now obtain our counts which I'll label $y_i$ for the number of individuals counted in sample unit $i$. From this dataset I can obtain the point estimate for the abundance in two steps. First, I calculate the average, or expected value, of the density for each unit $\hat{D}$. Second, I multiply this estimated average by the total number of units in the sample frame $U$ to obtain the estimated abundance. The expected value of $\hat{D}$ is given by
+Having established which units to sample, we now obtain our counts which I'll label $y_i$ for the number of individuals counted in sample unit $i$. From this dataset I can obtain the point estimate for the abundance in two steps. First, I calculate the average, or expected value, of the density for each unit $\hat{D}$. Second, I multiply this estimated average by the total area of the sample frame $A$ to obtain the estimated abundance. The expected value of $\hat{D}$ is given by
 
 \begin{equation}
   \hat{D}=\frac{\sum_{i=1}^u{y_i}}{\sum_{i=1}^u{a_i}}
@@ -41,7 +41,7 @@ which has units of individuals per unit area. If you look back into your introdu
   (\#eq:abundance)
 \end{equation}
 
-This estimate will be unbiased, or accurate, if our counts in each sample unit are made without errors. All individuals present are detected, no individuals are counted twice, and no other species are mistakenly identified as the species of interest. These are challenging conditions to meet, in most cases. 
+**This estimate will be unbiased, or accurate, if our counts in each sample unit are made without errors. All individuals present are detected, no individuals are counted twice, and no other species are mistakenly identified as the species of interest.** These are challenging conditions to meet, in most cases. 
 
 The next step is to quantify the precision of our estimate. This is the step that differs between sampling with and without replacement. The simplest formula is for the case where sampling is done with replacement. This is the same formula for the standard error of a mean when sampling from an infinite population. The first step is to calculate the sample variance of the counts
 
