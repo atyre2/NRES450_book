@@ -25,7 +25,7 @@
 <meta name="author" content="Andrew Tyre">
 
 
-<meta name="date" content="2018-01-22">
+<meta name="date" content="2018-01-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -275,7 +275,7 @@ Figure 3.4: The variance of the counts does not systematically decrease as the s
 \end{equation}\]</span>
 <p>With the sample variance for the counts calculated, we follow the same procedure to get the the variance of <span class="math inline">\(\hat{D}\)</span></p>
 <span class="math display" id="eq:densityvarwrRatio">\[\begin{equation}
-  s_{\hat{D}^2} = \left(\frac{u}{\sum_{i=1}^u{a_i}}\right)^2\frac{s_y^2}{u}
+  s_{\hat{D}}^2 = \left(\frac{u}{\sum_{i=1}^u{a_i}}\right)^2\frac{s_y^2}{u}
   \tag{3.10}
 \end{equation}\]</span>
 <p>The finite sample size correction for sampling without replacement is similar - now instead of the fraction of sample units we use the fraction of the area:</p>
@@ -285,7 +285,7 @@ Figure 3.4: The variance of the counts does not systematically decrease as the s
 \end{equation}\]</span>
 <p>Finally, the conversion to the <span class="math inline">\(s_{\hat{N}}^2\)</span> is always the same, simply multiplying the variance by the square of total area, <span class="math inline">\(A\)</span>.</p>
 <p><span class="math display">\[
-  s_{\hat{N}} = s_{\hat{D}}^2 A^2 
+  s_{\hat{N}}^2 = s_{\hat{D}}^2 A^2 
 \]</span></p>
 <p>The second alternative is to select sample units with a probability proportional to their size; this leads to a <em>probability-proportional-to-size</em> or PPS estimate. For example, if our sample units are defined in a GIS layer with different size polygons, and we select the units to be sampled by throwing random points onto the map, then each unit will be selected with a probability proportional to it’s size. In addition, it will also be sampling with replacement, and this is the only type of sampling that works for this estimator.</p>
 </div>
