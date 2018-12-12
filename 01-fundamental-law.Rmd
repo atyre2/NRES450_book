@@ -19,7 +19,11 @@ where we’ve replaced the number of births and deaths with the products of the 
 
 Where things get interesting is when one or more of the rate constants (B, D, I, E) in \@ref(eq:fundamental2) or amounts (b, d, i, e) in \@ref(eq:fundamental) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
 
-**ADD EXAMPLE HERE TO ILLUSTRATE THE LAST BIT.**
+### Killer whales and sea otters
+
+Sea otter (*Enhydra lutris*) populations recovered in Alaska after nearly a century of overhunting (fur trade). Their populations saw a recovery after the International Fur Seal Treaty began in 1911. However, in Western Alaka scientists in the late 20th century noticed their numbers declining again. Researchers radio-tagged sea otters from 1992-1996 to determine birth rates of adult females and pup survival and discovered that these rates were similar to those of stable populations. So if adult females and pups were surviving at the same rate as other populations in which no decline was observed, then what could posibly be causing the declines? 
+
+The answer was increased mortality. The culprit this time was killer whales (*Orcinus orca*). Scientists estimated that a single killer whale could consume 1825 otters per year (assuming this is the only prey they are consuming). However, sea otters and killer whales have co-existed in west-central Aleutian archipielago for thousands of years. Why then this sudden predation effect on sea otter populations? The most likely explanaition is a shift in the prey resource base for killer whales, who are known to prey on marine mammals such as Steller sea lions and harbor seals. The difference now is that the populations of both these pinnipeds have collapsed recently in the western North Pacific. In this example, the population dynamics of sea otters depended on the abundance of Steller sea lions and harbor seals. 
 
 ## The laws of nature
 
