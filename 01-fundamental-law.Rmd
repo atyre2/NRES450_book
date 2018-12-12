@@ -17,7 +17,9 @@ N' = bN - dN + i - e
 
 where we’ve replaced the number of births and deaths with the products of the population abundance, N, and a per capita rate of birth and death. We’ve left immigration and emigration as fixed rates. The apostrophe notation for N means "instantaneous rate of change", that is, the rate when the time interval approaches 0, $\Delta \rightarrow 0$.
 
-Where things get interesting is when one or more of the rate constants in \@ref(eq:fundamental2) or amounts in \@ref(eq:fundamental) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
+Where things get interesting is when one or more of the rate constants (B, D, I, E) in \@ref(eq:fundamental2) or amounts (b, d, i, e) in \@ref(eq:fundamental) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
+
+**ADD EXAMPLE HERE TO ILLUSTRATE THE LAST BIT.**
 
 ## The laws of nature
 
@@ -26,7 +28,7 @@ The title of this chapter describes equation \@ref(eq:fundamental) as a "law" --
 The opposite of objective is subjective. Our inner thoughts and feelings are subjective, that is, they are known only to us as individuals. You might tell me what you are thinking or feeling, but I have no independent way of verifying that information. Beliefs about objective reality are similarly subjective, in
 that two people can have different beliefs about reality. **However, it is possible for us to conduct *reality checks* on our beliefs about reality. If enough of us get together to check our beliefs, and over time, agree to a consensus belief that passes reality checks, then this is about as close to objective knowledge as we can get. Rosen calls this form of knowledge *intersubjective*;** it is different from subjective belief by virtue of its broader consensus amongst many people, and yet not fully objective by virtue of the fact that it was formed from our subjective perceptions of reality. 
 
-Intersubjective knowledge is socially constructed knowledge, but is not consistent with the the post-modernist position that all reality is socially constructed. Our socially constructed, intersubjective beliefs are constrained by objective reality -- not everything is possible. Even if a diehard post-modernist could convince a group of a 1000 people that she could fly unaided, she would not be able to do so. 
+Intersubjective knowledge is socially constructed knowledge, but is not consistent with the post-modernist position that all reality is socially constructed. Our socially constructed, intersubjective beliefs are constrained by objective reality -- not everything is possible. Even if a diehard post-modernist could convince a group of a 1000 people that she could fly unaided, she would not be able to do so. 
 
 **In the field of wildlife management science, the goal is the production of “reliable knowledge” [@romesburg1981wildlife] to use in making management decisions. It is not uncommon to see exhortations from leaders in the field to make science based decisions, presumably a call to use reliable, or intersubjective, knowledge to decide which course of action should be followed.** Unfortunately, as we will see in many examples throughout this book, people do not make decisions like that. Our subjective beliefs about many things, from religion to justice, affect what we think should be done. Inevitably, the more people are affected by a decision or policy related to wildlife management, the more political (i.e. subjective) the decision or policy will become.
 
@@ -39,13 +41,14 @@ Almost all of the equations in this book, other than the fundamental equation, a
 A consequence of this deliberate simplification is that all models are in fact, fictitious. This might seem surprising. After all, works of fiction are by definition false. Not true. How can something that is known to be false help us understand nature? This is a problem that so vexed early philosophers of science that they deliberately ignored it for the better part of a century.  Fortunately for the science of population dynamics, this philosophical high-mindedness did not stop scientists from using models to understand nature. Statistician George Box put it this way: 
 
 > All models are wrong. Some models are useful.
->
 > --- @box1976science. 
 
-The key is identifying which models are useful. In this book the utility of a model is measured by the extent to which the model allows us to forecast the future consequences of management decisions.
+The key in Science is identifying which models are useful. In this book the utility of a model is measured by the extent to which the model allows us to forecast the future consequences of management decisions.
 
 
 ## Glossary
 
-1. **Solipsism** A metaphysical viewpoint that asserts reality is only the result of our imaginations.
+1. **Solipsism:** A metaphysical viewpoint that asserts reality is only the result of our imaginations.
+2. **Model:** a mathematical model is a description of a system using mathematical language and concepts to better understand the effects of different components in the system. 
+
 
