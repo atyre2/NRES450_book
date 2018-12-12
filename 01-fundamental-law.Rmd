@@ -5,9 +5,9 @@
   (\#eq:fundamental)
 \end{equation}
 
-This simple equation governs all changes in single species populations. The change in the abundance of a
-population in a given area across an interval of time $\Delta$, $\Delta N$, is the sum of the number of births $B$, the
-number of deaths $D$, the number of immigrants, or individuals arriving in the area from outside, $I$, and
+This simple equation governs all changes in single species populations. The change ($\Delta$) in the abundance of a
+population in a given area across an interval of time, $\Delta N$, is the sum of the number of births, $B$, the
+number of deaths, $D$, the number of immigrants, or individuals arriving in the area from outside, $I$, and
 the number of emigrants, individuals leaving the area, $E$. As the interval of time gets smaller, we can write the fundamental law as a rate
 
 \begin{equation}
@@ -15,7 +15,7 @@ N' = bN - dN + i - e
 (\#eq:fundamental2)
 \end{equation}
 
-where we’ve replaced the number of births and deaths with the products of the population abundance, N, and a per capita rate of birth and death. We’ve left immigration and emigration as fixed rates. The apostrophe notation for N means "instantaneous rate of change", that is, the rate when the time interval $\Delta \rightarrow 0$.
+where we’ve replaced the number of births and deaths with the products of the population abundance, N, and a per capita rate of birth and death. We’ve left immigration and emigration as fixed rates. The apostrophe notation for N means "instantaneous rate of change", that is, the rate when the time interval approaches 0, $\Delta \rightarrow 0$.
 
 Where things get interesting is when one or more of the rate constants in \@ref(eq:fundamental2) or amounts in \@ref(eq:fundamental) on the right hand side of these equations are not constant. In particular, when they depend on $N$, or on the abundance of other species, the dynamics of populations get very interesting.
 
