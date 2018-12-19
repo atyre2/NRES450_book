@@ -1,5 +1,13 @@
 # The fundamental law of population dynamics {#chap:fundamental}
 
+## Learning objectives
+At the end of chapter 1, the students should be able to: 
+1. Identify the different components of the fundamental equation. 
+2. Understand the difference between objective, subjective, and intersubjective knowledge. 
+3. Understand the link between intersubjective knowledge and decision making in wildlife management. 
+
+## Introduction
+
 \begin{equation}
   \Delta N = B - D + I - E
   (\#eq:fundamental)
