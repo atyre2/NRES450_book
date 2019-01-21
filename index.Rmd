@@ -22,6 +22,8 @@ I assume you have installed R and RStudio to run examples shown in each chapter.
 # automatically create a bib database for R packages
 knitr::write_bib(c(.packages(), 'bookdown', 'knitr', 'rmarkdown'), 'packages.bib')
 knitr::opts_chunk$set(echo=FALSE)
+library("dplyr")
+library("huxtable")
 ```
 
 I originally set out to write this book because no existing population dynamics texts had the right mix of topics, didn't address management related questions, or were far too advanced for an undergraduate audience. 
@@ -37,3 +39,37 @@ My educational objectives for the course, and for the curriculum in which it is 
 7. Articulate the objectives of stakeholders along a means/ends continuum.
 8. Enumerate available management actions and assemble alternative strategies.
 9. Make tradeoffs between competing objectives to select a preferred management strategy in an SDM framework.
+
+```{r objective_coverage}
+ht <- tribble(
+  ~LO, ~C1, ~C2, ~C3, ~C4, ~C5, ~C6, ~C7, ~C8,
+  "Learning Objective",  "Chapter", "","","","","","","",
+  "", "1","2","3","4","5","6","7","8",
+  "0",  "", "","","","","","","",
+  "1",  "", "","","","","","","",
+  "2",  "", "","","","","","","",
+  "3",  "", "","","","","","","",
+  "4",  "", "","","","","","","",
+  "5",  "", "","","","","","","",
+  "6",  "", "","","","","","","",
+  "7",  "", "","","","","","","",
+  "8",  "", "","","","","","","",
+  "9",  "", "","","","","","",""
+)
+ht <- huxtable(ht)
+ht <- theme_striped(ht)
+align(ht) <- "center"
+colspan(ht)[1,2] <- 8
+rowspan(ht)[1,1] <- 2
+wrap(ht)[1,1] <- TRUE
+width(ht) <- 0.5
+col_width(ht) <- c(0.2, rep(0.1, 8))
+ht <- set_background_color(ht, matrix(
+  c(3, 2,
+    4, 4,
+    11, 3,
+    12, 3), ncol = 2, byrow = TRUE), 
+  grey(0.4))
+ht
+```
+
