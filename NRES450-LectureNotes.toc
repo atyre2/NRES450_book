@@ -14,64 +14,63 @@
 \contentsline {section}{\numberline {2.6}Tradeoffs}{15}{section.2.6}
 \contentsline {section}{\numberline {2.7}Exercises}{17}{section.2.7}
 \contentsline {subsection}{Wild horses in the American Southwest}{18}{section*.3}
-\contentsline {chapter}{\numberline {3}References}{19}{chapter.3}
-\contentsline {chapter}{\numberline {4}Estimating Abundance}{21}{chapter.4}
-\contentsline {subsection}{\numberline {4.0.1}Elephant aerial counts}{21}{subsection.4.0.1}
-\contentsline {section}{\numberline {4.1}Sampling error, accuracy and precision}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Simple random sampling}{24}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Create sample units}{24}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Sample from sampling units - counts}{25}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Estimate population parameters}{25}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Estimating error in population parameters}{25}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}How big a sample to take?}{28}{section.4.3}
-\contentsline {section}{\numberline {4.4}Areas of different sizes}{28}{section.4.4}
-\contentsline {section}{\numberline {4.5}Stratified Sampling}{30}{section.4.5}
-\contentsline {subsection}{Taylor's Law}{31}{section*.4}
-\contentsline {section}{Further Reading}{31}{section*.5}
-\contentsline {section}{Exercises}{31}{section*.6}
-\contentsline {chapter}{\numberline {5}Exponential growth and decay}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Deaths}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Births}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}Turchin's law of population inertia}{34}{section.5.3}
-\contentsline {section}{\numberline {5.4}Estimating \(r\)}{36}{section.5.4}
-\contentsline {section}{\numberline {5.5}Glossary}{37}{section.5.5}
-\contentsline {section}{\numberline {5.6}Exercises}{37}{section.5.6}
-\contentsline {chapter}{\numberline {6}Population Regulation and Stochasticity}{39}{chapter.6}
-\contentsline {subsection}{Pheasants on the Island}{39}{section*.7}
-\contentsline {section}{\numberline {6.1}Resource Limitation}{39}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}The many flavors of carrying capacity}{41}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Density Dependent or Independent?}{44}{section.6.2}
-\contentsline {section}{\numberline {6.3}Stochasticity}{45}{section.6.3}
-\contentsline {section}{\numberline {6.4}Trends over time}{49}{section.6.4}
-\contentsline {section}{\numberline {6.5}Glossary}{50}{section.6.5}
-\contentsline {chapter}{\numberline {7}Harvesting and Control}{53}{chapter.7}
-\contentsline {subsection}{Eurasian Lynx in Norway}{53}{section*.8}
-\contentsline {section}{\numberline {7.1}Compensatory and Additive Mortality}{54}{section.7.1}
-\contentsline {section}{\numberline {7.2}A Better Model For Harvesting Wildlife}{55}{section.7.2}
-\contentsline {subsection}{Epitaph for MSY}{56}{section*.9}
-\contentsline {subsection}{\numberline {7.2.1}Fixed quota harvesting}{57}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Fixed Effort harvest strategy}{58}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Revisiting Eurasian Lynx}{59}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Revisiting Additivity}{59}{subsection.7.2.4}
-\contentsline {section}{\numberline {7.3}What about control?}{61}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Predicting the response to management}{62}{subsection.7.3.1}
-\contentsline {subsection}{Mid continental light geese}{64}{section*.10}
-\contentsline {subsection}{Living with large predators}{65}{section*.11}
-\contentsline {section}{\numberline {7.4}A ``rule of thumb'' for harvest and control}{66}{section.7.4}
-\contentsline {section}{\numberline {7.5}Exercises}{66}{section.7.5}
-\contentsline {chapter}{\numberline {8}Structured Populations}{67}{chapter.8}
-\contentsline {section}{\numberline {8.1}Age structure}{67}{section.8.1}
-\contentsline {subsection}{Projecting an age structured population}{71}{section*.12}
-\contentsline {section}{\numberline {8.2}Population Projection Matrices}{72}{section.8.2}
-\contentsline {subsection}{Growing or Declining?}{72}{section*.13}
-\contentsline {section}{\numberline {8.3}A more complex example}{74}{section.8.3}
-\contentsline {subsection}{How many age classes?}{78}{section*.14}
-\contentsline {section}{\numberline {8.4}Sensitivity and elasticity}{80}{section.8.4}
-\contentsline {section}{\numberline {8.5}Stage or size structured populations}{81}{section.8.5}
-\contentsline {section}{\numberline {8.6}Exercises}{83}{section.8.6}
-\contentsline {chapter}{\numberline {9}Conservation of small populations}{87}{chapter.9}
-\contentsline {subsection}{Mangel and Tier's Four Facts}{87}{section*.15}
-\contentsline {section}{\numberline {9.1}Minimum viable population size}{88}{section.9.1}
-\contentsline {section}{\numberline {9.2}Extinction risk and expected minimum population size}{90}{section.9.2}
-\contentsline {section}{\numberline {9.3}Dealing with habitat fragmentation}{92}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}Sumatran tiger management}{93}{subsection.9.3.1}
+\contentsline {chapter}{\numberline {3}Estimating Abundance}{19}{chapter.3}
+\contentsline {subsection}{\numberline {3.0.1}Elephant aerial counts}{19}{subsection.3.0.1}
+\contentsline {section}{\numberline {3.1}Sampling error, accuracy and precision}{20}{section.3.1}
+\contentsline {section}{\numberline {3.2}Simple random sampling}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Create sample units}{22}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Sample from sampling units - counts}{23}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Estimate population parameters}{23}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Estimating error in population parameters}{23}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}How big a sample to take?}{26}{section.3.3}
+\contentsline {section}{\numberline {3.4}Areas of different sizes}{26}{section.3.4}
+\contentsline {section}{\numberline {3.5}Stratified Sampling}{28}{section.3.5}
+\contentsline {subsection}{Taylor's Law}{29}{section*.4}
+\contentsline {section}{Further Reading}{29}{section*.5}
+\contentsline {section}{Exercises}{29}{section*.6}
+\contentsline {chapter}{\numberline {4}Exponential growth and decay}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Deaths}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Births}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}Turchin's law of population inertia}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}Estimating \(r\)}{34}{section.4.4}
+\contentsline {section}{\numberline {4.5}Glossary}{35}{section.4.5}
+\contentsline {section}{\numberline {4.6}Exercises}{35}{section.4.6}
+\contentsline {chapter}{\numberline {5}Population Regulation and Stochasticity}{37}{chapter.5}
+\contentsline {subsection}{Pheasants on the Island}{37}{section*.7}
+\contentsline {section}{\numberline {5.1}Resource Limitation}{37}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}The many flavors of carrying capacity}{39}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Density Dependent or Independent?}{42}{section.5.2}
+\contentsline {section}{\numberline {5.3}Stochasticity}{43}{section.5.3}
+\contentsline {section}{\numberline {5.4}Trends over time}{47}{section.5.4}
+\contentsline {section}{\numberline {5.5}Glossary}{48}{section.5.5}
+\contentsline {chapter}{\numberline {6}Harvesting and Control}{51}{chapter.6}
+\contentsline {subsection}{Eurasian Lynx in Norway}{51}{section*.8}
+\contentsline {section}{\numberline {6.1}Compensatory and Additive Mortality}{52}{section.6.1}
+\contentsline {section}{\numberline {6.2}A Better Model For Harvesting Wildlife}{53}{section.6.2}
+\contentsline {subsection}{Epitaph for MSY}{54}{section*.9}
+\contentsline {subsection}{\numberline {6.2.1}Fixed quota harvesting}{55}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Fixed Effort harvest strategy}{56}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Revisiting Eurasian Lynx}{57}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Revisiting Additivity}{57}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}What about control?}{59}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Predicting the response to management}{60}{subsection.6.3.1}
+\contentsline {subsection}{Mid continental light geese}{62}{section*.10}
+\contentsline {subsection}{Living with large predators}{63}{section*.11}
+\contentsline {section}{\numberline {6.4}A ``rule of thumb'' for harvest and control}{64}{section.6.4}
+\contentsline {section}{\numberline {6.5}Exercises}{64}{section.6.5}
+\contentsline {chapter}{\numberline {7}Structured Populations}{65}{chapter.7}
+\contentsline {section}{\numberline {7.1}Age structure}{65}{section.7.1}
+\contentsline {subsection}{Projecting an age structured population}{69}{section*.12}
+\contentsline {section}{\numberline {7.2}Population Projection Matrices}{70}{section.7.2}
+\contentsline {subsection}{Growing or Declining?}{70}{section*.13}
+\contentsline {section}{\numberline {7.3}A more complex example}{72}{section.7.3}
+\contentsline {subsection}{How many age classes?}{76}{section*.14}
+\contentsline {section}{\numberline {7.4}Sensitivity and elasticity}{78}{section.7.4}
+\contentsline {section}{\numberline {7.5}Stage or size structured populations}{79}{section.7.5}
+\contentsline {section}{\numberline {7.6}Exercises}{81}{section.7.6}
+\contentsline {chapter}{\numberline {8}Conservation of small populations}{85}{chapter.8}
+\contentsline {subsection}{Mangel and Tier's Four Facts}{85}{section*.15}
+\contentsline {section}{\numberline {8.1}Minimum viable population size}{86}{section.8.1}
+\contentsline {section}{\numberline {8.2}Extinction risk and expected minimum population size}{88}{section.8.2}
+\contentsline {section}{\numberline {8.3}Dealing with habitat fragmentation}{90}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Sumatran tiger management}{91}{subsection.8.3.1}
