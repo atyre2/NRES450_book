@@ -163,12 +163,8 @@ b. Draw up a proposed objectives hierarchy for the managers to consider. Identif
 
 Wild horses have roamed the west since their re-introduction to North America by the Spanish Conquistadors. Most of these horses occur on land managed by the Bureau of Land Management, and since 1971 the Wild Free-Roaming Horses and Burro's Act has stipulated what BLM can and cannot do to manage this population. The BLM and other federal agencies are supposed to monitor horse numbers, and ensure that they "preserve and maintain a thriving natural ecological balance." Although current management targets a maximum population of 23,622 horses across 179 management units, the current free-roaming population exceeds 33,000. Political pressure means that BLM is not able to cull horses, instead relying on capture and adoption to reduce wild populations. Unfortunately adoption demand is usually much less than the number of horses captured, and as a result there is a burgeoning captive herd of around 45,000 horses that must also be maintained. A few horses are sold, but most remain in captivity until they die of natural causes.  
 
-Garrott and Oli (2013) worked out that the captive population would stabilize around 60,000 horses by 2027 representing a balance between natural deaths and new captures from the wild. Caring for these animals will cost in excess of \$100 million dollars per year; the 2012 budget for the Wild Horse and Burro program was \$74 million, of which 60\% is used to care for captive horses. 
+@Garrott2013BLM worked out that the captive population would stabilize around 60,000 horses by 2027 representing a balance between natural deaths and new captures from the wild. Caring for these animals will cost in excess of \$100 million dollars per year; the 2012 budget for the Wild Horse and Burro program was \$74 million, of which 60\% is used to care for captive horses. 
 
-A National Research Council report (NRC 2013) on wild horses and burros concluded that if removals from the free-roaming population ceased, the population would grow unchecked until food and water became limiting. At that point the horses would be in poor health, and rangelands would be degraded affected native species and other public uses (grazing, hunting). 
+A National Research Council report [@NAP2013BLM] on wild horses and burros concluded that if removals from the free-roaming population ceased, the population would grow unchecked until food and water became limiting. At that point the horses would be in poor health, and rangelands would be degraded affected native species and other public uses (grazing, hunting). 
 
-# References 
 
-Garrott, R.A. and M.K. Oli (2013) A critical crossroad for BLM's Wild Horse Program. Science, 341:847-848.
-
-NRC (2013) Using Science to Improve the BLM Wild Horse and Burro Program: A Way Forward. National Academies Press, Washington, DC.
