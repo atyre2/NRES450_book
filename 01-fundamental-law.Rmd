@@ -1,7 +1,12 @@
 # The fundamental law of population dynamics {#chap:fundamental}
 
-## Learning objectives
+**Learning objectives**
 At the end of chapter 1, the students should be able to: 
+
+General objective: 
+1. Differentiate between the different terms and concepts in wildlife management, population models, and the law of population dynamics.
+
+Chapter objectives: 
 1. Identify the different components of the fundamental equation. 
 2. Understand the difference between objective, subjective, and intersubjective knowledge. 
 3. Understand the link between intersubjective knowledge and decision making in wildlife management. 

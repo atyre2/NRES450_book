@@ -1,0 +1,73 @@
+\contentsline {chapter}{Preface}{5}{chapter*.2}
+\contentsline {chapter}{\numberline {1}The fundamental law of population dynamics}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Learning objectives}{7}{section.1.1}
+\contentsline {section}{\numberline {1.2}Introduction}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Killer whales and sea otters}{7}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.3}The laws of nature}{7}{section.1.3}
+\contentsline {section}{\numberline {1.4}The nature of models of nature}{7}{section.1.4}
+\contentsline {section}{\numberline {1.5}Glossary}{7}{section.1.5}
+\contentsline {chapter}{\numberline {2}Making decisions}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Learning objectives}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Problem}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Objectives}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Alternatives}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Consequences}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Tradeoffs}{9}{section.2.6}
+\contentsline {section}{\numberline {2.7}Exercises}{9}{section.2.7}
+\contentsline {subsection}{Wild horses in the American Southwest}{9}{section*.3}
+\contentsline {chapter}{\numberline {3}Estimating Abundance}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Learning objectives}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Sampling error, accuracy and precision}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Simple random sampling}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}How big a sample to take?}{15}{section.3.4}
+\contentsline {section}{\numberline {3.5}Areas of different sizes}{18}{section.3.5}
+\contentsline {section}{\numberline {3.6}Stratified Sampling}{20}{section.3.6}
+\contentsline {subsection}{Taylor's Law}{21}{section*.4}
+\contentsline {section}{Further Reading}{22}{section*.5}
+\contentsline {section}{Exercises}{22}{section*.6}
+\contentsline {chapter}{\numberline {4}Exponential growth and decay}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Deaths}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Births}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Turchin's law of population inertia}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}Estimating \(r\)}{23}{section.4.4}
+\contentsline {section}{\numberline {4.5}Glossary}{23}{section.4.5}
+\contentsline {section}{\numberline {4.6}Exercises}{23}{section.4.6}
+\contentsline {chapter}{\numberline {5}Population Regulation and Stochasticity}{25}{chapter.5}
+\contentsline {subsection}{Pheasants on the Island}{25}{section*.7}
+\contentsline {section}{\numberline {5.1}Resource Limitation}{25}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}The many flavors of carrying capacity}{25}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Density Dependent or Independent?}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3}Stochasticity}{25}{section.5.3}
+\contentsline {section}{\numberline {5.4}Trends over time}{25}{section.5.4}
+\contentsline {section}{\numberline {5.5}Glossary}{25}{section.5.5}
+\contentsline {chapter}{\numberline {6}Harvesting and Control}{27}{chapter.6}
+\contentsline {subsection}{Eurasian Lynx in Norway}{27}{section*.8}
+\contentsline {section}{\numberline {6.1}Compensatory and Additive Mortality}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}A Better Model For Harvesting Wildlife}{27}{section.6.2}
+\contentsline {subsection}{Epitaph for MSY}{27}{section*.9}
+\contentsline {subsection}{\numberline {6.2.1}Fixed quota harvesting}{27}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Fixed Effort harvest strategy}{27}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Revisiting Eurasian Lynx}{27}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Revisiting Additivity}{27}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}What about control?}{27}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Predicting the response to management}{27}{subsection.6.3.1}
+\contentsline {subsection}{Mid continental light geese}{27}{section*.10}
+\contentsline {subsection}{Living with large predators}{27}{section*.11}
+\contentsline {section}{\numberline {6.4}A ``rule of thumb'' for harvest and control}{27}{section.6.4}
+\contentsline {section}{\numberline {6.5}Exercises}{27}{section.6.5}
+\contentsline {chapter}{\numberline {7}Structured Populations}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Age structure}{29}{section.7.1}
+\contentsline {subsection}{Projecting an age structured population}{29}{section*.12}
+\contentsline {section}{\numberline {7.2}Population Projection Matrices}{29}{section.7.2}
+\contentsline {subsection}{Growing or Declining?}{29}{section*.13}
+\contentsline {section}{\numberline {7.3}A more complex example}{29}{section.7.3}
+\contentsline {subsection}{How many age classes?}{29}{section*.14}
+\contentsline {section}{\numberline {7.4}Sensitivity and elasticity}{29}{section.7.4}
+\contentsline {section}{\numberline {7.5}Stage or size structured populations}{29}{section.7.5}
+\contentsline {section}{\numberline {7.6}Exercises}{29}{section.7.6}
+\contentsline {chapter}{\numberline {8}Conservation of small populations}{31}{chapter.8}
+\contentsline {subsection}{Mangel and Tier's Four Facts}{31}{section*.15}
+\contentsline {section}{\numberline {8.1}Minimum viable population size}{31}{section.8.1}
+\contentsline {section}{\numberline {8.2}Extinction risk and expected minimum population size}{31}{section.8.2}
+\contentsline {section}{\numberline {8.3}Dealing with habitat fragmentation}{31}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Sumatran tiger management}{31}{subsection.8.3.1}

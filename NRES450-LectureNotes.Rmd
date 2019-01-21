@@ -1,10 +1,64 @@
+--- 
+title: "Lecture Notes for Biology of Wildlife Populations"
+author: "Andrew Tyre"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: atyre2/NRES450_book
+description: "These are the lecture notes for NRES 450 Biology of Wildlife populations at the University of Nebraska."
+---
+
+# Preface {-}
+
+Placeholder
+
+
+
+<!--chapter:end:index.Rmd-->
+
+
+# The fundamental law of population dynamics {#chap:fundamental}
+
+Placeholder
+
+
+## Learning objectives
+## Introduction
+### Killer whales and sea otters
+## The laws of nature
+## The nature of models of nature
+## Glossary
+
+<!--chapter:end:01-fundamental-law.Rmd-->
+
+
+# Making decisions {#chap:sdm}
+
+Placeholder
+
+
+## Learning objectives
+## Problem
+## Objectives
+## Alternatives
+## Consequences
+## Tradeoffs
+## Exercises
+### Wild horses in the American Southwest {-}
+
+<!--chapter:end:02-sdm.Rmd-->
+
 # Estimating Abundance {#chap:abundance}
 
 ```{r}
 knitr::read_chunk("R/ci_coverage.r")
 ```
 
-**Learning objectives**
+## Learning objectives
 At the end of chapter 3, the student should be able to: 
 
 General objective: 
@@ -20,16 +74,9 @@ The fundamental metric of population dynamics is the abundance of the population
 
 Why bother to estimate the size of the population? Why not simply count every individual animal, and obtain a *census* of the population? This was standard practice for large mammals in North America until the middle of the 20^th^ century, and even later in Africa. With enough well trained personnel, it is indeed possible to obtain high levels of complete counts for populations, particularly in open areas like the African savannah. **The primary reason for abandoning complete counts is cost.** The time required to survey every piece of a landscape or region is tremendous, and time is money. In addition, for many species in many landscapes, the assumption of complete detectability, that every individual in a sample unit is counted, is not met. In that case, the attempt to census the population leads to an abundance that is biased (more on this later). We can both reduce costs and deal with bias of incomplete detectability by moving to statistical sampling procedures for estimating the total abundance of a population in a given area. 
 
-### Elephant aerial counts
-Sometimes, researchers relly on total counts, or census, for certain species to keep track of population trends or estimate other demographic parameters. For example, in Tanzania, in the Serengeti ecosystem, researchers use "total" counts where surveyors use aircrafts equipped with Global Positioning System (GPS) units and cameras to fly over the entire elephant range and count the number of individuals they see. Because they are large animals these total counts make sense. They assume perfect detectability but even with such large species this is unrealistic because sometimes individuals clump together and it becomes difficult to differentiate individuals. 
+The steps required to estimate any parameter in a population, like the total abundance, follows this general scheme
 
-```{r elephant, fig.show='hold',fig.cap="View of a heard of elephants in the Seregenti ecosystem in Tanzania from an aerial count in Kenia. Photo by Peter Chira/ AWF."}
-knitr::include_graphics("images/Kenya-census-elephants-aerial-view.jpg")
-```
-
-The steps required to estimate any parameter in a population, like the total abundance, follows this general scheme:
-
-```{r scheme, fig.show='hold',fig.cap="The general steps required to estimate parameters and their precision using a simple random sampling approach."}
+```{r scheme, out.width='49%', fig.show='hold',fig.cap="The general steps required to do a simple random sampling."}
 knitr::include_graphics("images/Sampling_Design.png")
 ```
 
@@ -37,7 +84,7 @@ knitr::include_graphics("images/Sampling_Design.png")
 
 When we want to measure $N$, the abundance of a population in a particular area, we have two choices: census or sample. A census means that every individual is counted – no one is missed, no one is counted twice, the answer is $N$, exactly. In that case, we know what $N$ is, and there is no error to estimate. In this case, "error" has a very specific meaning. The error is the difference between the true $N$ and the $N$ that we have measured. In reality, the error is never zero. Even if a survey of abundance is called a census, it is virtually impossible to have an exact count of a real population. At best the error in the count is small and ignorable. A much better approach is to recognize the existence of error in our counts, and quantify it. From now on, to distinguish between the true population abundance, $N$, and our estimate of the abundance, I will use a "hat" to indicate the estimated abundance, like this: $\hat{N}$.
 
-Error in an estimated quantity like the abundance has two components, the precision and the accuracy. Precision refers to the variation between repeated estimates of the same type -- if we sampled the same population repeatedly, what is the average difference between repeated samples (Figure \@ref(fig:precision))? In contrast, accuracy refers to the distance between the average estimate and the truth. On average, a good estimate will have no deviation from the true population abundance. Any individual estimate will be off by some unknown amount, but averaging repeated samples would converge to the true value. An estimate of a quantity that has a non-zero average difference between the estimate and the true value of the quantity is said to be biased. We want unbiased estimates of abundance. 
+Error in an estimated quantity like the abundance has two components, the precision and the accuracy. Precision refers to the variation between repeated estimates of the same type -- if we sampled the same population repeatedly, what is the average difference between repeated samples (Figure \@ref(fig:precision))? In contrast, accuracy refers to the distance between the average estimate and the truth. A good estimate will on average have no deviation from the true population abundance. Any individual estimate will be off by some unknown amount, but averaging repeated samples would converge to the true value. An estimate of a quantity that has a non-zero average difference between the estimate and the true value of the quantity is said to be biased. We want unbiased estimates of abundance. 
 
 ```{r precision, out.width='49%', fig.show='hold',fig.cap="The classic depiction of the difference between accuracy and precision. The figure on the left shows high precision but low accuracy, while the figure on the right shows high accuracy and low precision. (Images from Wikimedia Commons, in the public domain)"}
 knitr::include_graphics(c("images/High_precision_Low_accuracy.png", "images/High_accuracy_Low_precision.png"))
@@ -45,14 +92,11 @@ knitr::include_graphics(c("images/High_precision_Low_accuracy.png", "images/High
 
 ## Simple random sampling
 
-### Create sample units
-We'll begin with the easiest possible estimate of abundance. We have some area, $A$, which we call the *sample frame*. We divide the sample frame into $U$ equal sized areas, where $u$ si much smaller than $U$, $U= 	\sum_{i=1}^{} u$. We’ll call these subdivisions of the area sample units. The area of each sample unit is $a$, and $Ua=A$. We assume that we can count all the individuals in a sample unit without missing any individuals (perfect detection), and without counting individuals more than once (no double counting). We cannot count all $U$ sample units. If we could, we would have a census, not a sample. Instead, we will select random $u$ sample units.
+We'll begin with the easiest possible estimate of abundance. We have some area, $A$, which we call the *sample frame*. We divide the sample frame into $U$ equal sized areas. We’ll call these subdivisions of the area sample units. The area of each sample unit is $a$, and $Ua=A$. We assume that we can count all the individuals in a sample unit without missing any individuals (perfect detection), and without counting individuals more than once (no double counting). We cannot count all $U$ sample units. If we could, we would have a census, not a sample. Instead, we will select $u$ sample units, where typically $u$ is much smaller than $U$. We will select the sample units at random. 
 
-### Sample from sampling units - counts
-There are two ways to sample randomly from the set of all sample units. Give each sample unit a unique number, and place strips of paper with each number into a bag. In the first method, sampling with replacement, we draw a strip of paper, note the number, and then put the strip of paper back into the bag. **This means that it is possible for a given sample unit to be counted more than once.** In the second method, sampling without replacement, we draw a strip of paper, note the number, and then set that strip of paper aside. This means that each sample unit will only be sampled once. Both methods give the same result for the estimated abundance, but the precision of the samples will be different, especially if the total number of sample units $U$ is small. Either way, we have now obtained a list of $i$ sample units $u$ in which to count our $n$ individuals. 
+There are two ways to sample randomly from the set of all sample units. Give each sample unit a unique number, and place strips of paper with each number into a bag. In the first method, sampling with replacement, we draw a strip of paper, note the number, and then put the strip of paper back into the bag. **This means that it is possible for a given sample unit to be counted more than once.** In the second method, sampling without replacement, we draw a strip of paper, note the number, and then set that strip of paper aside. This means that each sample unit will only be sampled once. Both methods give the same result for the estimated abundance, but the precision of the samples will be different, especially if the total number of sample units U is small. Either way, we have now obtained a list of sample units in which to count our individuals. 
 
-### Estimate population parameters 
-Having established which units to sample, we now obtain our counts which I'll label $y_i$ for the number of individuals counted in sample unit $i$. From this dataset I can obtain the point estimate for the abundance in two steps. First, I calculate the average, or expected value, of the density $\hat{D}$ for each unit. Second, I multiply this estimated average density by the total area $A$ of the sample frame $U$ to obtain the estimated abundance. The expected value of $\hat{D}$ is given by
+Having established which units to sample, we now obtain our counts which I'll label $y_i$ for the number of individuals counted in sample unit $i$. From this dataset I can obtain the point estimate for the abundance in two steps. First, I calculate the average, or expected value, of the density for each unit $\hat{D}$. Second, I multiply this estimated average by the total area of the sample frame $A$ to obtain the estimated abundance. The expected value of $\hat{D}$ is given by
 
 \begin{equation}
   \hat{D}=\frac{\sum_{i=1}^u{y_i}}{\sum_{i=1}^u{a_i}}
@@ -61,7 +105,7 @@ Having established which units to sample, we now obtain our counts which I'll la
   (\#eq:densitySWR)
 \end{equation}
 
-which has units of individuals per unit area. If you look back into your introductory statistics textbook, this is simply the arithmetic mean ($\bar{y}$) multiplied by $1/a$. This is the conversion from an average count per sample unit to an average density per unit area. The estimated abundance in the entire area $A$ is then
+which has units of individuals per unit area. If you look back into your introductory statistics textbook, this is simply the arithmetic mean ($\bar{y}$) multiplied by $1/a$. This is the conversion from an average count per sample unit to an average density per unit area. The estimated abundance in the entire area is then
 
 \begin{equation}
   \hat{N}=\hat{D}A.
@@ -70,7 +114,6 @@ which has units of individuals per unit area. If you look back into your introdu
 
 **This estimate will be unbiased, or accurate, if our counts in each sample unit are made without errors. All individuals present are detected, no individuals are counted twice, and no other species are mistakenly identified as the species of interest.** These are challenging conditions to meet, in most cases. 
 
-### Estimating error in population parameters
 The next step is to quantify the precision of our estimate. This is the step that differs between sampling with and without replacement. The simplest formula is for the case where sampling is done with replacement. This is the same formula for the standard error of a mean when sampling from an infinite population. The first step is to calculate the sample variance of the counts
 
 $$
@@ -79,9 +122,9 @@ s_y^2 = \frac{\sum_{i=1}^{u}{y_i^2}-\frac{\left(\sum_{i=1}^u{y_i}\right)^2}{u}}
   (\#eq:samplevariance)
 $$
 
-This is the variance of the distribution of the counts, not yet the precision of our sample mean. **The sample variance is a property of the observed counts. In contrast, the precision of our sample mean is a property of a statistic, the average density. This statistic itself has a distribution, that is, it is a random variable whose value is not known precisely.** Imagine taking a second, and then a third, sample of units and recalculating the average density. Each time you take a sample, the average density will be different. Imagine doing that infinitely many times, and you have the distribution of the average density.
+This is the variance of the distribution of the counts, not yet the precision of our sample mean. The sample variance is a property of the observed counts. In contrast, the precision of our sample mean is a property of a statistic, the average density. This statistic itself has a distribution, that is, it is a random variable whose value is not known precisely. Imagine taking a second, and then a third, sample of units and recalculating the average density. Each time you take a sample, the average density will be different. Imagine doing that infinitely many times, and you have the distribution of the average density.
 
-The best estimate of the expected value of the distribution of the average density is just the sample mean. But what about the variance of the distribution of the average density? The sample variance seems relevant; a more variable sample should lead to a less precise estimate of the sample mean. Intuitively, as more data are collected, the precision should improve the estimate of the mean. So the variance of our average density $s_{\hat{D}}^2$ should increase with the sample variance $s_{y}^2$ and decrease with the sample size $u$, and it turns out that
+The best estimate of the expected value of the distribution of the average density is just the sample mean. But what about the variance of the distribution of the average density? The sample variance seems relevant; a more variable sample should lead to a less precise estimate of the sample mean. Intuitively, as more data are collected, the precision should improve the estimate of the mean gets better. So the variance of our average density should increase with the sample variance and decrease with the sample size, and it turns out that
 
 \begin{equation}
   s_{\hat{D}}^2 = \frac{1}{a^2}\frac{s_y^2}{u}
@@ -117,10 +160,7 @@ With the estimated abundance and it’s precision in hand, there are a couple of
 
 or the ratio between the standard error of abundance and abundance multiplied by 100. The CV is a useful relative measure of precision that can be readily compared between different estimates. Imagine you have 2 estimates, one of 100 individuals with a standard error of 10 and the second of a 1000 individuals with a standard error of 50. Which estimate is more precise? In an absolute sense the first estimate has a smaller standard error. However, in a relative sense, the second one is more precise with a CV of 5% compared to a CV of 10%. Implicit in the use of the CV is that a deviation of a given size is less important if the abundance is larger. 
 
-When presenting estimated abundances graphically or in tables it is standard practice to convert the estimates of the precision into confidence limits on the estimate. A confidence limit shows the range of values that would contain the true mean a certain percentage of the time, typically 95%, if the entire estimation process (including calculating the confidence limits) were repeated many times (Figure \@ref(fig:ciCoverage)). This is a challenging concept to grasp --- however there are a couple of simple rules for interpreting these limits. 
-    1. You may not infer that the distribution of possible population sizes is indicated by the confidence limits. Unfortunately this is exactly what most biologists would like to do. 
-    2. Smaller confidence intervals are better. 
-    3. **If the confidence limits do not include some specific constant (like a target population size), then you can say that the estimate is statistically significantly different from the constant value.**
+When presenting estimated abundances graphically or in tables it is standard practice to convert the estimates of the precision into confidence limits on the estimate. A confidence limit shows the range of values that would contain the true mean a certain percentage of the time, typically 95%, if the entire estimation process (including calculating the confidence limits) were repeated many times (Figure \@ref(fig:ciCoverage)). This is a challenging concept to grasp --- however there are a couple of simple rules for interpreting these limits. First, you may not infer that the distribution of possible population sizes is indicated by the confidence limits. Unfortunately this is exactly what most biologists would like to do. Second, smaller confidence intervals are better. Third, **if the confidence limits do not include some specific constant (like a target population size), then you can say that the estimate is statistically significantly different from the constant value.**
 ```{r ciCoverage, fig.cap="Simulated abundance estimates with 95% confidence intervals. The horizontal dashed line is the true abundance in a sample frame with 100 units. The dots represent 20 different samples of 10 units (with replacement) from the sample frame."}
 ```
 
@@ -148,9 +188,9 @@ lines(SE~u,col="green")
 
 Should we care how many units we sample? Each additional unit increases the cost of the effort - at a minimum it takes time, and time is usually money. So why not use the smallest number of units possible? We can calculate a variance with a sample size of two, so why not use only two? 
 
-As always in life, there is a tradeoff to be made here. Fewer sample units are cheaper, but the resulting estimate is less precise. Unfortunately, there is no "rule of thumb" that works for all samples. The greater the sample size, the more precise the estimate is all one can say. The response is also not linear -- when sample sizes are small the increase in precision with each additional sample is greater than when sample sizes are large (Figure \@ref(fig:sampleSize)). The exact height of this curve depends on the variance of the counts in each sample unit, but the shape of the curve will always be a reciprocal function of the sample size. The curve is higher (less precision for a given sample size) when the variance of the counts is higher for the same average count (red line in Figure \@ref(fig:sampleSize)). The curve is lower (higher precision for a given sample size) when the variance is smaller (green line in Figure \@ref(fig:sampleSize)).
+As always in life, there is a tradeoff to be made here. Fewer sample units are cheaper, but the resulting estimate is less precise. Unfortunately, there is no "rule of thumb" that works for all samples. The greater the sample size, the more precise the estimate is all one can say. The response is also not linear -- when sample sizes are small the increase in precision with each additional sample is greater than when sample sizes are large (Figure \@ref(fig:sampleSize)). The exact height of this curve depends on the variance of the counts in each sample unit, but the shape of the curve will always be a reciprocal function of the sample size. The curve is higher (worse precision for a given sample size) when the variance of the counts is higher for the same average count (red line in Figure \@ref(fig:sampleSize)). The curve is lower (better precision for a given sample size) when the variance is smaller (green line in Figure \@ref(fig:sampleSize)).
 
-So how do we decide on the number of samples to take? We need to have some information about the mean and variance of the samples we are going to take, and a goal for the precision of our estimate. There are rules of thumb for the precision required, but they are nearly impossible to achieve. For rough monitoring a coefficient of variation $CV$ of 20% is considered acceptable, while for research purposes 5% is the goal. The expected mean and variance of the samples comes either from previous surveys of the same species using the same methods, or expert opinion (also known as a SWAG for Scientific Wild Assed Guess). With this information it is possible to construct the curve in Figure \@ref(fig:sampleSize), and then read off the sample size needed to achieve the goal. However, in reality what typically happens is that the budget available sets the precision that can be achieved. 
+So how do we decide on the number of samples to take? We need to have some information about the mean and variance of the samples we are going to take, and a goal for the precision of our estimate. There are rules of thumb for the precision required, but they are nearly impossible to achieve. For rough monitoring a coefficient of variation of 20% is considered acceptable, while for research purposes 5% is the goal. The expected mean and variance of the samples comes either from previous surveys of the same species using the same methods, or expert opinion (also known as a SWAG for Scientific Wild Assed Guess). With this information it is possible to construct the curve in Figure \@ref(fig:sampleSize), and then read off the sample size needed to achieve the goal. What typically happens is that the budget available sets the precision that can be achieved. 
 
 It is important to note that the variance of the counts is *not* a function of the sample size. The estimated sample variance will change as more samples are taken, but does not change systematically. Rather, the sample variance converges towards the true variance of the counts, which is some positive number (Figure \@ref(fig:samplevar)). At small sample sizes the variance of the sample variance is also higher. 
 
@@ -165,7 +205,7 @@ abline(h=var,lty=2)
 
 ## Areas of different sizes
 
-In the previous section the sample units $u$ were equal in size $a$, so that the total area was $A = Ua$. In many instances the sample units $u$ may not be equal in size, and then a slightly different approach is needed for calculating the precision of the total abundance $N$. The first issue is to choose the sample units $u$ randomly with respect to their size $a$. The second issue is how to deal with differences in size when calculating the standard errors of density and hence abundance. 
+In the previous section the sample units were equal in size, so that the total area $A = Ua$. In many instances the sample units may not be equal in size, and then a slightly different approach is needed for calculating the precision of the total abundance $N$. The first issue is to choose the sample units randomly with respect to their size. The second issue is how to deal with differences in size when calculating the standard errors of density and hence abundance. 
 
 One option for choosing sample units that differ in size is to ignore the differences, and choose sample units with equal probabilities. This leads to a *ratio estimate* of the abundance. The estimate of the density is
 
@@ -226,7 +266,7 @@ If we know what the variances are, then everything is easy. The sample frame is 
   (\#eq:neymanallocation)
 \end{equation}
 
-where we want to estimate $u_h$ wich is the sample size for each stratum, $u$ is the total sampling effort to be allocated, and $U_h$ is the total number of sample units available in stratum $h$. This allocation, known as the Neyman allocation is optimal in the sense that the variance of $\hat{N}$ is as small as possible. If the cost of sampling each stratum is identical, then this will also yield the most precise estimate for a given cost. However, if sampling costs differ between strata, then we also want to change the proportion with the cost of each stratum in order to do the best possible for a given amount of money. 
+where $u$ is the total sampling effort to be allocated, and $U_h$ is the total number of sample units available in stratum $h$. This allocation, known as the Neyman allocation, is optimal, in the sense that the variance of $\hat{N}$ is as small as possible. If the cost of sampling each stratum is identical, then this will also yield the most precise estimate for a given cost. However, if sampling costs differ between strata, then we also want to change the proportion with the cost of each stratum in order to do the best possible for a given amount of money. 
 
 What if we don't know what the variances are? Typically we still have some notion of where we expect to find more or less of the species in question. Ideally, we already have the landscape categorized in some fashion, say into ecoregions, and we know that some ecoregional types are better than others. Or we know that certain land uses are more conducive to the species. For example, if you want to estimate the abundance of a prairie dependent species like the grasshopper sparrow, you would expect fewer of them in riparian forests than in perennial grasslands. In addition, the variance of a count typically increases with the abundance (see [Taylor's Law]). Thus for stratification to work, it is sufficient to have an idea of the relative abundance, and hence relative variance in counts. 
 
@@ -282,21 +322,6 @@ There’s a good cheat sheet for sample means and variances at \url{''http://www
 
 ## Exercises {-}
 
-**A. Comprehension**
-1. When estimating population parameters like population size $N$, why do we resort to sampling procedures? 
-2. Why do we say that the sampling error can never be zero? Provide an example. 
-3. How do we estimate the precision of a parameter? 
-4. How do we estimate the accuracy of a parameter?
-5. What are the main differences between simple random sampling and stratified sampling?
-
-**B. Analysis: **
-1. Explain the relationship between the size of the confidence intervals and precision. Why are smaller confidence intervals better?. Provide an example. 
-2. Explain the importance of estimating the population size in wildlife management and population dynamics?
-3. Think of an example in ecology where you would estimate the population size using counts with replacement and without replacement. 
-4. Explain why ecologists might resort to doing stratified sampling to estimate population size $N$. Provide an example. 
-
-**3. Problem solving: **
-
 ```{r caribouExample}
 options(knitr.kable.NA = '')
 caribou <- readr::read_delim(
@@ -314,4 +339,97 @@ knitr::kable(caribou, caption="Stratified random sample of the Nelchina Caribou 
 1. Calculate the estimated abundance and variance of the entire Nelchina Caribou Herd (Table \@ref(tab:caribouExample)).
 
 2. Given the same total sample size, what is the Neyman allocation of sample units to strata in the Caribou example? 
+
+
+<!--chapter:end:03-abundance.Rmd-->
+
+
+# Exponential growth and decay {#chap:exponential}
+
+Placeholder
+
+
+## Deaths
+## Births
+## Turchin's law of population inertia
+## Estimating $r$
+## Glossary
+## Exercises
+
+<!--chapter:end:04-exponential.Rmd-->
+
+
+# Population Regulation and Stochasticity {#chap:regulation}
+
+Placeholder
+
+
+### Pheasants on the Island {-}
+## Resource Limitation
+### The many flavors of carrying capacity
+## Density Dependent or Independent?
+## Stochasticity
+## Trends over time
+## Glossary
+
+<!--chapter:end:05-regulation.Rmd-->
+
+
+# Harvesting and Control {#chap:harvesting}
+
+Placeholder
+
+
+### Eurasian Lynx in Norway {-}
+## Compensatory and Additive Mortality {#standard-model}
+## A Better Model For Harvesting Wildlife {#better-model}
+### Epitaph for MSY {-}
+### Fixed quota harvesting
+### Fixed Effort harvest strategy
+### Revisiting Eurasian Lynx
+### Revisiting Additivity
+## What about control?
+### Predicting the response to management
+### Mid continental light geese {-}
+### Living with large predators {-}
+## A "rule of thumb" for harvest and control
+## Exercises
+
+<!--chapter:end:06-harvest_and_control.Rmd-->
+
+
+# Structured Populations {#chap:structured}
+
+Placeholder
+
+
+## Age structure
+### Projecting an age structured population {-}
+## Population Projection Matrices
+### Growing or Declining? {-}
+## A more complex example
+### How many age classes? {-}
+## Sensitivity and elasticity
+## Stage or size structured populations
+## Exercises
+
+<!--chapter:end:07-structured_populations.Rmd-->
+
+
+# Conservation of small populations {#chap:conservation}
+
+Placeholder
+
+
+### Mangel and Tier's Four Facts {-}
+## Minimum viable population size
+## Extinction risk and expected minimum population size
+## Dealing with habitat fragmentation
+### Sumatran tiger management
+
+<!--chapter:end:08-conservation.Rmd-->
+
+`r if (knitr:::is_html_output()) '# References {-}'`
+
+<!--chapter:end:22-references.Rmd-->
 

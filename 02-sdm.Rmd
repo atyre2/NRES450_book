@@ -1,6 +1,11 @@
 # Making decisions {#chap:sdm}
 
+General Objectives:
+1. Enumerate available management actions and assemble alternative strategies.
+2. Make tradeoffs between competing objectives to select a preferred management strategy in an SDM framework.
+
 ## Learning objectives
+
 At the end of chapter 2, the students should be able to:
 1. Identify the main decision to tackle in a conservation oriented problem.
 2. Identify the problem, objectives, actions, consequences, and tradeoffs in a conservation oriented problem. 
@@ -120,6 +125,14 @@ In the case of the improvement in population size, I've hypothesized that 2 feed
 
 
 ## Exercises
+
+**A. Comprehension: **
+1. Explain the Structured Decision Making (SDM) framework and why it is useful for wildlife management. 
+2. Enumerate three key components in identifying the right problem to solve in a wildlife management problem?
+3. What are the differences between a fundamental and a means objective?
+4. Explain how a consequences table can help wildilfe managers solve problems.
+
+**C. Problem solving: **
 
 1.  The Department of Fish and Game in Nunivak Island AK face a problem with muskox. They need to award a number of hunting permits (one permit allows for hunting one muskox) the following year. Table \@ref(tab:muskox-con1) has the consequences of a decision about how many Muskox to remove from Nunivak Island AK. Based on that table, identify the following: 
 
